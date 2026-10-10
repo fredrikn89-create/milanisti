@@ -1081,3 +1081,16 @@ html, body { overflow-x: clip; }
 .st-form li.fm-w b { background: #1e7b3a; }
 .st-form li.fm-l b { background: #b3202a; }
 .st-form li span small { display: block; font-size: 0.72rem; color: var(--muted); }
+
+/* Smale tabeller (≤4 kolonner) beholder tabellform på mobil, så hele tabellen er synlig i ett bilde */
+@media (max-width: 760px) {
+  .fin-table.fin-compact { display: table; width: 100%; font-size: 0.74rem; }
+  .fin-table.fin-compact thead { display: table-header-group; }
+  .fin-table.fin-compact tbody { display: table-row-group; }
+  .fin-table.fin-compact tr { display: table-row; padding: 0; border: 0; }
+  .fin-table.fin-compact th, .fin-table.fin-compact td { display: table-cell; padding: 0.4rem 0.35rem 0.4rem 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  .fin-table.fin-compact thead th { font-size: 0.6rem; letter-spacing: 0; white-space: normal; }
+  .fin-table.fin-compact tbody th { white-space: nowrap; padding: 0.4rem 0.35rem 0.4rem 0; }
+  .fin-table.fin-compact td::before { content: none; }
+  .fin-table.fin-compact caption { display: table-caption; font-size: 0.85rem; }
+}
