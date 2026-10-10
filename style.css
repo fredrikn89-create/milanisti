@@ -1018,8 +1018,9 @@ html, body { overflow-x: clip; }
 .rd-group img { display: block; width: 100%; height: auto; }
 .rd-sec { margin-top: 2rem; }
 .rd-sec h2 { font-family: var(--display); text-transform: uppercase; font-size: 1.3rem; margin: 0 0 1rem; padding-top: 0.6rem; border-top: 4px solid var(--red); display: inline-block; }
-.rd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.5rem 1.5rem; }
-.rd-card img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; margin-bottom: 0.9rem; }
+.rd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1.5rem 1.5rem; }
+.rd-card { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; align-items: start; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.rd-card img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; }
 .rd-card h3 { margin: 0 0 0.4rem; font-family: var(--display); font-size: 1.4rem; }
 .rd-card p { margin: 0; font-size: 0.95rem; }
 .rd-card .rd-role { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.1rem; }
@@ -1028,4 +1029,4 @@ html, body { overflow-x: clip; }
 /* Forfatter med lite bilde på artikkelen */
 .feed .by-who { display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none; }
 .feed .by-who img { width: 1.25rem; height: 1.25rem; border-radius: 50%; object-fit: cover; flex: none; }
-.rd-lead { grid-template-columns: minmax(13rem, 17rem); }
+.rd-lead { grid-template-columns: minmax(0, 28rem); }
