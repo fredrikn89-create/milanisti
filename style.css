@@ -1024,3 +1024,7 @@ html, body { overflow-x: clip; }
 .rd-card p { margin: 0; font-size: 0.95rem; }
 .rd-card .rd-role { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.1rem; }
 .rd-card .rd-ai { margin-top: 0.7rem; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.03em; color: var(--muted); }
+
+/* Forfatter med lite bilde på artikkelen */
+.feed .by-who { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.feed .by-who img { width: 1.9rem; height: 1.9rem; border-radius: 50%; object-fit: cover; flex: none; }
