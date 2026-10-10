@@ -1020,6 +1020,9 @@ html, body { overflow-x: clip; }
 .rd-sec h2 { font-family: var(--display); text-transform: uppercase; font-size: 1.3rem; margin: 0 0 1rem; padding-top: 0.6rem; border-top: 4px solid var(--red); display: inline-block; }
 .rd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr)); gap: 1.5rem 1.5rem; }
 .rd-card { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; align-items: start; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.rd-card figure { margin: 0; }
+.rd-cap { display: block; margin-top: 0.35rem; font-family: var(--mono); font-size: 0.66rem; line-height: 1.35; color: var(--muted); }
+.rd-cap b { display: block; color: var(--red); letter-spacing: 0.06em; text-transform: uppercase; }
 .rd-card img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; }
 .rd-card h3 { margin: 0 0 0.4rem; font-family: var(--display); font-size: 1.4rem; }
 .rd-card p { margin: 0; font-size: 0.95rem; }
