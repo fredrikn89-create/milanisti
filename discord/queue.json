@@ -1,5 +1,93 @@
 [
  {
+  "id": "f-torino",
+  "date": "2026-08-22",
+  "no": {
+   "title": "Amorim og Abate debuterer i åpningskampen",
+   "ingress": "Serie A starter søndag kl. 20.45 på Olimpico Grande Torino, der begge trenerne har sin første seriekamp på benken.",
+   "badge": "Før kamp: Torino–Milan",
+   "url": "https://milanisti.net/no/#f-torino"
+  },
+  "en": {
+   "title": "Amorim and Abate make their debuts in the opener",
+   "ingress": "Serie A kicks off on Sunday at 20:45 at the Olimpico Grande Torino, where both managers take charge for their first league match.",
+   "badge": "Preview: Torino–Milan",
+   "url": "https://milanisti.net/#f-torino"
+  },
+  "it": {
+   "title": "Amorim e Abate al debutto nella gara d'apertura",
+   "ingress": "La Serie A comincia domenica alle 20:45 all'Olimpico Grande Torino, dove entrambi gli allenatori siedono in panchina per la prima volta in campionato.",
+   "badge": "Pre-partita: Torino–Milan",
+   "url": "https://milanisti.net/it/#f-torino"
+  }
+ },
+ {
+  "id": "a-torino",
+  "date": "2026-08-23",
+  "no": {
+   "title": "Cissé og Rabiot ga Amorim sine første tre poeng",
+   "ingress": "Milan åpnet Serie A-sesongen med 2–1 borte mot Torino etter to mål på tre minutter midt i andre omgang. Ché Adams reduserte i det 93. minutt og ga en nervøs avslutning.",
+   "badge": "Torino 1–2 Milan",
+   "url": "https://milanisti.net/no/#a-torino"
+  },
+  "en": {
+   "title": "Cissé and Rabiot gave Amorim his first three points",
+   "ingress": "Milan opened the Serie A season with a 2–1 away win at Torino after two goals in three minutes in the middle of the second half. Ché Adams pulled one back in the 93rd minute, making for a nervy finish.",
+   "badge": "Torino 1–2 Milan",
+   "url": "https://milanisti.net/#a-torino"
+  },
+  "it": {
+   "title": "Cissé e Rabiot regalano ad Amorim i primi tre punti",
+   "ingress": "Il Milan ha aperto la stagione di Serie A con un 2–1 in trasferta contro il Torino, grazie a due gol in tre minuti a metà ripresa. Ché Adams ha accorciato al 93' regalando un finale nervoso.",
+   "badge": "Torino 1–2 Milan",
+   "url": "https://milanisti.net/it/#a-torino"
+  }
+ },
+ {
+  "id": "f-venezia",
+  "date": "2026-08-27",
+  "no": {
+   "title": "Amorims første kamp på San Siro",
+   "ingress": "Milan tar imot Venezia fredag kl. 20.45 i sin første hjemmekamp under Rúben Amorim, etter åpningsseieren over Torino.",
+   "badge": "Før kamp: Milan–Venezia",
+   "url": "https://milanisti.net/no/#f-venezia"
+  },
+  "en": {
+   "title": "Amorim's first match at San Siro",
+   "ingress": "Milan host Venezia on Friday at 20:45 in their first home match under Rúben Amorim, after the opening win over Torino.",
+   "badge": "Preview: Milan–Venezia",
+   "url": "https://milanisti.net/#f-venezia"
+  },
+  "it": {
+   "title": "La prima di Amorim a San Siro",
+   "ingress": "Il Milan ospita il Venezia venerdì alle 20:45 nella prima partita in casa sotto Rúben Amorim, dopo la vittoria d'esordio sul Torino.",
+   "badge": "Pre-partita: Milan–Venezia",
+   "url": "https://milanisti.net/it/#f-venezia"
+  }
+ },
+ {
+  "id": "a-venezia",
+  "date": "2026-08-28",
+  "no": {
+   "title": "Ramos brøt igjennom etter 69 minutter",
+   "ingress": "Milan slo Venezia 2–0 på San Siro og har full pott etter to runder. Gonçalo Ramos scoret sitt første mål i Milan-drakt etter en lang og bortkastet første halvdel, og Venezia-forsvaret ga laget et uheldig selvmål på overtid.",
+   "badge": "Milan 2–0 Venezia",
+   "url": "https://milanisti.net/no/#a-venezia"
+  },
+  "en": {
+   "title": "Ramos broke through after 69 minutes",
+   "ingress": "Milan beat Venezia 2–0 at San Siro and have maximum points after two matchdays. Gonçalo Ramos scored his first goal in a Milan shirt after a long and wasteful first half, and the Venezia defence gifted the team an unlucky own goal in stoppage time.",
+   "badge": "Milan 2–0 Venezia",
+   "url": "https://milanisti.net/#a-venezia"
+  },
+  "it": {
+   "title": "Ramos sblocca la gara al 69'",
+   "ingress": "Il Milan ha battuto il Venezia 2–0 a San Siro e ha il bottino pieno dopo due giornate. Gonçalo Ramos ha segnato il suo primo gol con la maglia del Milan dopo un lungo e sprecato primo tempo, e la difesa del Venezia ha regalato alla squadra una sfortunata autogol nel recupero.",
+   "badge": "Milan 2–0 Venezia",
+   "url": "https://milanisti.net/it/#a-venezia"
+  }
+ },
+ {
   "id": "f-juventus",
   "date": "2026-09-05",
   "no": {
@@ -327,6 +415,28 @@
    "ingress": "Il Milan ha venduto Rafael Leão, ha speso una cifra record per Gonçalo Ramos e ancora non ha un direttore sportivo. È ora che Gerry Cardinale ammetta che il modello non funziona.",
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-ds"
+  }
+ },
+ {
+  "id": "n-modulvalg",
+  "date": "2026-10-10",
+  "no": {
+   "title": "Fire bak eller tre bak? Amorims systemvalg foran Sassuolo",
+   "ingress": "Rúben Amorim byttet fra sin faste 3-4-2-1 til en firerkjede mot Lecce, og italiensk presse venter at han holder fast ved den på søndag. Hvordan resten av laget settes sammen, er fortsatt åpent.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-modulvalg"
+  },
+  "en": {
+   "title": "Back four or back three? Amorim's system choice ahead of Sassuolo",
+   "ingress": "Rúben Amorim switched from his usual 3-4-2-1 to a back four against Lecce, and the Italian press expects him to stick with it on Sunday. How the rest of the team is put together is still open.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-modulvalg"
+  },
+  "it": {
+   "title": "Difesa a quattro o a tre? La scelta tattica di Amorim in vista del Sassuolo",
+   "ingress": "Rúben Amorim è passato dal suo abituale 3-4-2-1 a una difesa a quattro contro il Lecce, e la stampa italiana si aspetta che la confermi domenica. Come sarà composto il resto della squadra è ancora aperto.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-modulvalg"
   }
  }
 ]
