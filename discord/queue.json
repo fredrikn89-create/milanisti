@@ -438,5 +438,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-rinnovi"
   }
+ },
+ {
+  "id": "f-sassuolo",
+  "date": "2026-10-10",
+  "no": {
+   "title": "Amorim holder kortene tett før Sassuolo",
+   "ingress": "Milan spiller borte mot Sassuolo søndag kl. 18.00. Rúben Amorim ville ikke si om han går for tre eller fire bak, men lovet mer spilletid til Camarda.",
+   "badge": "Før kamp: Sassuolo–Milan",
+   "url": "https://milanisti.net/no/#f-sassuolo"
+  },
+  "en": {
+   "title": "Amorim keeps his cards close before Sassuolo",
+   "ingress": "Milan play away at Sassuolo on Sunday at 18:00. Rúben Amorim would not say whether he will go with three or four at the back, but promised more playing time for Camarda.",
+   "badge": "Preview: Sassuolo–Milan",
+   "url": "https://milanisti.net/#f-sassuolo"
+  },
+  "it": {
+   "title": "Amorim tiene le carte coperte prima del Sassuolo",
+   "ingress": "Il Milan gioca in trasferta contro il Sassuolo domenica alle 18:00. Rúben Amorim non ha voluto dire se andrà con tre o quattro dietro, ma ha promesso più minuti a Camarda.",
+   "badge": "Anteprima: Sassuolo–Milan",
+   "url": "https://milanisti.net/it/#f-sassuolo"
+  }
  }
 ]
