@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="../style.css?v=202610101453">
+<link rel="stylesheet" href="../style.css?v=202610101727">
 <link rel="alternate" hreflang="en" href="../index.html">
 <link rel="alternate" hreflang="it" href="../it/index.html">
 <link rel="alternate" hreflang="nb" href="../no/index.html">
@@ -281,7 +281,7 @@
           body.hidden = !open;
           btn.setAttribute('aria-expanded', String(open));
           btn.textContent = open ? 'Mostra meno' : 'Leggi tutto';
-          if (open && window.umami) { var h = btn.closest('article').querySelector('h3'); umami.track('Artikkel åpnet', { artikkel: h ? h.textContent : body.id }); }
+          if (open && window.umami) { var a = btn.closest('article'); var h = a.querySelector('h3'); umami.track('Artikkel åpnet', { artikkel: h ? h.textContent : body.id, id: a.id, sprak: document.documentElement.lang }); }
         });
       });
       document.querySelectorAll('.filters button').forEach(function (b) {
