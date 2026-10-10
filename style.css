@@ -1041,3 +1041,5 @@ html, body { overflow-x: clip; }
 .rd-rest { margin-top: 0.6rem !important; }
 .rd-card .rd-ai { margin-top: 0.5rem; }
 .feed .ai-by { font-size: 0.82rem; color: var(--muted); font-style: italic; margin: 0.6rem 0 0; }
+.feed .pubtime { font-size: 0.82rem; color: var(--muted); margin: 0.6rem 0 0; }
+.feed .pubtime + .ai-by { margin-top: 0.2rem; }
