@@ -1028,3 +1028,4 @@ html, body { overflow-x: clip; }
 /* Forfatter med lite bilde på artikkelen */
 .feed .by-who { display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none; }
 .feed .by-who img { width: 1.25rem; height: 1.25rem; border-radius: 50%; object-fit: cover; flex: none; }
+.rd-lead { grid-template-columns: minmax(13rem, 17rem); }
