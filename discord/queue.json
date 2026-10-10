@@ -1,0 +1,332 @@
+[
+ {
+  "id": "f-juventus",
+  "date": "2026-09-05",
+  "no": {
+   "title": "Første store prøve for Amorims Milan",
+   "ingress": "Juventus og Milan har begge full pott etter to runder før søndagens toppkamp i Torino kl. 20.45.",
+   "badge": "Før kamp: Juventus–Milan",
+   "url": "https://milanisti.net/no/#f-juventus"
+  },
+  "en": {
+   "title": "First big test for Amorim's Milan",
+   "ingress": "Juventus and Milan both have maximum points after two matchdays ahead of Sunday's top-of-the-table clash in Turin at 20:45.",
+   "badge": "Preview: Juventus–Milan",
+   "url": "https://milanisti.net/#f-juventus"
+  },
+  "it": {
+   "title": "Il primo vero esame per il Milan di Amorim",
+   "ingress": "Juventus e Milan sono entrambe a punteggio pieno dopo due giornate, alla vigilia del big match di domenica a Torino alle 20:45.",
+   "badge": "Pre-partita: Juventus–Milan",
+   "url": "https://milanisti.net/it/#f-juventus"
+  }
+ },
+ {
+  "id": "a-juventus",
+  "date": "2026-09-06",
+  "no": {
+   "title": "Gatti tok seieren fra Milan i tilleggstiden",
+   "ingress": "Milan var to minutter fra seier i Torino, men Federico Gatti headet inn 1–1. Med ett skudd på mål hele kampen var poenget likevel ikke ufortjent.",
+   "badge": "Juventus 1–1 Milan",
+   "url": "https://milanisti.net/no/#a-juventus"
+  },
+  "en": {
+   "title": "Gatti snatched victory from Milan in stoppage time",
+   "ingress": "Milan were two minutes from victory in Turin, but Federico Gatti headed in to make it 1–1. With one shot on target all match, the point was nonetheless not undeserved.",
+   "badge": "Juventus 1–1 Milan",
+   "url": "https://milanisti.net/#a-juventus"
+  },
+  "it": {
+   "title": "Gatti beffa il Milan nel recupero",
+   "ingress": "Il Milan era a due minuti dalla vittoria a Torino, ma Federico Gatti ha segnato di testa l'1–1. Con un solo tiro in porta in tutta la partita, il pareggio non è stato comunque immeritato.",
+   "badge": "Juventus 1–1 Milan",
+   "url": "https://milanisti.net/it/#a-juventus"
+  }
+ },
+ {
+  "id": "f-lazio",
+  "date": "2026-09-11",
+  "no": {
+   "title": "Gattuso tar imot sin gamle klubb",
+   "ingress": "Lazio–Milan spilles på Olimpico i Roma lørdag kl. 18.00, med Gennaro Gattuso på den andre benken.",
+   "badge": "Før kamp: Lazio–Milan",
+   "url": "https://milanisti.net/no/#f-lazio"
+  },
+  "en": {
+   "title": "Gattuso welcomes his old club",
+   "ingress": "Lazio–Milan is played at the Olimpico in Rome on Saturday at 18:00, with Gennaro Gattuso on the other bench.",
+   "badge": "Preview: Lazio–Milan",
+   "url": "https://milanisti.net/#f-lazio"
+  },
+  "it": {
+   "title": "Gattuso ritrova la sua vecchia squadra",
+   "ingress": "Lazio–Milan si gioca all'Olimpico di Roma sabato alle 18:00, con Gennaro Gattuso sull'altra panchina.",
+   "badge": "Pre-partita: Lazio–Milan",
+   "url": "https://milanisti.net/it/#f-lazio"
+  }
+ },
+ {
+  "id": "a-lazio",
+  "date": "2026-09-12",
+  "no": {
+   "title": "Moreira reddet poenget med to mål på to minutter",
+   "ingress": "Milan lå under 0–2 til pause mot Gennaro Gattusos Lazio, men innbytter Diego Moreira sørget for 2–2 med to mål på to minutter.",
+   "badge": "Lazio 2–2 Milan",
+   "url": "https://milanisti.net/no/#a-lazio"
+  },
+  "en": {
+   "title": "Moreira rescued the point with two goals in two minutes",
+   "ingress": "Milan were 0–2 down at half-time against Gennaro Gattuso's Lazio, but substitute Diego Moreira made it 2–2 with two goals in two minutes.",
+   "badge": "Lazio 2–2 Milan",
+   "url": "https://milanisti.net/#a-lazio"
+  },
+  "it": {
+   "title": "Moreira salva il punto con due gol in due minuti",
+   "ingress": "Il Milan era sotto 0–2 all'intervallo contro la Lazio di Gennaro Gattuso, ma il subentrato Diego Moreira ha firmato il 2–2 con due gol in due minuti.",
+   "badge": "Lazio 2–2 Milan",
+   "url": "https://milanisti.net/it/#a-lazio"
+  }
+ },
+ {
+  "id": "f-benfica",
+  "date": "2026-09-15",
+  "no": {
+   "title": "Europa League starter med et gammelt finaleoppgjør",
+   "ingress": "Milan møter Benfica på San Siro onsdag kl. 21.00 i den første kampen i Europa League. Lagene har møttes i to europacupfinaler, og Milan vant begge.",
+   "badge": "Før kamp: Milan–Benfica",
+   "url": "https://milanisti.net/no/#f-benfica"
+  },
+  "en": {
+   "title": "Europa League kicks off with an old final rematch",
+   "ingress": "Milan face Benfica at San Siro on Wednesday at 21:00 in their first Europa League match. The sides have met in two European Cup finals, and Milan won both.",
+   "badge": "Preview: Milan–Benfica",
+   "url": "https://milanisti.net/#f-benfica"
+  },
+  "it": {
+   "title": "L'Europa League si apre con una vecchia sfida da finale",
+   "ingress": "Il Milan affronta il Benfica a San Siro mercoledì alle 21:00 nella prima partita di Europa League. Le due squadre si sono affrontate in due finali europee, e il Milan le ha vinte entrambe.",
+   "badge": "Pre-partita: Milan–Benfica",
+   "url": "https://milanisti.net/it/#f-benfica"
+  }
+ },
+ {
+  "id": "a-benfica",
+  "date": "2026-09-16",
+  "no": {
+   "title": "Benfica ødela europafesten på San Siro",
+   "ingress": "Milan tapte 0–2 for Benfica i den første kampen i Europa League. Det var Benficas første seier over Milan noensinne, og San Siro pep mot Rúben Amorim.",
+   "badge": "Milan 0–2 Benfica",
+   "url": "https://milanisti.net/no/#a-benfica"
+  },
+  "en": {
+   "title": "Benfica spoil the European party at San Siro",
+   "ingress": "Milan lost 0–2 to Benfica in their first Europa League match. It was Benfica's first ever win over Milan, and San Siro booed Rúben Amorim.",
+   "badge": "Milan 0–2 Benfica",
+   "url": "https://milanisti.net/#a-benfica"
+  },
+  "it": {
+   "title": "Il Benfica rovina la festa europea a San Siro",
+   "ingress": "Il Milan ha perso 0–2 contro il Benfica nella prima partita di Europa League. È stata la prima vittoria in assoluto del Benfica sul Milan, e San Siro ha fischiato Rúben Amorim.",
+   "badge": "Milan 0–2 Benfica",
+   "url": "https://milanisti.net/it/#a-benfica"
+  }
+ },
+ {
+  "id": "f-lecce",
+  "date": "2026-09-19",
+  "no": {
+   "title": "San Siro fyller 100 år, og Milan trenger en reaksjon",
+   "ingress": "Milan tar imot Lecce søndag kl. 20.45, dagen etter at San Siro fyller 100 år. Etter tapet for Benfica er det bare seier som holder.",
+   "badge": "Før kamp: Milan–Lecce",
+   "url": "https://milanisti.net/no/#f-lecce"
+  },
+  "en": {
+   "title": "San Siro turns 100, and Milan need a reaction",
+   "ingress": "Milan host Lecce on Sunday at 20:45, the day after San Siro turns 100. After the defeat to Benfica, only a win will do.",
+   "badge": "Preview: Milan–Lecce",
+   "url": "https://milanisti.net/#f-lecce"
+  },
+  "it": {
+   "title": "San Siro compie 100 anni, e il Milan ha bisogno di una reazione",
+   "ingress": "Il Milan ospita il Lecce domenica alle 20:45, il giorno dopo i 100 anni di San Siro. Dopo la sconfitta con il Benfica, va bene solo la vittoria.",
+   "badge": "Pre-partita: Milan–Lecce",
+   "url": "https://milanisti.net/it/#f-lecce"
+  }
+ },
+ {
+  "id": "a-lecce",
+  "date": "2026-09-20",
+  "no": {
+   "title": "Pulisic, Rabiot og Moreira sikret trygg seier",
+   "ingress": "Milan slo Lecce 3–0 og går inn i landslagspausen på femteplass med elleve poeng. Etter en tung uke var dette den mest komplette kampen under Rúben Amorim så langt.",
+   "badge": "Milan 3–0 Lecce",
+   "url": "https://milanisti.net/no/#a-lecce"
+  },
+  "en": {
+   "title": "Pulisic, Rabiot and Moreira secured a comfortable win",
+   "ingress": "Milan beat Lecce 3–0 and go into the international break in fifth place with eleven points. After a tough week, this was the most complete performance under Rúben Amorim so far.",
+   "badge": "Milan 3–0 Lecce",
+   "url": "https://milanisti.net/#a-lecce"
+  },
+  "it": {
+   "title": "Pulisic, Rabiot e Moreira firmano una vittoria tranquilla",
+   "ingress": "Il Milan ha battuto il Lecce 3–0 e va alla sosta per le nazionali al quinto posto con undici punti. Dopo una settimana pesante, è stata la partita più completa finora della gestione Rúben Amorim.",
+   "badge": "Milan 3–0 Lecce",
+   "url": "https://milanisti.net/it/#a-lecce"
+  }
+ },
+ {
+  "id": "s-amorim",
+  "date": "2026-09-21",
+  "no": {
+   "title": "Amorim lærte av Manchester. Nå må han lære av Benfica",
+   "ingress": "Treneren byttet til firebackslinje mot Lecce og fikk sin beste kamp. Men rotasjonen mot Benfica viste at han fortsatt eksperimenterer med det han ikke har råd til å tape.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-amorim"
+  },
+  "en": {
+   "title": "Amorim learned from Manchester. Now he has to learn from Benfica",
+   "ingress": "The coach switched to a back four against Lecce and got his best performance. But the rotation against Benfica showed that he is still experimenting when he cannot afford to lose.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-amorim"
+  },
+  "it": {
+   "title": "Amorim ha imparato dal Manchester. Ora deve imparare dal Benfica",
+   "ingress": "L'allenatore è passato alla difesa a quattro contro il Lecce e ha ottenuto la sua migliore partita. Ma il turnover contro il Benfica ha mostrato che sta ancora sperimentando in partite che non può permettersi di perdere.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-amorim"
+  }
+ },
+ {
+  "id": "n-moreira-mvp",
+  "date": "2026-10-03",
+  "no": {
+   "title": "Moreira kåret til månedens spiller i september",
+   "ingress": "Supporterne stemte fram Diego Moreira som Milans beste spiller i september. Han har scoret tre seriemål, alle som innbytter.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-moreira-mvp"
+  },
+  "en": {
+   "title": "Moreira named Player of the Month for September",
+   "ingress": "The fans voted Diego Moreira Milan's best player in September. He has scored three league goals, all of them off the bench.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-moreira-mvp"
+  },
+  "it": {
+   "title": "Moreira è l'MVP rossonero di settembre",
+   "ingress": "I tifosi hanno scelto Diego Moreira come miglior giocatore rossonero di settembre. Ha segnato tre gol in campionato, tutti da subentrato.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-moreira-mvp"
+  }
+ },
+ {
+  "id": "s-sansiro",
+  "date": "2026-10-04",
+  "no": {
+   "title": "Vi feiret San Siro i 100 år. Nå skal det rives",
+   "ingress": "Milan markerte stadionets hundreårsdag med lysshow og en DJ på taket. Samtidig jobber klubben med å rive det. Det er vanskelig å se for seg en mer selvmotsigende jubileumsuke.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-sansiro"
+  },
+  "en": {
+   "title": "We celebrated 100 years of San Siro. Now it is to be demolished",
+   "ingress": "Milan marked the stadium's centenary with a light show and a DJ on the roof. At the same time, the club is working to demolish it. It is hard to imagine a more self-contradictory anniversary week.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-sansiro"
+  },
+  "it": {
+   "title": "Abbiamo festeggiato i 100 anni di San Siro. Ora verrà abbattuto",
+   "ingress": "Il Milan ha celebrato il centenario dello stadio con uno spettacolo di luci e un DJ sul tetto. Nel frattempo, il club lavora per abbatterlo. Difficile immaginare una settimana del centenario più contraddittoria.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-sansiro"
+  }
+ },
+ {
+  "id": "n-skader",
+  "date": "2026-10-06",
+  "no": {
+   "title": "Saelemaekers ute i flere måneder, Estupiñán usikker",
+   "ingress": "Alexis Saelemaekers må trolig opereres i den samme ankelen som ble operert i 2024. Pervis Estupiñán skadet kneet med Ecuador. Begge mangler på venstresiden før Sassuolo.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-skader"
+  },
+  "en": {
+   "title": "Saelemaekers out for months, Estupiñán doubtful",
+   "ingress": "Alexis Saelemaekers is likely to need surgery on the same ankle that was operated on in 2024. Pervis Estupiñán injured his knee with Ecuador. Both are left-sided options Milan are missing before Sassuolo.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-skader"
+  },
+  "it": {
+   "title": "Saelemaekers fuori per mesi, Estupiñán in dubbio",
+   "ingress": "Alexis Saelemaekers dovrà probabilmente operarsi alla stessa caviglia già operata nel 2024. Pervis Estupiñán si è fatto male al ginocchio con l'Ecuador. Il Milan perde due uomini della fascia sinistra prima del Sassuolo.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-skader"
+  }
+ },
+ {
+  "id": "s-moreira",
+  "date": "2026-10-06",
+  "no": {
+   "title": "Moreira er for god til å sitte på benken",
+   "ingress": "Tre mål i de to siste seriekampene, alle som innbytter. Diego Moreira er Milans beste spiller i september, og nå må Rúben Amorim tørre å starte ham.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-moreira"
+  },
+  "en": {
+   "title": "Moreira is too good to sit on the bench",
+   "ingress": "Three goals in the last two league matches, all as a substitute. Diego Moreira was Milan's best player in September, and now Rúben Amorim must dare to start him.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-moreira"
+  },
+  "it": {
+   "title": "Moreira è troppo forte per stare in panchina",
+   "ingress": "Tre gol nelle ultime due partite di campionato, tutti da subentrato. Diego Moreira è il miglior giocatore del Milan a settembre, e ora Rúben Amorim deve avere il coraggio di schierarlo titolare.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-moreira"
+  }
+ },
+ {
+  "id": "n-cardinale-sansiro",
+  "date": "2026-10-07",
+  "no": {
+   "title": "Cardinale: – Vi skal bygge et stadion for 80 000",
+   "ingress": "Milan-eier Gerry Cardinale snakket om San Siro og en NBA-arena på en konferanse i Los Angeles. Samme uke ryddet forvaltningsdomstolen veien for salget av stadionet.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-cardinale-sansiro"
+  },
+  "en": {
+   "title": "Cardinale: “We will build a stadium for 80,000”",
+   "ingress": "Milan owner Gerry Cardinale talked about San Siro and an NBA arena at a conference in Los Angeles. In the same week, the administrative court cleared the way for the sale of the stadium.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-cardinale-sansiro"
+  },
+  "it": {
+   "title": "Cardinale: «Costruiremo uno stadio da 80mila posti»",
+   "ingress": "Il patron del Milan Gerry Cardinale ha parlato di San Siro e di un'arena NBA durante una conferenza a Los Angeles. Nella stessa settimana il TAR ha dato via libera alla vendita dello stadio.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-cardinale-sansiro"
+  }
+ },
+ {
+  "id": "s-ds",
+  "date": "2026-10-07",
+  "no": {
+   "title": "74 millioner for en spiss, null for en sportsdirektør",
+   "ingress": "Milan solgte Rafael Leão, brukte klubbrekord på Gonçalo Ramos og har fortsatt ingen sportsdirektør. Det er på tide at Gerry Cardinale innrømmer at modellen ikke virker.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-ds"
+  },
+  "en": {
+   "title": "74 million for a striker, nothing for a sporting director",
+   "ingress": "Milan sold Rafael Leão, spent a club record on Gonçalo Ramos and still have no sporting director. It is time Gerry Cardinale admitted that the model is not working.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-ds"
+  },
+  "it": {
+   "title": "74 milioni per un centravanti, zero per un direttore sportivo",
+   "ingress": "Il Milan ha venduto Rafael Leão, ha speso una cifra record per Gonçalo Ramos e ancora non ha un direttore sportivo. È ora che Gerry Cardinale ammetta che il modello non funziona.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-ds"
+  }
+ }
+]

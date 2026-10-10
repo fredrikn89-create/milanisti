@@ -1,0 +1,25 @@
+name: Post nye artikler til Discord
+on:
+  push:
+    branches: [main]
+    paths: ['discord/queue.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Post
+        env:
+          DISCORD_WEBHOOK_NO: ${{ secrets.DISCORD_WEBHOOK_NO }}
+          DISCORD_WEBHOOK_EN: ${{ secrets.DISCORD_WEBHOOK_EN }}
+          DISCORD_WEBHOOK_IT: ${{ secrets.DISCORD_WEBHOOK_IT }}
+        run: python3 discord/post.py
+      - name: Lagre hva som er postet
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add discord/posted.json
+          git diff --cached --quiet || (git commit -m "Oppdater postet-liste" && git push)
