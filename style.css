@@ -1026,5 +1026,5 @@ html, body { overflow-x: clip; }
 .rd-card .rd-ai { margin-top: 0.7rem; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.03em; color: var(--muted); }
 
 /* Forfatter med lite bilde på artikkelen */
-.feed .by-who { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-.feed .by-who img { width: 1.9rem; height: 1.9rem; border-radius: 50%; object-fit: cover; flex: none; }
+.feed .by-who { display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none; }
+.feed .by-who img { width: 1.25rem; height: 1.25rem; border-radius: 50%; object-fit: cover; flex: none; }
