@@ -460,5 +460,27 @@
    "badge": "Anteprima: Sassuolo–Milan",
    "url": "https://milanisti.net/it/#f-sassuolo"
   }
+ },
+ {
+  "id": "s-yankees",
+  "date": "2026-10-10",
+  "no": {
+   "title": "Milan var Milan før noen sa Yankees",
+   "ingress": "Gerry Cardinale kaller Milan «New York Yankees i italiensk fotball» og vil bygge en sports- og underholdningsplattform med nytt stadion og NBA-arena. Ambisjonen er stor. Spørsmålet er hvor mye av den som handler om fotballen.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-yankees"
+  },
+  "en": {
+   "title": "Milan was Milan before anyone said Yankees",
+   "ingress": "Gerry Cardinale calls Milan «the New York Yankees of Italian football» and wants to build a sports and entertainment platform with a new stadium and an NBA arena. The ambition is big. The question is how much of it is about football.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-yankees"
+  },
+  "it": {
+   "title": "Il Milan era il Milan prima che qualcuno dicesse Yankees",
+   "ingress": "Gerry Cardinale definisce il Milan «i New York Yankees del calcio italiano» e vuole costruire una piattaforma sportiva e di intrattenimento con un nuovo stadio e un'arena NBA. L'ambizione è grande. La domanda è quanta parte riguardi il calcio.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-yankees"
+  }
  }
 ]
