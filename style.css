@@ -1068,3 +1068,8 @@ html, body { overflow-x: clip; }
 .abs-flag { flex: none; min-width: 3rem; text-align: center; font: 600 0.68rem var(--mono, "IBM Plex Mono", monospace); letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.4rem; border-radius: 3px; color: #fff !important; }
 .abs-rod { background: #b3202a; }
 .abs-gul { background: #f2b705; color: #111 !important; }
+.lg-topgames { margin-top: 1.4rem; }
+.lg-topgames h3 { font-size: 1rem; margin: 0 0 0.5rem; }
+.lg-topgames ol { list-style: none; margin: 0; padding: 0; }
+.lg-topgames li { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; padding: 0.5rem 0; border-top: 1px solid var(--line, #ddd); }
+.lg-topgames .who small { display: block; font-size: 0.75rem; color: var(--muted); }
