@@ -780,9 +780,9 @@ html, body { overflow-x: clip; }
 .bors .pos { color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
 .bors .cm { color: var(--fg); }
 .die { display: inline-grid; place-items: center; min-width: 1.9rem; height: 1.9rem; padding: 0 0.3rem; font-weight: 700; font-size: 0.95rem; border: 1px solid var(--rule); border-radius: 4px; background: #fff; }
-.die.d5, .die.d6 { background: var(--red); border-color: var(--red); color: #fff; }
-.die.d4 { border-color: var(--fg); }
-.die.d1, .die.d2 { color: var(--muted); }
+.die.d8, .die.d9, .die.d10 { background: var(--red); border-color: var(--red); color: #fff; }
+.die.d7 { border-color: var(--fg); }
+.die.d1, .die.d2, .die.d3, .die.d4, .die.d5 { color: var(--muted); }
 .die.na { color: var(--muted); border-style: dashed; }
 @media (max-width: 760px) {
   .bors table, .bors tbody, .bors tr { display: block; }
