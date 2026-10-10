@@ -1012,3 +1012,16 @@ html, body { overflow-x: clip; }
   .rk-pl td::before { content: none; }
 }
 .rk-na { font-family: var(--mono); font-size: 10px; fill: var(--muted); text-anchor: middle; }
+
+/* Redaksjon */
+.rd-group { margin: 1.5rem 0 0; }
+.rd-group img { display: block; width: 100%; height: auto; }
+.rd-sec { margin-top: 2.5rem; }
+.rd-sec h2 { font-family: var(--display); text-transform: uppercase; font-size: 1.3rem; margin: 0 0 1rem; padding-top: 0.6rem; border-top: 4px solid var(--red); display: inline-block; }
+.rd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem 1.5rem; }
+.rd-card { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; align-items: start; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.rd-card img { display: block; width: 5rem; height: 5rem; object-fit: cover; object-position: 50% 28%; border-radius: 50%; }
+.rd-card h3 { margin: 0 0 0.4rem; font-family: var(--display); font-size: 1.4rem; }
+.rd-card p { margin: 0; font-size: 0.95rem; }
+.rd-card .rd-role { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.1rem; }
+.rd-ai { margin-top: 2rem; }
