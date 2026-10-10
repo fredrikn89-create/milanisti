@@ -659,7 +659,7 @@ html, body { overflow-x: clip; }
   .people li { grid-template-columns: minmax(0, 1fr); }
   /* Fem faner på én linje på mobil (Fredrik 9.10.2026) */
   .menu { flex-wrap: wrap; justify-content: space-between; gap: 0; }
-  .menu > li > a { padding: 0.5rem 0.12rem 0.6rem; font-size: clamp(0.66rem, 3vw, 1rem); letter-spacing: -0.005em; white-space: nowrap; }
+  .menu > li > a { padding: 0.5rem 0.12rem 0.6rem; font-size: clamp(0.66rem, 3.25vw, 1rem); letter-spacing: -0.005em; white-space: nowrap; }
   .menu > li:last-child > a { padding-right: 0; }
   .drop { display: none !important; }
 }
