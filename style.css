@@ -1060,3 +1060,11 @@ html, body { overflow-x: clip; }
 .feed .ai-by { font-size: 0.82rem; color: var(--muted); font-style: italic; margin: 0.6rem 0 0; }
 .feed .pubtime { font-size: 0.82rem; color: var(--muted); margin: 0.6rem 0 0; }
 .feed .pubtime + .ai-by { margin-top: 0.2rem; }
+
+.absences ul { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+.absences li { display: flex; gap: 0.7rem; align-items: flex-start; padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+.absences li b { display: block; font-weight: 600; }
+.absences li span { font-size: 0.85rem; color: var(--muted); }
+.abs-flag { flex: none; min-width: 3rem; text-align: center; font: 600 0.68rem var(--mono, "IBM Plex Mono", monospace); letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.4rem; border-radius: 3px; color: #fff !important; }
+.abs-rod { background: #b3202a; }
+.abs-gul { background: #f2b705; color: #111 !important; }
