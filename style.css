@@ -1073,3 +1073,11 @@ html, body { overflow-x: clip; }
 .lg-topgames ol { list-style: none; margin: 0; padding: 0; }
 .lg-topgames li { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; padding: 0.5rem 0; border-top: 1px solid var(--line, #ddd); }
 .lg-topgames .who small { display: block; font-size: 0.75rem; color: var(--muted); }
+.st-form { margin-top: 1.6rem; }
+.st-form h3 { font-size: 1rem; margin: 0 0 0.6rem; }
+.st-form ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.st-form li { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.7rem 0.35rem 0.35rem; border: 1px solid var(--line, #ddd); border-radius: 999px; font-size: 0.9rem; }
+.st-form li b { display: inline-flex; width: 1.6rem; height: 1.6rem; align-items: center; justify-content: center; border-radius: 50%; color: #fff; background: #777; font-size: 0.8rem; }
+.st-form li.fm-w b { background: #1e7b3a; }
+.st-form li.fm-l b { background: #b3202a; }
+.st-form li span small { display: block; font-size: 0.72rem; color: var(--muted); }
