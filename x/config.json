@@ -1,0 +1,4 @@
+{
+ "accounts": {"no": "NO", "en": "EN", "it": "IT"},
+ "max_per_run": 3
+}
