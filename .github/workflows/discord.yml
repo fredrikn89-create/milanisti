@@ -2,7 +2,7 @@ name: Post nye artikler til Discord
 on:
   push:
     branches: [main]
-    paths: ['discord/queue.json']
+    paths: ['discord/queue.json', 'discord/post.py']
   workflow_dispatch:
 permissions:
   contents: write

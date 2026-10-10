@@ -9,10 +9,14 @@ done = set(json.load(open(path)))
 for a in queue:
     if a['id'] in done:
         continue
+    complete = True
     for lang, env in HOOKS.items():
+        if f"{a['id']}:{lang}" in done:
+            continue
         hook = os.environ.get(env)
         if not hook:
-            print(f'Mangler {env}, hopper over {a["id"]} ({lang})')
+            print(f'Mangler {env}, hopper over {a["id"]} ({lang}); prøves igjen neste kjøring')
+            complete = False
             continue
         t = a[lang]
         payload = {'username': 'Milanisti', 'embeds': [{'title': t['title'], 'description': t['ingress'], 'url': t['url'],
@@ -20,5 +24,7 @@ for a in queue:
         req = urllib.request.Request(hook, json.dumps(payload).encode(), {'Content-Type': 'application/json', 'User-Agent': 'milanisti'})
         urllib.request.urlopen(req, timeout=20).read()
         print('postet', a['id'], lang)
-    done.add(a['id'])
+        done.add(f"{a['id']}:{lang}")
+    if complete:
+        done.add(a['id'])
 json.dump(sorted(done), open(path, 'w'), indent=0)
