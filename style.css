@@ -784,6 +784,21 @@ html, body { overflow-x: clip; }
 .die.d7 { border-color: var(--fg); }
 .die.d1, .die.d2, .die.d3, .die.d4, .die.d5 { color: var(--muted); }
 .die.na { color: var(--muted); border-style: dashed; }
+.pitch-row { display: grid; grid-template-columns: 1fr; gap: 0.8rem; max-width: 26rem; margin: 0 auto; }
+.pitch-row.two { grid-template-columns: 1fr 1fr; gap: 0.5rem; max-width: 40rem; }
+.pitch-wrap { margin: 0; }
+.pitch-wrap figcaption { font: 500 0.72rem var(--mono, "IBM Plex Mono", monospace); letter-spacing: 0.06em; color: var(--muted); text-align: center; margin-bottom: 0.25rem; }
+.pitch { position: relative; aspect-ratio: 68 / 100; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-around; padding: 4% 1% 4%; background: repeating-linear-gradient(180deg, #3b8a4a 0 10%, #348243 10% 20%); }
+.pitch-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pr { position: relative; display: flex; justify-content: space-around; align-items: flex-start; }
+.pp { position: relative; display: flex; flex-direction: column; align-items: center; min-width: 0; flex: 1 1 0; }
+.pp b { margin-top: 0.15rem; font-size: 0.66rem; line-height: 1.1; font-weight: 600; color: #fff; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); max-width: 100%; white-space: nowrap; }
+.pitch .die { min-width: 0; width: 1.9rem; height: 1.9rem; padding: 0; border-radius: 50%; font-size: 0.8rem; border-color: rgba(0, 0, 0, 0.35); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
+.pitch .die.na { background: rgba(255, 255, 255, 0.75); border-color: rgba(0, 0, 0, 0.35); border-style: solid; color: #666; }
+.pitch-row.two .die { width: 1.55rem; height: 1.55rem; font-size: 0.68rem; }
+.pitch-row.two .pp b { font-size: 0.5rem; letter-spacing: -0.01em; }
+@media (min-width: 560px) { .pitch-row.two .pp b { font-size: 0.62rem; } .pitch-row.two .die { width: 1.8rem; height: 1.8rem; font-size: 0.78rem; } }
+
 @media (max-width: 760px) {
   .bors table, .bors tbody, .bors tr { display: block; }
   .bors thead { display: none; }
