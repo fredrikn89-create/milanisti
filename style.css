@@ -1090,7 +1090,7 @@ html, body { overflow-x: clip; }
   .fin-table.fin-compact tr { display: table-row; padding: 0; border: 0; }
   .fin-table.fin-compact th, .fin-table.fin-compact td { display: table-cell; padding: 0.4rem 0.35rem 0.4rem 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
   .fin-table.fin-compact thead th { font-size: 0.6rem; letter-spacing: 0; white-space: normal; }
-  .fin-table.fin-compact tbody th { white-space: nowrap; padding: 0.4rem 0.35rem 0.4rem 0; }
+  .fin-table.fin-compact tbody th { white-space: normal; min-width: 3.2rem; padding: 0.4rem 0.35rem 0.4rem 0; }
   .fin-table.fin-compact td::before { content: none; }
   .fin-table.fin-compact caption { display: table-caption; font-size: 0.85rem; }
 }
