@@ -482,5 +482,27 @@
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-yankees"
   }
+ },
+ {
+  "id": "a-sassuolo",
+  "date": "2026-10-11",
+  "no": {
+   "title": "Rabiot ga Milan ledelsen, og Sassuolo fikk den tilbake",
+   "ingress": "Milan tok ledelsen gjennom Adrien Rabiot etter 63 minutter, men slapp inn utligningen fem minutter senere. Dermed ble det 1–1 i Reggio Emilia, og Milan er tilbake på femteplass med tolv poeng. Tredje uavgjort på seks serierunder, og igjen var det laget selv som ga fra seg tre poeng.",
+   "badge": "Sassuolo 1–1 Milan",
+   "url": "https://milanisti.net/no/#a-sassuolo"
+  },
+  "en": {
+   "title": "Rabiot gave Milan the lead, and Sassuolo took it back",
+   "ingress": "Milan took the lead through Adrien Rabiot after 63 minutes but conceded the equaliser five minutes later. It ended 1–1 in Reggio Emilia, and Milan are back in fifth place with twelve points. A third draw in six league rounds, and once again the team gave away three points themselves.",
+   "badge": "Sassuolo 1–1 Milan",
+   "url": "https://milanisti.net/#a-sassuolo"
+  },
+  "it": {
+   "title": "Rabiot dà il vantaggio al Milan, il Sassuolo se lo riprende",
+   "ingress": "Il Milan è passato in vantaggio con Adrien Rabiot al 63', ma ha subito il pareggio cinque minuti dopo. Finisce 1–1 a Reggio Emilia e il Milan è di nuovo quinto con dodici punti. Il terzo pareggio in sei giornate di campionato, e ancora una volta è stata la squadra stessa a regalare tre punti.",
+   "badge": "Sassuolo 1–1 Milan",
+   "url": "https://milanisti.net/it/#a-sassuolo"
+  }
  }
 ]
