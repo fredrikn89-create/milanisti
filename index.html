@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="style.css?v=202610130947">
+<link rel="stylesheet" href="style.css?v=202610130951">
 <link rel="alternate" hreflang="en" href="index.html">
 <link rel="alternate" hreflang="it" href="it/index.html">
 <link rel="alternate" hreflang="nb" href="no/index.html">
@@ -340,7 +340,7 @@
       });
       document.querySelectorAll('.share').forEach(function (b) {
         b.addEventListener('click', function () {
-          var url = location.origin + location.pathname + '#' + b.dataset.id;
+          var url = location.origin + location.pathname.replace(/[^\/]*$/, '') + 'a/' + b.dataset.id + '.html';
           if (window.umami) umami.track('Artikkel delt', { id: b.dataset.id, sprak: document.documentElement.lang });
           if (navigator.share) { navigator.share({ title: b.dataset.title, url: url }).catch(function () {}); return; }
           var old = b.textContent, done = function () { b.textContent = b.dataset.done; setTimeout(function () { b.textContent = old; }, 2000); };
