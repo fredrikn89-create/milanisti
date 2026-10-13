@@ -526,5 +526,27 @@
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-torsdag"
   }
+ },
+ {
+  "id": "n-ibrahimovic",
+  "date": "2026-10-13",
+  "no": {
+   "title": "Sky: Ibrahimović er ute av den daglige driften i Milan",
+   "ingress": "Zlatan Ibrahimović har ikke lenger noen operativ rolle i Milan, melder Sky Sport Italia. Han blir værende som rådgiver i eierselskapet RedBird.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-ibrahimovic"
+  },
+  "en": {
+   "title": "Sky: Ibrahimović is out of Milan's day-to-day running",
+   "ingress": "Zlatan Ibrahimović no longer has an operational role at Milan, Sky Sport Italia reports. He stays on as an adviser at the ownership group RedBird.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-ibrahimovic"
+  },
+  "it": {
+   "title": "Sky: Ibrahimović fuori dalla gestione quotidiana del Milan",
+   "ingress": "Zlatan Ibrahimović non ha più un ruolo operativo nel Milan, riporta Sky Sport Italia. Resta consulente della proprietà RedBird.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-ibrahimovic"
+  }
  }
 ]
