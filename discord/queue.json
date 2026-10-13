@@ -504,5 +504,27 @@
    "badge": "Sassuolo 1–1 Milan",
    "url": "https://milanisti.net/it/#a-sassuolo"
   }
+ },
+ {
+  "id": "s-torsdag",
+  "date": "2026-10-13",
+  "no": {
+   "title": "Torsdager, trenere og tålmodighet",
+   "ingress": "Debatten om Europa League handler egentlig ikke om turneringen. Den handler om en klubb som har byttet trener fire ganger på to år, og om hvorvidt den fjerde nye, Rúben Amorim, er mannen som gir Milan roen og storheten tilbake.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-torsdag"
+  },
+  "en": {
+   "title": "Thursdays, managers and patience",
+   "ingress": "The debate about the Europa League is not really about the competition. It is about a club that has changed manager four times in two years, and about whether the fourth newcomer, Rúben Amorim, is the man to bring calm and greatness back to Milan.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-torsdag"
+  },
+  "it": {
+   "title": "I giovedì, gli allenatori e la pazienza",
+   "ingress": "Il dibattito sull'Europa League non riguarda davvero la competizione. Riguarda un club che ha cambiato allenatore quattro volte in due anni, e se il quarto nuovo arrivato, Rúben Amorim, sia l'uomo che riporterà al Milan la calma e la grandezza.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-torsdag"
+  }
  }
 ]
