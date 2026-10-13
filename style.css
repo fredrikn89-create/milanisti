@@ -726,6 +726,11 @@ html, body { overflow-x: clip; }
   cursor: pointer;
 }
 .readmore:hover { background: var(--fg); }
+.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; align-items: flex-start; }
+.actions .readmore, .actions .readmore[aria-expanded="true"] { margin-top: 0; }
+.actions:has(.readmore[aria-expanded="true"]) { margin-top: 1rem; }
+.share { padding: 0.55rem 1rem; font: 500 0.78rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg); background: transparent; border: 1px solid var(--rule); cursor: pointer; }
+.share:hover { border-color: var(--fg); }
 .readmore[aria-expanded="true"] { margin-top: 1rem; background: transparent; color: var(--red); border: 1px solid var(--red); }
 @media (max-width: 760px) {
   /* Mobil (Fredrik 9.10.2026): bilde i full bredde men lavere, tittel rett under, mindre tilleggsinfo */
@@ -744,6 +749,7 @@ html, body { overflow-x: clip; }
   .feed .txt h3 { font-size: 1.35rem; line-height: 1.12; margin-bottom: 0.4rem; }
   .feed .ingress { margin-bottom: 0.6rem; }
   .readmore { margin-top: 0; }
+  .actions { margin-top: 0; }
 }
 
 .art-fig .comp-logo {
