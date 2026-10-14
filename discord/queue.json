@@ -548,5 +548,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-ibrahimovic"
   }
+ },
+ {
+  "id": "f-salzburg",
+  "date": "2026-10-14",
+  "no": {
+   "title": "Amorim varsler rotasjon i Salzburg, og Camarda kan få sjansen",
+   "ingress": "Milan møter Salzburg borte torsdag kl. 18.45 etter 0–2 mot Benfica i første runde. Amorim bekreftet at det blir utskiftninger, og at Pavlović starter.",
+   "badge": "Før kamp: Salzburg–Milan",
+   "url": "https://milanisti.net/no/#f-salzburg"
+  },
+  "en": {
+   "title": "Amorim promises rotation in Salzburg, and Camarda could get his chance",
+   "ingress": "Milan visit Salzburg on Thursday at 18:45 after a 0–2 defeat to Benfica on matchday 1. Amorim confirmed there will be changes, and that Pavlović will start.",
+   "badge": "Preview: Salzburg–Milan",
+   "url": "https://milanisti.net/#f-salzburg"
+  },
+  "it": {
+   "title": "Amorim annuncia rotazioni a Salisburgo, e Camarda può avere la sua occasione",
+   "ingress": "Il Milan fa visita al Salisburgo giovedì alle 18:45 dopo lo 0–2 contro il Benfica alla prima giornata. Amorim ha confermato che ci saranno cambi e che Pavlović partirà titolare.",
+   "badge": "Prepartita: Salisburgo–Milan",
+   "url": "https://milanisti.net/it/#f-salzburg"
+  }
  }
 ]
