@@ -570,5 +570,27 @@
    "badge": "Prepartita: Salisburgo–Milan",
    "url": "https://milanisti.net/it/#f-salzburg"
   }
+ },
+ {
+  "id": "a-salzburg",
+  "date": "2026-10-15",
+  "no": {
+   "title": "Cissé tok hat-trick og Milan knuste Salzburg",
+   "ingress": "Milan slo Salzburg 4–0 borte, og Alphadjo Cissé scoret tre ganger. Det ga Milans første poeng i årets Europa League, etter 0–2-tapet mot Benfica i første runde.",
+   "badge": "Salzburg 0–4 Milan",
+   "url": "https://milanisti.net/no/#a-salzburg"
+  },
+  "en": {
+   "title": "Cissé hat-trick as Milan crush Salzburg",
+   "ingress": "Milan beat Salzburg 4–0 away, with Alphadjo Cissé scoring three times. It gave Milan their first points of this season's Europa League, after the 2–0 defeat to Benfica in the opening round.",
+   "badge": "Salzburg 0–4 Milan",
+   "url": "https://milanisti.net/#a-salzburg"
+  },
+  "it": {
+   "title": "Tripletta di Cissé e il Milan travolge il Salisburgo",
+   "ingress": "Il Milan ha battuto il Salisburgo 4-0 in trasferta, con tre gol di Alphadjo Cissé. Sono i primi punti rossoneri in questa Europa League, dopo lo 0-2 con il Benfica alla prima giornata.",
+   "badge": "Salisburgo 0-4 Milan",
+   "url": "https://milanisti.net/it/#a-salzburg"
+  }
  }
 ]
