@@ -570,27 +570,5 @@
    "badge": "Prepartita: Salisburgo–Milan",
    "url": "https://milanisti.net/it/#f-salzburg"
   }
- },
- {
-  "id": "n-pavlovic-renewal",
-  "date": "2026-10-15",
-  "no": {
-   "title": "Pavlović forlenger med Milan til 2031",
-   "ingress": "Strahinja Pavlović har signert en ny kontrakt som varer til 30. juni 2031, med opsjon på ett år til. Milan bekreftet avtalen onsdag, dagen før kampen mot hans gamle klubb Salzburg.",
-   "badge": "Nyheter",
-   "url": "https://milanisti.net/no/#n-pavlovic-renewal"
-  },
-  "en": {
-   "title": "Pavlović extends with Milan until 2031",
-   "ingress": "Strahinja Pavlović has signed a new contract running until 30 June 2031, with an option for one more year. Milan confirmed the deal on Wednesday, the day before facing his former club Salzburg.",
-   "badge": "News",
-   "url": "https://milanisti.net/#n-pavlovic-renewal"
-  },
-  "it": {
-   "title": "Pavlović rinnova con il Milan fino al 2031",
-   "ingress": "Strahinja Pavlović ha firmato un nuovo contratto fino al 30 giugno 2031, con opzione per un altro anno. Il Milan ha ufficializzato l'accordo mercoledì, alla vigilia della sfida contro il Salisburgo, la sua ex squadra.",
-   "badge": "Notizie",
-   "url": "https://milanisti.net/it/#n-pavlovic-renewal"
-  }
  }
 ]
