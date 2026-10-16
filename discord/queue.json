@@ -592,5 +592,27 @@
    "badge": "Salisburgo 0-4 Milan",
    "url": "https://milanisti.net/it/#a-salzburg"
   }
+ },
+ {
+  "id": "s-flattered",
+  "date": "2026-10-16",
+  "no": {
+   "title": "Treneren som sa nei takk til rosen",
+   "ingress": "Milan vant 4–0 i Salzburg, og etter kampen var det Rúben Amorim som ba om å få dempe jubelen. Det forteller mer om denne sesongen enn selve hat-tricken.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-flattered"
+  },
+  "en": {
+   "title": "The manager who said no thanks to the praise",
+   "ingress": "Milan won 4–0 in Salzburg, and after the match it was Rúben Amorim who asked to turn the celebrations down. That says more about this season than the hat-trick itself.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-flattered"
+  },
+  "it": {
+   "title": "L'allenatore che ha detto no grazie agli elogi",
+   "ingress": "Il Milan ha vinto 4–0 a Salisburgo, e dopo la partita è stato Rúben Amorim a chiedere di abbassare i toni dei festeggiamenti. Dice più su questa stagione della tripletta stessa.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-flattered"
+  }
  }
 ]
