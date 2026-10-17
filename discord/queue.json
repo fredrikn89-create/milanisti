@@ -614,5 +614,27 @@
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-flattered"
   }
+ },
+ {
+  "id": "n-tresoldi",
+  "date": "2026-10-17",
+  "no": {
+   "title": "Gazzetta: Cardinale vil ha Tresoldi, og Inter følger også med",
+   "ingress": "Gazzetta dello Sport melder lørdag at Milan-eier Gerry Cardinale vil hente Club Brugge-spissen Nicolò Tresoldi. Det er et rykte: det er ikke rapportert noe bud.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-tresoldi"
+  },
+  "en": {
+   "title": "Gazzetta: Cardinale wants Tresoldi, and Inter are watching too",
+   "ingress": "Gazzetta dello Sport reports on Saturday that Milan owner Gerry Cardinale wants to sign Club Brugge striker Nicolò Tresoldi. It is a rumour: no bid has been reported.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-tresoldi"
+  },
+  "it": {
+   "title": "Gazzetta: Cardinale vuole Tresoldi, e anche l'Inter è alla finestra",
+   "ingress": "La Gazzetta dello Sport riporta sabato che il proprietario del Milan Gerry Cardinale vuole l'attaccante del Club Brugge Nicolò Tresoldi. È una voce: non è stata riportata alcuna offerta.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-tresoldi"
+  }
  }
 ]
