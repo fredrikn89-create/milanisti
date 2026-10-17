@@ -636,5 +636,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-tresoldi"
   }
+ },
+ {
+  "id": "f-atalanta",
+  "date": "2026-10-17",
+  "no": {
+   "title": "Amorim hopper over pressekonferansen, og Cissé kan beholde plassen mot Atalanta",
+   "ingress": "Milan møter Atalanta på San Siro søndag kl. 18.00, tre dager etter 4–0 i Salzburg. Amorim holder ingen pressekonferanse, så laget må leses ut av pressens indiskresjoner.",
+   "badge": "Før kamp: Milan–Atalanta",
+   "url": "https://milanisti.net/no/#f-atalanta"
+  },
+  "en": {
+   "title": "Amorim skips the press conference, and Cissé may keep his place against Atalanta",
+   "ingress": "Milan face Atalanta at San Siro on Sunday at 6 pm, three days after the 4–0 in Salzburg. Amorim is holding no press conference, so the line-up has to be read from press leaks.",
+   "badge": "Preview: Milan–Atalanta",
+   "url": "https://milanisti.net/#f-atalanta"
+  },
+  "it": {
+   "title": "Amorim salta la conferenza stampa, e Cissé può mantenere il posto contro l'Atalanta",
+   "ingress": "Il Milan affronta l'Atalanta a San Siro domenica alle 18, tre giorni dopo il 4–0 di Salisburgo. Amorim non tiene la conferenza stampa, quindi la formazione va letta dalle indiscrezioni della stampa.",
+   "badge": "Prima della partita: Milan–Atalanta",
+   "url": "https://milanisti.net/it/#f-atalanta"
+  }
  }
 ]
