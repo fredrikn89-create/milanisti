@@ -658,5 +658,27 @@
    "badge": "Prima della partita: Milan–Atalanta",
    "url": "https://milanisti.net/it/#f-atalanta"
   }
+ },
+ {
+  "id": "a-atalanta",
+  "date": "2026-10-18",
+  "no": {
+   "title": "Milan ledet 3–0 og skalv seg til seier over Atalanta",
+   "ingress": "Milan slo Atalanta 3–2 på San Siro etter å ha ledet 3–0 med mål av Ramos, Rabiot og Gila. Atalanta reduserte gjennom Gaetano og Krstović, og Maignan holdt poengene i sluttminuttene. Milan har 15 poeng etter syv runder.",
+   "badge": "Milan 3–2 Atalanta",
+   "url": "https://milanisti.net/no/#a-atalanta"
+  },
+  "en": {
+   "title": "Milan led 3–0 and sweated their way past Atalanta",
+   "ingress": "Milan beat Atalanta 3–2 at San Siro after leading 3–0, with goals from Ramos, Rabiot and Gila. Atalanta pulled two back through Gaetano and Krstović, and Maignan protected the points in the closing minutes. Milan have 15 points after seven rounds.",
+   "badge": "Milan 3–2 Atalanta",
+   "url": "https://milanisti.net/#a-atalanta"
+  },
+  "it": {
+   "title": "Il Milan era avanti 3–0 e ha sudato per battere l'Atalanta",
+   "ingress": "Il Milan ha battuto l'Atalanta 3–2 a San Siro dopo essere stato avanti 3–0, con gol di Ramos, Rabiot e Gila. L'Atalanta ha accorciato con Gaetano e Krstović, e Maignan ha difeso i punti nei minuti finali. Il Milan ha 15 punti dopo sette giornate.",
+   "badge": "Milan 3–2 Atalanta",
+   "url": "https://milanisti.net/it/#a-atalanta"
+  }
  }
 ]
