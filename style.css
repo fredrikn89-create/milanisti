@@ -1182,3 +1182,11 @@ html, body { overflow-x: clip; }
 .pp-pop li:first-child { border-top: 0; }
 .pp-pop small { color: var(--muted); font-size: 0.62rem; }
 .pp-pop em { color: var(--muted); font-style: normal; }
+
+/* Tre baner side om side (Fredrik 18.10.2026) */
+.pitch-row.three { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.35rem; max-width: 52rem; }
+.pitch-row.three .die { width: 1.2rem; height: 1.2rem; font-size: 0.55rem; border-width: 1.5px; }
+.pitch-row.three .pp b { font-size: 0.4rem; letter-spacing: -0.02em; }
+.pitch-row.three .pitch-wrap figcaption { font-size: 0.6rem; }
+.pitch-row.three .pitch-wrap figcaption small { font-size: 0.5rem; }
+@media (min-width: 560px) { .pitch-row.three .die { width: 1.6rem; height: 1.6rem; font-size: 0.7rem; } .pitch-row.three .pp b { font-size: 0.56rem; } .pitch-row.three .pitch-wrap figcaption { font-size: 0.72rem; } .pitch-row.three .pitch-wrap figcaption small { font-size: 0.62rem; } }
