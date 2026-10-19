@@ -1200,14 +1200,7 @@ html, body { overflow-x: clip; }
 .lgd-more:hover, .lgd-less:hover { text-decoration: underline; }
 .lgd-panel { margin: 0.6rem 0 1.2rem; padding: 0.8rem 0 0; display: grid; gap: 1rem; max-width: 46rem; }
 .lgd-panel[hidden] { display: none; }
-.lgd-box { border: 1px solid var(--rule); padding: 0.9rem 1rem; background: var(--surface, transparent); }
 .lgd-box h3, .lgd-text h3 { margin: 0 0 0.5rem; font-size: 0.8rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
-.lgd-facts { margin: 0; }
-.lgd-facts > div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.3rem 0; border-top: 1px solid var(--rule); font-size: 0.92rem; }
-.lgd-facts > div:first-child { border-top: 0; }
-.lgd-facts dt { color: var(--muted); }
-.lgd-facts dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
-.lgd-note { font-size: 0.82rem; color: var(--muted); margin: 0.7rem 0 0; }
 .lgd-text p { margin: 0 0 0.9rem; }
 .lgd-text h3 { margin-top: 1.2rem; }
 .lgd-text h3:first-child { margin-top: 0; }
@@ -1216,3 +1209,13 @@ html, body { overflow-x: clip; }
 .players li.lgd > .lgd-panel { grid-column: 1 / -1; }
 .players li.lgd.open { grid-column: 1 / -1; }
 .players li.lgd .lgd-more { margin-top: 0.4rem; }
+
+/* Faktaboks: rolig rutenett, liten skrift, etikett over verdi */
+.lgd-box { border: 1px solid var(--rule); padding: 0.8rem 0.9rem; background: var(--surface, transparent); }
+.lgd-box h3 { margin: 0 0 0.6rem; }
+.lgd-facts { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 0.65rem 1rem; }
+.lgd-facts > div { margin: 0; min-width: 0; }
+.lgd-facts > div.w { grid-column: 1 / -1; padding-top: 0.55rem; border-top: 1px solid var(--rule); }
+.lgd-facts dt { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); line-height: 1.3; margin: 0 0 0.12rem; }
+.lgd-facts dd { margin: 0; font-size: 0.84rem; line-height: 1.4; text-align: left; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.lgd-note { font-size: 0.72rem; line-height: 1.45; color: var(--muted); margin: 0.8rem 0 0; padding-top: 0.6rem; border-top: 1px solid var(--rule); }
