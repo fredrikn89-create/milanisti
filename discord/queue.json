@@ -680,5 +680,27 @@
    "badge": "Milan 3–2 Atalanta",
    "url": "https://milanisti.net/it/#a-atalanta"
   }
+ },
+ {
+  "id": "n-krosche",
+  "date": "2026-10-19",
+  "no": {
+   "title": "Krösche er ute i Frankfurt, og Milan skal være nær en avtale",
+   "ingress": "Eintracht Frankfurts sportsdirektør Markus Krösche ble søndag fritatt fra jobben etter eget ønske. Mandag melder Matteo Moretto at han er «a un passo» fra å bli Milans nye Head of Football. Milan har ikke bekreftet noe.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-krosche"
+  },
+  "en": {
+   "title": "Krösche is out at Frankfurt, and Milan are said to be close to a deal",
+   "ingress": "Eintracht Frankfurt sporting director Markus Krösche was released from his duties on Sunday at his own request. On Monday Matteo Moretto reports that he is \"a un passo\" from becoming Milan's new Head of Football. Milan have confirmed nothing.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-krosche"
+  },
+  "it": {
+   "title": "Krösche lascia Francoforte, e il Milan sarebbe vicino all'accordo",
+   "ingress": "Il direttore sportivo dell'Eintracht Francoforte Markus Krösche è stato sollevato domenica dai suoi incarichi su sua richiesta. Lunedì Matteo Moretto riferisce che è «a un passo» dal diventare il nuovo Head of Football del Milan. Il Milan non ha confermato nulla.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-krosche"
+  }
  }
 ]
