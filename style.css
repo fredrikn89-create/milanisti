@@ -1192,3 +1192,22 @@ html, body { overflow-x: clip; }
 @media (min-width: 560px) { .pitch-row.three .die { width: 1.6rem; height: 1.6rem; font-size: 0.7rem; } .pitch-row.three .pp b { font-size: 0.56rem; } .pitch-row.three .pitch-wrap figcaption { font-size: 0.72rem; } .pitch-row.three .pitch-wrap figcaption small { font-size: 0.62rem; } }
 .lg-comp { display: flex; align-items: center; gap: 0.6rem; margin: 0.2rem 0 0.9rem; font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
 .lg-comp select { font-family: var(--mono); font-size: 0.85rem; padding: 0.4rem 0.6rem; border: 1px solid var(--rule); background: var(--bg); color: var(--fg); text-transform: none; letter-spacing: 0; }
+/* Legendeprofiler (Fredrik 19.10.2026) */
+.lgd-list li.lgd { display: block; }
+.lgd-list li.lgd.open { grid-column: 1 / -1; }
+.lgd .lgd-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.lgd-more, .lgd-less { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; background: none; border: 0; padding: 0.3rem 0; margin-top: 0.2rem; cursor: pointer; color: var(--red); }
+.lgd-more:hover, .lgd-less:hover { text-decoration: underline; }
+.lgd-panel { margin: 0.6rem 0 1.2rem; padding: 0.8rem 0 0; display: grid; gap: 1rem; max-width: 46rem; }
+.lgd-panel[hidden] { display: none; }
+.lgd-box { border: 1px solid var(--rule); padding: 0.9rem 1rem; background: var(--surface, transparent); }
+.lgd-box h3, .lgd-text h3 { margin: 0 0 0.5rem; font-size: 0.8rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.lgd-facts { margin: 0; }
+.lgd-facts > div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.3rem 0; border-top: 1px solid var(--rule); font-size: 0.92rem; }
+.lgd-facts > div:first-child { border-top: 0; }
+.lgd-facts dt { color: var(--muted); }
+.lgd-facts dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.lgd-note { font-size: 0.82rem; color: var(--muted); margin: 0.7rem 0 0; }
+.lgd-text p { margin: 0 0 0.9rem; }
+.lgd-text h3 { margin-top: 1.2rem; }
+.lgd-text h3:first-child { margin-top: 0; }
