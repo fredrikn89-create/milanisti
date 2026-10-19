@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="../style.css?v=202610191023">
+<link rel="stylesheet" href="../style.css?v=202610191027">
 <link rel="alternate" hreflang="en" href="../regnskap.html">
 <link rel="alternate" hreflang="it" href="../it/regnskap.html">
 <link rel="alternate" hreflang="nb" href="../no/regnskap.html">
@@ -96,7 +96,7 @@ var P=JSON.parse(document.getElementById('rk-data').textContent),A=P.S,S=A.slice
 var NS='http://www.w3.org/2000/svg',tip=document.createElement('div');tip.className='rk-tip';tip.hidden=true;document.body.appendChild(tip);
 function range(se){var k=(P.kinds||{})[se]||'season';var y=+se.slice(0,4);if(k==='cal')return [y+'-01-01',y+'-12-31'];if(k==='half')return [se.slice(-4)+'-01-01',se.slice(-4)+'-06-30'];return [y+'-07-01',(y+1)+'-06-30']}
 function lab(se,c){return c?((P.short&&P.short[se])||se.slice(2)):se}
-function axl(se,i,bw,c){var t=lab(se,c);if(t.length*6.6+6>bw){t=(P.short&&P.short[se])?t.slice(0,2):se.slice(-2);}var k=Math.max(1,Math.ceil((t.length*6.6+8)/bw));return (se===cur||(S.length-1-i)%k===0)&&!(se!==cur&&k>1&&Math.abs(S.indexOf(cur)-i)<k)?t:''}
+function axl(se,i,bw,c){var t=lab(se,c);if(t.length*6.6+6>bw){t=(P.short&&P.short[se])?P.short[se]:se.slice(-2);}var k=Math.max(1,Math.ceil((t.length*6.6+8)/bw));return (se===cur||(S.length-1-i)%k===0)&&!(se!==cur&&k>1&&Math.abs(S.indexOf(cur)-i)<k)?t:''}
 function num(v,d){if(v==null)return L.ns;var s=Math.abs(v).toFixed(d==null?1:d).replace('.',L.decimal);return s.replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
 function eur(v,sign){if(v==null)return L.ns;return (v<0?'− ':(sign&&v>0?'+ ':''))+'€ '+num(v)+' '+L.mill}
 function pc(d){return d.cost_wages!=null&&d.cost_amortisation!=null?d.cost_wages+d.cost_amortisation:null}
@@ -119,7 +119,7 @@ function colrect(g,x,y0,y1,w,fill,round){var top=Math.min(y0,y1),hh=Math.abs(y1-
  else d='M'+x+','+y0+'V'+(top+hh-r)+'Q'+x+','+(top+hh)+' '+(x+r)+','+(top+hh)+'H'+(x+w-r)+'Q'+(x+w)+','+(top+hh)+' '+(x+w)+','+(top+hh-r)+'V'+y0+'Z';
  return el('path',{d:d,fill:fill},g)}
 // Søylediagram med én verdi per sesong; vals kan være negative. opts.limit tegner en terskel per sesong.
-function columns(box,vals,o){o=o||{};var h=o.h||230,f=frame(box,h),s=f[0],W=f[1],m={l:44,r:8,t:22,b:28};
+function columns(box,vals,o){o=o||{};var h=o.h||230,f=frame(box,h),s=f[0],W=f[1],m={l:44,r:(o.lines?36:8),t:22,b:o.axis2?44:28};
  var ok=vals.filter(function(v){return v!=null}),lims=o.limits||[],all=ok.concat(lims.filter(function(v){return v!=null}),o.lines||[]);
  var mx=Math.max.apply(null,all.concat([0])),mn=Math.min.apply(null,all.concat([0]));var top=mx>0?mx*1.1:0,bot=mn<0?mn*1.1:0;
  var y=function(v){return m.t+(top-v)/(top-bot)*(h-m.t-m.b)},bw=(W-m.l-m.r)/S.length,cw=Math.min(o.cw||40,bw*0.55);
@@ -127,13 +127,14 @@ function columns(box,vals,o){o=o||{};var h=o.h||230,f=frame(box,h),s=f[0],W=f[1]
  for(var v=bot;v<=top+1e-9;v+=step){el('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),'class':Math.abs(v)<1e-9?'rk-zero':'rk-grid'},s);txt(s,m.l-6,y(v)+4,(v<0?'−':'')+num(v,0)+(o.pct?' %':''),'rk-ax','end')}
  if(bot<0)el('line',{x1:m.l,x2:W-m.r,y1:y(0),y2:y(0),'class':'rk-zero'},s);
  S.forEach(function(se,i){var cx=m.l+bw*i+bw/2,v=vals[i],g=el('g',{'class':'rk-col'+(se===cur?' on':'')},s);
-  txt(s,cx,h-8,axl(se,i,bw,cmp),'rk-ax'+(se===cur?' rk-ax-on':''));
+  var al=o.axis2?(vals[i]!=null?o.axis2(se,i,bw):''):axl(se,i,bw,cmp);
+  if(Array.isArray(al)){if(al[0]){txt(s,cx,h-21,al[0],'rk-ax'+(se===cur?' rk-ax-on':''));txt(s,cx,h-8,al[1],'rk-ax'+(se===cur?' rk-ax-on':''))}}else txt(s,cx,h-8,al,'rk-ax'+(se===cur?' rk-ax-on':''));
   if(v!=null){var col=o.color?o.color(v,i):'#2a78d6';colrect(g,cx-cw/2,y(0),y(v),cw,col,true);
    var ly=v>=0?y(v)-6:y(v)+14;if(o.labels!==false&&(se===cur||(o.labelAll&&!cmp)))txt(g,cx,ly,cmp?(v<0?'−':'')+num(v,o.pct?0:1)+(o.pct?' %':''):(o.fmt?o.fmt(v):num(v,0)),'rk-val');
    var hr=el('rect',{x:m.l+bw*i,y:m.t,width:bw,height:h-m.t-m.b,fill:'transparent'},g);hit(hr,[{v:se},{v:o.fmt?o.fmt(v):num(v),l:o.name||''}].concat(o.extra?o.extra(i):[]),se)}
-  else{txt(g,cx,y(0)-6,cmp?'–':(o.na||L.na),'rk-na')}
+  else{var fn=vals.findIndex(function(q){return q==null});if(cmp||i!==fn)txt(g,cx,y(0)-6,'–','rk-na');else txt(g,m.l+4,y(0)-8,o.na||L.na,'rk-na rk-na-l','start')}
   if(lims[i]!=null){el('line',{x1:cx-bw*0.45,x2:cx+bw*0.45,y1:y(lims[i]),y2:y(lims[i]),'class':'rk-limit'},s)}});
- (o.lines||[]).forEach(function(v,k){el('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),'class':'rk-limit'},s);txt(s,W-m.r,y(v)-5,(o.lineNames||[])[k]||'','rk-limlab','end')});
+ (o.lines||[]).forEach(function(v,k){el('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),'class':'rk-limit'},s);txt(s,W-2,y(v)+4,(o.lineNames||[])[k]||'','rk-limlab','end')});
  if(lims.some(function(v){return v!=null})){var li=lims.findIndex(function(v){return v!=null});txt(s,m.l+bw*li+bw*0.05,y(lims[li])-6,L.limit,'rk-limlab','start')}}
 function revChart(box){var h=270,f=frame(box,h),s=f[0],W=f[1],m={l:44,r:8,t:22,b:28},keys=Object.keys(L.revnames);
  var mx=Math.max.apply(null,S.map(function(se){return D[se].rev_total||0})),top=nice(mx*1.08),y=function(v){return m.t+(top-v)/top*(h-m.t-m.b)};
@@ -207,7 +208,7 @@ function draw(){S=A.slice(lo);sync();tiles();pl();about();revChart(document.quer
  columns(document.querySelector('[data-chart=res]'),S.map(function(s){return D[s].net_result}),{name:L.res,fmt:function(v){return eur(v,true)},color:function(v){return v<0?'#b8333c':'#2a78d6'},labelAll:true});
  columns(document.querySelector('[data-chart=ratio]'),S.map(function(s){return rt(D[s])}),{name:L.ratio,pct:true,fmt:function(v){return num(v,0)+' %'},limits:S.map(function(s){return P.limit[s]||null}),
   color:function(v,i){var l=P.limit[S[i]];return l&&v>l?'#eda100':'#2a78d6'}});
- columns(document.querySelector('[data-chart=r3]'),S.map(function(s){return P.r3[s]}),{name:L.r3,fmt:function(v){return eur(v,true)},lines:[-5,-60],lineNames:['−5','−60'],na:L.na3,color:function(v){return v<0?'#b8333c':'#2a78d6'},labelAll:true});
+ columns(document.querySelector('[data-chart=r3]'),S.map(function(s){return P.r3[s]}),{h:260,axis2:function(se,i,bw){var st=S[Math.max(0,i-2)],yy=function(x){var m=x.match(/(\d{4})(?:\/(\d{2}))?$/);return m?(m[2]||m[1].slice(2)):x},ff=function(x){var m=x.match(/(\d{4})(?:\/(\d{2}))?$/);return m?(m[2]?m[1].slice(2)+'/'+m[2]:m[1].slice(2)):x},wide=bw>=46,a=wide?ff(st)+'\u2013':yy(st)+'\u2013',b=wide?ff(se):yy(se),k=Math.max(1,Math.ceil((a.length*6.6+8)/bw));return (se===cur||(S.length-1-i)%k===0)&&!(se!==cur&&k>1&&Math.abs(S.indexOf(cur)-i)<k)?[a,b]:['','']},name:L.r3,fmt:function(v){return eur(v,true)},lines:[-5,-60],lineNames:['−5','−60'],na:L.na3,color:function(v){return v<0?'#b8333c':'#2a78d6'},labelAll:true});
  perfChart(document.querySelector('[data-chart=perf]'));
  columns(document.querySelector('[data-chart=perpt]'),S.map(function(s){var p=pc(D[s]),q=D[s].league_points;return p!=null&&q?p/q:null}),{name:L.perpt,fmt:function(v){return '€ '+num(v)+' '+L.mill},labelAll:true});
  columns(document.querySelector('[data-chart=net]'),S.map(function(s){return D[s].transfer_spend}),{name:L.net,fmt:function(v){return eur(v)},labelAll:true});

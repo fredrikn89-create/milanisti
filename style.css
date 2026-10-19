@@ -1222,3 +1222,4 @@ html, body { overflow-x: clip; }
 .lgd-note { font-size: 0.72rem; line-height: 1.45; color: var(--muted); margin: 0.8rem 0 0; padding-top: 0.6rem; border-top: 1px solid var(--rule); }
 /* Økonomi/Regnskap: tall og årstall i svart; rødt er forbeholdt minustall */
 [id^="f-"] .timeline time { color: var(--fg); }
+.rk-na.rk-na-l { text-anchor: start; }
