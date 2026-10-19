@@ -1211,3 +1211,8 @@ html, body { overflow-x: clip; }
 .lgd-text p { margin: 0 0 0.9rem; }
 .lgd-text h3 { margin-top: 1.2rem; }
 .lgd-text h3:first-child { margin-top: 0; }
+/* Spillerprofiler i troppslisten */
+.players li.lgd { position: relative; }
+.players li.lgd > .lgd-panel { grid-column: 1 / -1; }
+.players li.lgd.open { grid-column: 1 / -1; }
+.players li.lgd .lgd-more { margin-top: 0.4rem; }
