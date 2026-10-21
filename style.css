@@ -658,9 +658,12 @@ html, body { overflow-x: clip; }
   section { padding-block: 2.25rem 0; }
   .people li { grid-template-columns: minmax(0, 1fr); }
   /* Fem faner på én linje på mobil (Fredrik 9.10.2026) */
-  .menu { flex-wrap: wrap; justify-content: space-between; gap: 0; }
-  .menu > li > a { padding: 0.5rem 0.12rem 0.6rem; font-size: clamp(0.66rem, 3.25vw, 1rem); letter-spacing: -0.005em; white-space: nowrap; }
-  .menu > li:last-child > a { padding-right: 0; }
+  /* Hovedmeny som 3 x 2 lette knapper (Fredrik 21.10.2026) */
+  .menu { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; padding-block: 0.6rem 0.2rem; }
+  .menu > li > a, .menu > li:first-child > a { padding: 0.6rem 0.3rem 0.55rem; font-size: clamp(0.8rem, 3.6vw, 1rem); letter-spacing: 0; text-align: center; white-space: nowrap; background: rgba(0, 0, 0, 0.035); border: 1px solid rgba(0, 0, 0, 0.09); border-bottom-width: 0.2rem; border-radius: 3px; }
+  .menu > li > a:hover { background: rgba(155, 58, 63, 0.08); }
+  .menu > li > a[aria-current] { background: rgba(155, 58, 63, 0.09); border-color: rgba(155, 58, 63, 0.35); border-bottom-color: var(--red); }
+  .menu > li:last-child > a { padding-right: 0.3rem; }
   .drop { display: none !important; }
 }
 
