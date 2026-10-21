@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="style.css?v=202610210826">
+<link rel="stylesheet" href="style.css?v=202610210828">
 <link rel="alternate" hreflang="en" href="regnskap.html">
 <link rel="alternate" hreflang="it" href="it/regnskap.html">
 <link rel="alternate" hreflang="nb" href="no/regnskap.html">
@@ -96,7 +96,7 @@ var P=JSON.parse(document.getElementById('rk-data').textContent),A=P.S,S=A.slice
 var NS='http://www.w3.org/2000/svg',tip=document.createElement('div');tip.className='rk-tip';tip.hidden=true;document.body.appendChild(tip);
 function range(se){var k=(P.kinds||{})[se]||'season';var y=+se.slice(0,4);if(k==='cal')return [y+'-01-01',y+'-12-31'];if(k==='half')return [se.slice(-4)+'-01-01',se.slice(-4)+'-06-30'];return [y+'-07-01',(y+1)+'-06-30']}
 function lab(se,c){return c?((P.short&&P.short[se])||se.slice(2)):se}
-function axl(se,i,bw,c){var t=lab(se,c);if(t.length*6.6+6>bw){t=(P.short&&P.short[se])?P.short[se]:se.slice(-2);}var k=Math.max(1,Math.ceil((t.length*6.6+8)/bw));return (se===cur||(S.length-1-i)%k===0)&&!(se!==cur&&k>1&&Math.abs(S.indexOf(cur)-i)<k)?t:''}
+function axl(se,i,bw,c){var t=lab(se,c);if(t.length*6.6+6>bw){t=(P.short&&P.short[se])?P.short[se].slice(0,2):se.slice(-2);}var k=Math.max(1,Math.ceil((t.length*6.6+8)/bw));return (se===cur||(S.length-1-i)%k===0)&&!(se!==cur&&k>1&&Math.abs(S.indexOf(cur)-i)<k)?t:''}
 function num(v,d){if(v==null)return L.ns;var s=Math.abs(v).toFixed(d==null?1:d).replace('.',L.decimal);return s.replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
 function eur(v,sign){if(v==null)return L.ns;return (v<0?'− ':(sign&&v>0?'+ ':''))+'€ '+num(v)+' '+L.mill}
 function pc(d){return d.cost_wages!=null&&d.cost_amortisation!=null?d.cost_wages+d.cost_amortisation:null}
@@ -130,7 +130,7 @@ function columns(box,vals,o){o=o||{};var h=o.h||230,f=frame(box,h),s=f[0],W=f[1]
   var al=o.axis2?(vals[i]!=null?o.axis2(se,i,bw):''):axl(se,i,bw,cmp);
   if(Array.isArray(al)){al.forEach(function(t,q){if(t)txt(s,cx,h-8-(al.length-1-q)*13,t,'rk-ax'+(se===cur?' rk-ax-on':''))})}else txt(s,cx,h-8,al,'rk-ax'+(se===cur?' rk-ax-on':''));
   if(v!=null){var col=o.color?o.color(v,i):'#2a78d6';colrect(g,cx-cw/2,y(0),y(v),cw,col,true);
-   var ly=v>=0?y(v)-6:y(v)+14;if(o.labels!==false&&(se===cur||(o.labelAll&&!cmp)))txt(g,cx,ly,cmp?(v<0?'−':'')+num(v,o.pct?0:1)+(o.pct?' %':''):(o.fmt?o.fmt(v):num(v,0)),'rk-val');
+   var ly=v>=0?y(v)-6:y(v)+14;if(o.labels!==false&&(se===cur||(o.labelAll&&!cmp&&bw>=30)))txt(g,cx,ly,(cmp||bw<90)?(v<0?'−':'')+num(v,o.pct?0:1)+(o.pct?' %':''):(o.fmt?o.fmt(v):num(v,0)),'rk-val');
    var hr=el('rect',{x:m.l+bw*i,y:m.t,width:bw,height:h-m.t-m.b,fill:'transparent'},g);hit(hr,[{v:se},{v:o.fmt?o.fmt(v):num(v),l:o.name||''}].concat(o.extra?o.extra(i):[]),se)}
   else{var fn=vals.findIndex(function(q){return q==null});if(cmp||i!==fn)txt(g,cx,y(0)-6,'–','rk-na');else txt(g,m.l+4,y(0)-8,o.na||L.na,'rk-na rk-na-l','start')}
   if(lims[i]!=null){el('line',{x1:cx-bw*0.45,x2:cx+bw*0.45,y1:y(lims[i]),y2:y(lims[i]),'class':'rk-limit'},s)}});
