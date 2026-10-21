@@ -746,5 +746,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-ramos-injury"
   }
+ },
+ {
+  "id": "f-bournemouth",
+  "date": "2026-10-21",
+  "no": {
+   "title": "Bournemouth–Milan – Cissé spiller, Ramos er usikker og Chukwueze mangler",
+   "ingress": "Milan møter Bournemouth på Vitality Stadium torsdag kl. 21.00. Amorim sier at Ramos ikke har noe alvorlig og at Cissé spiller, men røper verken laget eller om Ramos rekker kampen.",
+   "badge": "Før kamp: Bournemouth–Milan",
+   "url": "https://milanisti.net/no/#f-bournemouth"
+  },
+  "en": {
+   "title": "Bournemouth–Milan – Cissé plays, Ramos is doubtful and Chukwueze is missing",
+   "ingress": "Milan face Bournemouth at the Vitality Stadium on Thursday at 21:00. Amorim says Ramos has nothing serious and that Cissé will play, but reveals neither the line-up nor whether Ramos will make the match.",
+   "badge": "Preview: Bournemouth–Milan",
+   "url": "https://milanisti.net/#f-bournemouth"
+  },
+  "it": {
+   "title": "Bournemouth–Milan – Cissé gioca, Ramos è in dubbio e Chukwueze manca",
+   "ingress": "Il Milan affronta il Bournemouth al Vitality Stadium giovedì alle 21.00. Amorim dice che Ramos non ha nulla di grave e che Cissé giocherà, ma non svela né la formazione né se Ramos ce la farà.",
+   "badge": "Anteprima: Bournemouth–Milan",
+   "url": "https://milanisti.net/it/#f-bournemouth"
+  }
  }
 ]
