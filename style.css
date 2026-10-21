@@ -662,9 +662,9 @@ html, body { overflow-x: clip; }
   .menu { display: flex; flex-wrap: nowrap; gap: 0.22rem; padding-block: 0.55rem 0.15rem; width: 100%; box-sizing: border-box; }
   header nav:has(> .menu), nav:has(> .menu) { width: 100%; }
   .menu > li { flex: 1 1 auto; min-width: 0; }
-  .menu > li > a, .menu > li:first-child > a, .menu > li:last-child > a { padding: 0.55rem 0.15rem 0.5rem; font-size: clamp(0.55rem, 3.05vw, 0.85rem); letter-spacing: 0; text-align: center; white-space: nowrap; background: rgba(0, 0, 0, 0.03); border: 0; border-bottom: 0.14rem solid transparent; border-radius: 0; box-shadow: none; }
-  .menu > li > a:hover { background: rgba(0, 0, 0, 0.05); }
-  .menu > li > a[aria-current] { background: rgba(155, 58, 63, 0.06); border-bottom-color: var(--red); }
+  .menu > li > a, .menu > li:first-child > a, .menu > li:last-child > a { padding: 0.5rem 0.15rem 0.45rem; font-size: clamp(0.55rem, 3.05vw, 0.85rem); letter-spacing: 0; text-align: center; white-space: nowrap; background: rgba(0, 0, 0, 0.025); border: 1px solid rgba(0, 0, 0, 0.07); border-bottom-width: 0.18rem; border-radius: 2px; }
+  .menu > li > a:hover { background: rgba(155, 58, 63, 0.06); }
+  .menu > li > a[aria-current] { background: rgba(155, 58, 63, 0.07); border-color: rgba(155, 58, 63, 0.3); border-bottom-color: var(--red); }
   .drop { display: none !important; }
 }
 
