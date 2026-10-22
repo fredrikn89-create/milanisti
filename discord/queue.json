@@ -768,5 +768,27 @@
    "badge": "Anteprima: Bournemouth–Milan",
    "url": "https://milanisti.net/it/#f-bournemouth"
   }
+ },
+ {
+  "id": "n-injury-update",
+  "date": "2026-10-22",
+  "no": {
+   "title": "Ramos' MR er negativ, men Chukwueze kan bli borte i flere uker",
+   "ingress": "Gonçalo Ramos' MR-undersøkelse viste ingen skade i leggen, og han kan være aktuell til Udinese søndag. Samuel Chukwueze har startet infiltrasjonsbehandling for hoften og kan bli borte i flere uker.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-injury-update"
+  },
+  "en": {
+   "title": "Ramos' MRI is negative, but Chukwueze could be out for several weeks",
+   "ingress": "Gonçalo Ramos' MRI scan showed no injury in the calf, and he could be available for Udinese on Sunday. Samuel Chukwueze has started infiltration treatment for his hip and could be out for several weeks.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-injury-update"
+  },
+  "it": {
+   "title": "La risonanza di Ramos è negativa, ma Chukwueze potrebbe restare fuori per diverse settimane",
+   "ingress": "La risonanza di Gonçalo Ramos non ha mostrato lesioni al polpaccio, e potrebbe essere a disposizione per l'Udinese domenica. Samuel Chukwueze ha iniziato un trattamento infiltrativo per l'anca e potrebbe restare fuori per diverse settimane.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-injury-update"
+  }
  }
 ]
