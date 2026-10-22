@@ -790,5 +790,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-injury-update"
   }
+ },
+ {
+  "id": "a-bournemouth",
+  "date": "2026-10-23",
+  "no": {
+   "title": "Maignan ble utvist og Milan tapte 0–3 i Bournemouth",
+   "ingress": "Milan tapte 3–0 borte mot Bournemouth i Europa League. To straffer og rødt kort til Mike Maignan avgjorde kampen før pause.",
+   "badge": "Bournemouth 3–0 Milan",
+   "url": "https://milanisti.net/no/#a-bournemouth"
+  },
+  "en": {
+   "title": "Maignan sent off as Milan lose 0–3 at Bournemouth",
+   "ingress": "Milan lost 3–0 away to Bournemouth in the Europa League. Two penalties and a red card for Mike Maignan decided the match before the break.",
+   "badge": "Bournemouth 3–0 Milan",
+   "url": "https://milanisti.net/#a-bournemouth"
+  },
+  "it": {
+   "title": "Maignan espulso, il Milan perde 0–3 a Bournemouth",
+   "ingress": "Il Milan ha perso 3–0 in trasferta contro il Bournemouth in Europa League. Due rigori e il rosso a Mike Maignan hanno deciso la partita prima dell'intervallo.",
+   "badge": "Bournemouth 3–0 Milan",
+   "url": "https://milanisti.net/it/#a-bournemouth"
+  }
  }
 ]
