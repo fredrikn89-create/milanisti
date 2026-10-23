@@ -812,5 +812,27 @@
    "badge": "Bournemouth 3–0 Milan",
    "url": "https://milanisti.net/it/#a-bournemouth"
   }
+ },
+ {
+  "id": "s-fotias-austin-maignan",
+  "date": "2026-10-23",
+  "no": {
+   "title": "Fotias, Austin og Maignan – i den rekkefølgen",
+   "ingress": "I en kamp som skulle gi historisk klang av gjensidig respekt, druknet regelrett det hele i stormen Austin og en gresk dommer som manglet fotfeste på kortbehandlingen.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-fotias-austin-maignan"
+  },
+  "en": {
+   "title": "Fotias, Austin and Maignan – in that order",
+   "ingress": "In a match that was meant to carry a historic ring of mutual respect, it all simply drowned in Storm Austin and a Greek referee who lacked footing on his handling of the cards.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-fotias-austin-maignan"
+  },
+  "it": {
+   "title": "Fotias, Austin e Maignan – in quest'ordine",
+   "ingress": "In una partita che doveva avere il sapore storico del rispetto reciproco, tutto è semplicemente annegato nella tempesta Austin e in un arbitro greco che ha perso l'equilibrio nella gestione dei cartellini.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-fotias-austin-maignan"
+  }
  }
 ]
