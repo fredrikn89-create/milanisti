@@ -834,5 +834,27 @@
    "badge": "Commento",
    "url": "https://milanisti.net/it/#s-fotias-austin-maignan"
   }
+ },
+ {
+  "id": "f-udinese",
+  "date": "2026-10-24",
+  "no": {
+   "title": "Udinese–Milan: Rabiot, Moreira og Gila mangler, og Ramos ventes tilbake",
+   "ingress": "Milan møter Udinese søndag kl. 20.45 uten Rabiot, Moreira og Gila. Ramos ventes tilbake etter leggproblemet, og Amorim holder ingen pressekonferanse.",
+   "badge": "Før kamp: Udinese–Milan",
+   "url": "https://milanisti.net/no/#f-udinese"
+  },
+  "en": {
+   "title": "Udinese–Milan: Rabiot, Moreira and Gila missing, and Ramos expected back",
+   "ingress": "Milan face Udinese on Sunday at 20:45 without Rabiot, Moreira and Gila. Ramos is expected back after his calf problem, and Amorim is not holding a press conference.",
+   "badge": "Preview: Udinese–Milan",
+   "url": "https://milanisti.net/#f-udinese"
+  },
+  "it": {
+   "title": "Udinese–Milan: mancano Rabiot, Moreira e Gila, Ramos atteso al rientro",
+   "ingress": "Il Milan affronta l'Udinese domenica alle 20:45 senza Rabiot, Moreira e Gila. Ramos è atteso al rientro dopo il problema al polpaccio e Amorim non terrà la conferenza stampa.",
+   "badge": "Anteprima: Udinese–Milan",
+   "url": "https://milanisti.net/it/#f-udinese"
+  }
  }
 ]
