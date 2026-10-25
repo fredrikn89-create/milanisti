@@ -856,5 +856,27 @@
    "badge": "Anteprima: Udinese–Milan",
    "url": "https://milanisti.net/it/#f-udinese"
   }
+ },
+ {
+  "id": "a-udinese",
+  "date": "2026-10-26",
+  "no": {
+   "title": "Pulisic og Hutchinson sikret 2–0 i Udine",
+   "ingress": "Milan vant 2–0 borte mot Udinese. Pulisic scoret etter seks minutter, og Hutchinson doblet i andre omgang med sitt første mål for klubben.",
+   "badge": "Udinese 0–2 Milan",
+   "url": "https://milanisti.net/no/#a-udinese"
+  },
+  "en": {
+   "title": "Pulisic and Hutchinson secured 2–0 in Udine",
+   "ingress": "Milan won 2–0 away against Udinese. Pulisic scored after six minutes, and Hutchinson doubled the lead in the second half with his first goal for the club.",
+   "badge": "Udinese 0–2 Milan",
+   "url": "https://milanisti.net/#a-udinese"
+  },
+  "it": {
+   "title": "Pulisic e Hutchinson firmano lo 0–2 a Udine",
+   "ingress": "Il Milan ha vinto 2–0 in trasferta contro l'Udinese. Pulisic ha segnato dopo sei minuti, e Hutchinson ha raddoppiato nella ripresa con il suo primo gol con il club.",
+   "badge": "Udinese 0–2 Milan",
+   "url": "https://milanisti.net/it/#a-udinese"
+  }
  }
 ]
