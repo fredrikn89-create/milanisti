@@ -1108,14 +1108,14 @@ html, body { overflow-x: clip; }
 
 /* Video i artikler: små bokser side ved side under ingressen, klikk for å laste */
 .vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(6.8rem,1fr));gap:.5rem;margin:.7rem 0 .2rem}
-.vid{margin:0}.vid.vid-open{grid-column:1/-1}
+.vid{margin:0;display:flex;flex-direction:column}.vid.vid-open{grid-column:1/-1}
 .vid iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;background:#000}
-.vid-play,.vid-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.25rem;width:100%;height:100%;min-height:3.9rem;
+.vid-play,.vid-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.25rem;width:100%;flex:1 1 auto;min-height:3.9rem;
  background:#111;color:#fff;border:0;border-radius:10px;cursor:pointer;text-align:left;padding:.55rem .7rem .6rem;text-decoration:none;font:inherit}
 .vid-icon{display:grid;place-items:center;width:1.5rem;height:1.5rem;border-radius:50%;background:#c8102e;font-size:.6rem;flex:none}
 .vid-title{font-weight:700;font-size:.8rem;line-height:1.25}
 .vid-note{font-size:.68rem;opacity:.75;line-height:1.2}
-.vid figcaption{font-size:.72rem;margin-top:.25rem;opacity:.8}
+.vid figcaption{font-size:.72rem;margin-top:.25rem;opacity:.8;flex:none}
 .vid-play:focus-visible,.vid-card:focus-visible{outline:3px solid #c8102e;outline-offset:2px}
 
 /* Spillerbørs: sesongsnitt til høyre for kampens karakter */
