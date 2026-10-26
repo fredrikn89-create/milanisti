@@ -858,6 +858,28 @@
   }
  },
  {
+  "id": "n-loftus-cheek-hamstring",
+  "date": "2026-10-26",
+  "no": {
+   "title": "Loftus-Cheek har en muskelskade og er trolig ute mot Bologna og Inter",
+   "ingress": "Ruben Loftus-Cheek har en skade i bakre lårmuskel, og Milan skal sjekke ham på nytt om to uker. Han ventes å mangle både Bologna onsdag og derbyet mot Inter lørdag.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-loftus-cheek-hamstring"
+  },
+  "en": {
+   "title": "Loftus-Cheek has a muscle injury and is likely out against Bologna and Inter",
+   "ingress": "Ruben Loftus-Cheek has an injury to the back thigh muscle, and Milan will check him again in two weeks. He is expected to miss both Bologna on Wednesday and the derby against Inter on Saturday.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-loftus-cheek-hamstring"
+  },
+  "it": {
+   "title": "Loftus-Cheek ha una lesione muscolare ed è probabilmente fuori contro Bologna e Inter",
+   "ingress": "Ruben Loftus-Cheek ha un infortunio al muscolo posteriore della coscia, e il Milan lo controllerà di nuovo tra due settimane. Dovrebbe saltare sia il Bologna di mercoledì sia il derby con l'Inter di sabato.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-loftus-cheek-hamstring"
+  }
+ },
+ {
   "id": "s-survive-to-wednesday",
   "date": "2026-10-26",
   "no": {
