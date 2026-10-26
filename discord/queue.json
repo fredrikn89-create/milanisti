@@ -858,6 +858,28 @@
   }
  },
  {
+  "id": "s-survive-to-wednesday",
+  "date": "2026-10-26",
+  "no": {
+   "title": "Å overleve til onsdag er ikke en plan",
+   "ingress": "Amorim sa etter Udine at han lurer på hvem som overlever og får spille. Det sier mer om Milans tropp enn 2–0-seieren gjør.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-survive-to-wednesday"
+  },
+  "en": {
+   "title": "Surviving until Wednesday is not a plan",
+   "ingress": "After Udine, Amorim said he wonders who will survive and get to play. It says more about Milan's squad than the 2–0 win does.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-survive-to-wednesday"
+  },
+  "it": {
+   "title": "Sopravvivere fino a mercoledì non è un piano",
+   "ingress": "Dopo Udine Amorim ha detto di chiedersi chi sopravvivrà per giocare. Dice più sulla rosa del Milan di quanto faccia lo 0–2.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-survive-to-wednesday"
+  }
+ },
+ {
   "id": "a-udinese",
   "date": "2026-10-26",
   "no": {
