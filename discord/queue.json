@@ -922,27 +922,5 @@
    "badge": "Udinese 0–2 Milan",
    "url": "https://milanisti.net/it/#a-udinese"
   }
- },
- {
-  "id": "n-pulisic-renewal",
-  "date": "2026-10-27",
-  "no": {
-   "title": "Pulisic og Milan er enige om ny kontrakt til 2031",
-   "ingress": "Christian Pulisic og Milan har kommet til en prinsipiell enighet om en ny kontrakt som varer til 2031. Avtalen er ikke offisiell ennå og ventes formalisert i løpet av de nærmeste dagene.",
-   "badge": "Nyheter",
-   "url": "https://milanisti.net/no/#n-pulisic-renewal"
-  },
-  "en": {
-   "title": "Pulisic and Milan agree a new contract to 2031",
-   "ingress": "Christian Pulisic and Milan have reached an agreement in principle on a new contract that runs until 2031. The deal is not yet official and is expected to be formalised in the coming days.",
-   "badge": "News",
-   "url": "https://milanisti.net/#n-pulisic-renewal"
-  },
-  "it": {
-   "title": "Pulisic e il Milan d'accordo sul rinnovo fino al 2031",
-   "ingress": "Christian Pulisic e il Milan hanno raggiunto un'intesa di massima su un nuovo contratto fino al 2031. L'accordo non è ancora ufficiale e dovrebbe essere formalizzato nei prossimi giorni.",
-   "badge": "Notizie",
-   "url": "https://milanisti.net/it/#n-pulisic-renewal"
-  }
  }
 ]
