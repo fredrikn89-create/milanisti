@@ -664,6 +664,7 @@ html, body { overflow-x: clip; }
   .menu > li { flex: 1 1 auto; min-width: 0; }
   .menu > li > a, .menu > li:first-child > a, .menu > li:last-child > a { padding: 0.5rem 0.15rem 0.45rem; font-size: clamp(0.55rem, 3.05vw, 0.85rem); letter-spacing: 0; text-align: center; white-space: nowrap; background: rgba(0, 0, 0, 0.025); border: 1px solid rgba(0, 0, 0, 0.07); border-bottom-width: 0.18rem; border-radius: 2px; }
   .menu > li > a:hover { background: rgba(155, 58, 63, 0.06); }
+  .menu:has(> li:nth-child(7)) > li > a { font-size: clamp(0.5rem, 2.55vw, 0.85rem) !important; }
   .menu > li > a[aria-current] { background: rgba(155, 58, 63, 0.07); border-color: rgba(155, 58, 63, 0.3); border-bottom-color: var(--red); }
   .drop { display: none !important; }
 }
@@ -1227,3 +1228,29 @@ html, body { overflow-x: clip; }
 /* Økonomi/Regnskap: tall og årstall i svart; rødt er forbeholdt minustall */
 [id^="f-"] .timeline time { color: var(--fg); }
 .rk-na.rk-na-l { text-anchor: start; }
+
+/* Milanisti-tippen (tipgen.py, tipping.js) */
+.tip-hint { font: 500 0.72rem var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--red); margin: 0.4rem 0 0; }
+.tip-art { border: 1px solid var(--rule); border-top: 3px solid var(--red); padding: 0.7rem 0.8rem 0.8rem; margin: 1.2rem 0; background: var(--bg-alt, rgba(0,0,0,.025)); }
+.tip-art h4 { font-family: var(--mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); margin: 0 0 0.4rem; }
+#tip-app h3 { margin: 1.6rem 0 0.6rem; }
+#tip-app h3:first-of-type { margin-top: 1.2rem; }
+#tip-app .tip-box { border: 1px solid var(--rule); border-left: 3px solid var(--red); padding: 0.7rem 0.8rem; margin: 0 0 0.7rem; }
+.tip-head { display: flex; flex-wrap: wrap; gap: 0.2rem 0.6rem; align-items: baseline; margin-bottom: 0.5rem; }
+.tip-head b { font-family: var(--display); font-size: 1.1rem; }
+.tip-head span { font: 0.75rem var(--mono); color: var(--muted); }
+.tip-form, .tip-row { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; }
+.tip-form .tip-team { font-weight: 600; font-size: 0.92rem; }
+.tip-form input[type=number] { width: 3.2rem; text-align: center; font: 600 1.1rem var(--display); padding: 0.35rem 0.2rem; border: 1px solid var(--muted); background: var(--bg); color: var(--fg); }
+.tip-login label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+.tip-login input[type=text] { flex: 1 1 11rem; min-width: 0; max-width: 18rem; font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--muted); background: var(--bg); color: var(--fg); }
+.tip-form button, .tip-login button, .tip-who button { font: 500 0.78rem var(--mono); text-transform: uppercase; letter-spacing: 0.04em; padding: 0.55rem 0.9rem; border: 1px solid var(--red); background: var(--red); color: var(--on-red); cursor: pointer; }
+button.tip-google { background: transparent; color: var(--red); margin-top: 0.5rem; }
+.tip-msg { font-size: 0.85rem; color: var(--muted); margin: 0.45rem 0 0; min-height: 1em; }
+.tip-res { margin: 0; font-weight: 600; }
+.tip-lead { font-size: 0.88rem; margin: 0.7rem 0 0.3rem; }
+.tip-who p { margin: 0 0 0.4rem; }
+.tip-rules { margin: 0; padding-left: 1.2rem; }
+.tip-rules li { margin: 0.25rem 0; }
+.tip-hist { list-style: none; margin: 0; padding: 0; }
+.tip-hist li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.92rem; font-variant-numeric: tabular-nums; }
