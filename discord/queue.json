@@ -944,5 +944,27 @@
    "badge": "Anteprima: Milan-Bologna",
    "url": "https://milanisti.net/it/#f-bologna"
   }
+ },
+ {
+  "id": "a-bologna",
+  "date": "2026-10-28",
+  "no": {
+   "title": "Mbangula-trippel snudde 2–1 til 2–4 for Bologna på San Siro",
+   "ingress": "Cissé ga Milan 2–1 til pause, men Bologna scoret tre ganger i andre omgang. Samuel Mbangula tok tre av målene, og Milan tapte sin første seriekamp for sesongen.",
+   "badge": "Milan 2–4 Bologna",
+   "url": "https://milanisti.net/no/#a-bologna"
+  },
+  "en": {
+   "title": "Mbangula hat-trick turns 2–1 into 2–4 for Bologna at San Siro",
+   "ingress": "Cissé gave Milan a 2–1 half-time lead, but Bologna scored three times in the second half. Samuel Mbangula took three of the goals, and Milan lost their first league match of the season.",
+   "badge": "Milan 2–4 Bologna",
+   "url": "https://milanisti.net/#a-bologna"
+  },
+  "it": {
+   "title": "La tripletta di Mbangula ribalta il 2–1 in un 2–4 per il Bologna a San Siro",
+   "ingress": "Cissé ha portato il Milan sul 2–1 all'intervallo, ma il Bologna ha segnato tre volte nella ripresa. Samuel Mbangula ha realizzato tre dei gol e il Milan ha perso la prima partita di campionato della stagione.",
+   "badge": "Milan 2–4 Bologna",
+   "url": "https://milanisti.net/it/#a-bologna"
+  }
  }
 ]
