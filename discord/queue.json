@@ -968,6 +968,28 @@
   }
  },
  {
+  "id": "n-generali-stadium",
+  "date": "2026-10-29",
+  "no": {
+   "title": "Det nye stadionet heter Generali Stadium og får 71 500 plasser",
+   "ingress": "Milan og Inter viste torsdag kveld tegningene av det nye stadionet i Castello Sforzesco. Det skal ta over etter San Siro i sesongen 2031/32.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-generali-stadium"
+  },
+  "en": {
+   "title": "The new stadium is called Generali Stadium and will seat 71,500",
+   "ingress": "Milan and Inter unveiled the designs for the new stadium at Castello Sforzesco on Thursday evening. It will take over from San Siro in the 2031/32 season.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-generali-stadium"
+  },
+  "it": {
+   "title": "Il nuovo stadio si chiamerà Generali Stadium e avrà 71.500 posti",
+   "ingress": "Milan e Inter hanno svelato giovedì sera i disegni del nuovo stadio al Castello Sforzesco. Prenderà il posto di San Siro nella stagione 2031/32.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-generali-stadium"
+  }
+ },
+ {
   "id": "k-camarda",
   "date": "2026-10-29",
   "no": {
