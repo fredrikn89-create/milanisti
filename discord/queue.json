@@ -968,6 +968,28 @@
   }
  },
  {
+  "id": "k-camarda",
+  "date": "2026-10-29",
+  "no": {
+   "title": "Gutten fra Comasina",
+   "ingress": "Afforese, Vismara, Milanello – uansett hvor Francesco Camarda har spilt fotball, har San Siro alltid ligget der i nærheten som et pulserende hjerte gjennom tåkedisen.",
+   "badge": "Kommentar",
+   "url": "https://milanisti.net/no/#k-camarda"
+  },
+  "en": {
+   "title": "The boy from Comasina",
+   "ingress": "Afforese, Vismara, Milanello – wherever Francesco Camarda has played football, San Siro has always been close by, like a beating heart through the fog.",
+   "badge": "Comment",
+   "url": "https://milanisti.net/#k-camarda"
+  },
+  "it": {
+   "title": "Il ragazzo di Comasina",
+   "ingress": "Afforese, Vismara, Milanello – ovunque Francesco Camarda abbia giocato a calcio, San Siro è sempre stato lì vicino, come un cuore pulsante nella nebbia.",
+   "badge": "Commento",
+   "url": "https://milanisti.net/it/#k-camarda"
+  }
+ },
+ {
   "id": "s-etter-bologna",
   "date": "2026-10-29",
   "no": {
