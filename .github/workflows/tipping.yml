@@ -1,0 +1,16 @@
+name: Synk tippekamper til Supabase
+on:
+  push:
+    branches: [main]
+    paths: ['tipping/kamper.json', 'tipping/sync.py']
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Synk
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 tipping/sync.py
