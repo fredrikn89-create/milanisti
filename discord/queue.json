@@ -966,5 +966,27 @@
    "badge": "Milan 2–4 Bologna",
    "url": "https://milanisti.net/it/#a-bologna"
   }
+ },
+ {
+  "id": "s-etter-bologna",
+  "date": "2026-10-29",
+  "no": {
+   "title": "Håp er ikke en startellever",
+   "ingress": "Amorim håper at «en eller to» er tilbake til derbyet. Tapet mot Bologna handler like mye om en tropp som er avhengig av de samme spillerne som om kvelden på San Siro.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-etter-bologna"
+  },
+  "en": {
+   "title": "Hope is not a starting eleven",
+   "ingress": "Amorim hopes “one or two” will be back for the derby. The defeat to Bologna is as much about a squad that depends on the same players as it is about the night at San Siro.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-etter-bologna"
+  },
+  "it": {
+   "title": "La speranza non è una formazione titolare",
+   "ingress": "Amorim spera che «uno o due» siano di ritorno per il derby. La sconfitta con il Bologna parla tanto di una rosa che dipende dagli stessi giocatori quanto della serata a San Siro.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-etter-bologna"
+  }
  }
 ]
