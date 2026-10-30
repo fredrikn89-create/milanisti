@@ -1034,28 +1034,6 @@
   }
  },
  {
-  "id": "s-stadium-economics",
-  "date": "2026-10-30",
-  "no": {
-   "title": "Stadionet som skal betale for seg selv",
-   "ingress": "Generali Stadium koster rundt 2,3 milliarder euro. Hvem betaler, hva koster det Milan, og hvor mye kommer tilbake når det står ferdig i 2031?",
-   "badge": "Perspektiv",
-   "url": "https://milanisti.net/no/#s-stadium-economics"
-  },
-  "en": {
-   "title": "The stadium that is meant to pay for itself",
-   "ingress": "Generali Stadium costs around €2.3 billion. Who pays, what does it cost Milan, and how much comes back when it opens in 2031?",
-   "badge": "Perspective",
-   "url": "https://milanisti.net/#s-stadium-economics"
-  },
-  "it": {
-   "title": "Lo stadio che deve ripagarsi da solo",
-   "ingress": "Il Generali Stadium costa circa 2,3 miliardi di euro. Chi paga, quanto costa al Milan e quanto tornerà indietro quando aprirà nel 2031?",
-   "badge": "Prospettiva",
-   "url": "https://milanisti.net/it/#s-stadium-economics"
-  }
- },
- {
   "id": "n-cardinale-gazzetta",
   "date": "2026-10-30",
   "no": {
