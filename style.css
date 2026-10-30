@@ -1254,3 +1254,8 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 .tip-rules li { margin: 0.25rem 0; }
 .tip-hist { list-style: none; margin: 0; padding: 0; }
 .tip-hist li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.92rem; font-variant-numeric: tabular-nums; }
+
+/* Baner side om side: like høye bildetekster slik at banene ligger på samme linje (Fredrik 30.10.2026) */
+.pitch-row.two, .pitch-row.three { align-items: stretch; }
+.pitch-row.two .pitch-wrap, .pitch-row.three .pitch-wrap { display: flex; flex-direction: column; }
+.pitch-row.two .pitch-wrap figcaption, .pitch-row.three .pitch-wrap figcaption { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: flex-end; }
