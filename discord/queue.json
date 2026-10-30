@@ -1034,6 +1034,28 @@
   }
  },
  {
+  "id": "n-pulisic-contract",
+  "date": "2026-10-30",
+  "no": {
+   "title": "Pulisic har forlenget med Milan til 2031",
+   "ingress": "Milan har offisielt forlenget kontrakten med Christian Pulisic til 30. juni 2031.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-pulisic-contract"
+  },
+  "en": {
+   "title": "Pulisic extends with Milan until 2031",
+   "ingress": "Milan have officially extended Christian Pulisic's contract to 30 June 2031.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-pulisic-contract"
+  },
+  "it": {
+   "title": "Pulisic rinnova con il Milan fino al 2031",
+   "ingress": "Il Milan ha ufficialmente prolungato il contratto di Christian Pulisic fino al 30 giugno 2031.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-pulisic-contract"
+  }
+ },
+ {
   "id": "n-cardinale-gazzetta",
   "date": "2026-10-30",
   "no": {
