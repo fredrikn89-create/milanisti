@@ -1034,6 +1034,28 @@
   }
  },
  {
+  "id": "f-inter",
+  "date": "2026-10-30",
+  "no": {
+   "title": "Milan–Inter – Tomori er ute, men Rabiot, Gila og Moreira er tilbake til derbyet",
+   "ingress": "Milan møter Inter på San Siro lørdag kl. 20.45. Tomori er ute med en muskelskade, mens Rabiot, Gila og Moreira er tilbake i gruppen.",
+   "badge": "Før kamp: Milan–Inter",
+   "url": "https://milanisti.net/no/#f-inter"
+  },
+  "en": {
+   "title": "Milan–Inter – Tomori is out, but Rabiot, Gila and Moreira are back for the derby",
+   "ingress": "Milan face Inter at San Siro on Saturday at 20:45. Tomori is out with a muscle injury, while Rabiot, Gila and Moreira are back in the squad.",
+   "badge": "Preview: Milan–Inter",
+   "url": "https://milanisti.net/#f-inter"
+  },
+  "it": {
+   "title": "Milan–Inter – Tomori è out, ma Rabiot, Gila e Moreira tornano per il derby",
+   "ingress": "Il Milan affronta l'Inter a San Siro sabato alle 20:45. Tomori è out per un infortunio muscolare, mentre Rabiot, Gila e Moreira sono tornati in gruppo.",
+   "badge": "Anteprima: Milan–Inter",
+   "url": "https://milanisti.net/it/#f-inter"
+  }
+ },
+ {
   "id": "n-pulisic-contract",
   "date": "2026-10-30",
   "no": {
