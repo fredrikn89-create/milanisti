@@ -1032,5 +1032,27 @@
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-etter-bologna"
   }
+ },
+ {
+  "id": "n-cardinale-gazzetta",
+  "date": "2026-10-30",
+  "no": {
+   "title": "Cardinale: – Amorim er ikke i fare, og i januar blir Milan aggressive",
+   "ingress": "Milan-eieren sier i et intervju at han har full tillit til treneren, og at klubben skal styrke troppen i januar. Intervjuet kommer dagen før derbyet.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-cardinale-gazzetta"
+  },
+  "en": {
+   "title": "Cardinale: “Amorim is not in danger, and Milan will be aggressive in January”",
+   "ingress": "The Milan owner says in an interview that he has full faith in the coach and that the club will strengthen the squad in January. The interview comes the day before the derby.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-cardinale-gazzetta"
+  },
+  "it": {
+   "title": "Cardinale: «Amorim non è in pericolo, e a gennaio il Milan sarà aggressivo»",
+   "ingress": "Il proprietario del Milan dice in un'intervista di avere piena fiducia nell'allenatore e che il club rinforzerà la rosa a gennaio. L'intervista arriva alla vigilia del derby.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-cardinale-gazzetta"
+  }
  }
 ]
