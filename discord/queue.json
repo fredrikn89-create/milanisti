@@ -1098,5 +1098,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-cardinale-gazzetta"
   }
+ },
+ {
+  "id": "s-derby-familie",
+  "date": "2026-10-31",
+  "no": {
+   "title": "Familiestriden som aldri tar slutt",
+   "ingress": "Inter ble født ut av Milan. Det er derfor derbyet aldri har vært bare en kamp mellom to naboer, men et kapittel i en lang familiehistorie.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-derby-familie"
+  },
+  "en": {
+   "title": "The family feud that never ends",
+   "ingress": "Inter was born out of Milan. That is why the derby has never been just a match between two neighbours, but a chapter in a long family story.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-derby-familie"
+  },
+  "it": {
+   "title": "La lite di famiglia che non finisce mai",
+   "ingress": "L'Inter è nata dal Milan. Per questo il derby non è mai stato solo una partita tra due vicini, ma un capitolo di una lunga storia di famiglia.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-derby-familie"
+  }
  }
 ]
