@@ -1107,16 +1107,18 @@ html, body { overflow-x: clip; }
   .fin-table.fin-compact caption { display: table-caption; font-size: 0.85rem; }
 }
 
-/* Video i artikler: små bokser side ved side under ingressen, klikk for å laste */
-.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));align-items:stretch;gap:.5rem;margin:.7rem 0 .2rem}
-.vid{margin:0;display:flex;flex-direction:column}.vid.vid-open{grid-column:1/-1}
+/* Video i artikler: kompakte rader (1 kolonne mobil, 2 desktop), klikk for å laste */
+.vids{display:grid;grid-template-columns:1fr;gap:.35rem;margin:.7rem 0 .2rem}
+@media (min-width:720px){.vids{grid-template-columns:1fr 1fr}}
+.vid{margin:0;display:flex;align-items:stretch;gap:.5rem;min-width:0}.vid.vid-open{grid-column:1/-1;display:block}.vid.vid-open .vid-yt{display:none}
 .vid iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;background:#000}
-.vid-play,.vid-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.25rem;width:100%;flex:1 1 auto;min-height:3.9rem;
- background:#111;color:#fff;border:0;border-radius:10px;cursor:pointer;text-align:left;padding:.55rem .7rem .6rem;text-decoration:none;font:inherit}
-.vid-icon{display:grid;place-items:center;width:1.5rem;height:1.5rem;border-radius:50%;background:#c8102e;font-size:.6rem;flex:none}
-.vid-title{font-weight:700;font-size:.8rem;line-height:1.25}
-.vid-note{font-size:.68rem;opacity:.75;line-height:1.2}
-.vid figcaption{font-size:.72rem;margin-top:.25rem;opacity:.8;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vid-play,.vid-card{display:flex;align-items:center;gap:.55rem;flex:1 1 auto;min-width:0;background:#111;color:#fff;border:0;border-radius:8px;cursor:pointer;text-align:left;padding:.4rem .6rem;text-decoration:none;font:inherit}
+.vid-icon{display:grid;place-items:center;width:1.4rem;height:1.4rem;border-radius:50%;background:#c8102e;font-size:.55rem;flex:none}
+.vid-txt{display:flex;flex-direction:column;min-width:0}
+.vid-title{font-weight:700;font-size:.8rem;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vid-credit{font-size:.66rem;opacity:.7;line-height:1.2;margin-top:.1rem}
+.vid-yt{flex:none;align-self:center;font-size:.72rem;white-space:nowrap;color:inherit;opacity:.8}
+.vids-note{grid-column:1/-1;font-size:.66rem;opacity:.6;margin:.1rem 0 0}
 .vid-play:focus-visible,.vid-card:focus-visible{outline:3px solid #c8102e;outline-offset:2px}
 
 /* Spillerbørs: sesongsnitt til høyre for kampens karakter */
