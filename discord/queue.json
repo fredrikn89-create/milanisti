@@ -1142,5 +1142,27 @@
    "badge": "Milan 3–1 Inter",
    "url": "https://milanisti.net/it/#a-inter"
   }
+ },
+ {
+  "id": "s-modric-systemet",
+  "date": "2026-11-02",
+  "no": {
+   "title": "Et system som trenger en 41-åring",
+   "ingress": "I august sa Amorim at Modrić måtte kjempe om plassen. I oktober sa han at Milan spiller godt når Modrić gjør det. Mellom de to setningene ligger mye av Milans sesong.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-modric-systemet"
+  },
+  "en": {
+   "title": "A system that needs a 41-year-old",
+   "ingress": "In August Amorim said Modrić would have to fight for his place. In October he said Milan play well when Modrić does. Between those two sentences lies much of Milan’s season.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-modric-systemet"
+  },
+  "it": {
+   "title": "Un sistema che ha bisogno di un 41enne",
+   "ingress": "In agosto Amorim disse che Modrić avrebbe dovuto lottare per il posto. A ottobre disse che il Milan gioca bene quando gioca bene Modrić. Tra le due frasi c’è gran parte della stagione del Milan.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-modric-systemet"
+  }
  }
 ]
