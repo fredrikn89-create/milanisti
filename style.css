@@ -1261,3 +1261,27 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 .pitch-row.two, .pitch-row.three { align-items: stretch; }
 .pitch-row.two .pitch-wrap, .pitch-row.three .pitch-wrap { display: flex; flex-direction: column; }
 .pitch-row.two .pitch-wrap figcaption, .pitch-row.three .pitch-wrap figcaption { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: flex-end; }
+
+/* Grafikk i saker (Fredrik 3.11.2026): svart = Milan i dag, gull = det Fernandes legger til, grå = øvrig/ledig */
+.fig { margin: 1.4rem 0; padding: 1rem 1.1rem; border: 1px solid var(--rule); border-radius: 14px; background: linear-gradient(180deg, var(--bg, #fff), var(--bg-alt, #f6f3f1)); box-shadow: 0 1px 2px rgba(38,33,30,.06), 0 10px 28px -12px rgba(38,33,30,.3); }
+.fig-h { font-size: 1.02rem; margin: 0 0 0.15rem; display: flex; align-items: center; gap: 0.55rem; }
+.fig-h::before { content: ""; width: 5px; height: 1.1rem; border-radius: 3px; background: linear-gradient(180deg, #c75a60, #6f2327); flex: none; }
+.fig-sub { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.7rem; }
+.fig-note { font-size: 0.76rem; color: var(--muted); margin: 0.6rem 0 0; }
+.fig-facts dl { margin: 0.5rem 0 0; } .fig-facts dl > div { display: grid; grid-template-columns: 9rem 1fr; gap: 0.6rem; padding: 0.45rem 0; border-top: 1px solid var(--rule); font-size: 0.9rem; } .fig-facts dt { font-weight: 700; } .fig-facts dd { margin: 0; }
+.fb { display: grid; grid-template-columns: 7.5rem 1fr 3.2rem; gap: 0.55rem; align-items: center; margin: 0.45rem 0; font-size: 0.85rem; }
+.fb .fv { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+.fb .fbar { height: 1.3rem; border-radius: 0.65rem; background: linear-gradient(180deg, #d9d3ce, #ebe7e3); box-shadow: inset 0 2px 4px rgba(0,0,0,.18); position: relative; white-space: nowrap; font-size: 0; }
+.fb .fbar i { display: inline-block; height: 100%; vertical-align: top; }
+.fb .fbar i.first { border-radius: 0.65rem 0 0 0.65rem; } .fb .fbar i.last { border-radius: 0 0.65rem 0.65rem 0; } .fb .fbar i.first.last { border-radius: 0.65rem; }
+.s-k { background: linear-gradient(180deg, #5a4f4a 0%, #3a3330 55%, #241f1d 100%); box-shadow: 0 3px 8px rgba(36,31,29,.4), inset 0 1px 0 rgba(255,255,255,.28); }
+.s-g { background: linear-gradient(180deg, #f3e2a6 0%, #e2c26a 18%, #c9a240 45%, #a8802a 75%, #85621c 100%); box-shadow: 0 3px 8px rgba(133,98,28,.5), inset 0 1px 0 rgba(255,255,255,.7); }
+.s-gr { background: linear-gradient(180deg, #b3aca6 0%, #8b847e 45%, #5f5853 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.4); }
+.fb .lim { position: absolute; top: -5px; bottom: -5px; right: 0; width: 3px; border-radius: 2px; background: linear-gradient(180deg, #121010, #555); box-shadow: 0 0 0 2px rgba(255,255,255,.8), 0 2px 6px rgba(0,0,0,.35); }
+.fig-leg { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; font-size: 0.74rem; color: var(--muted); margin-top: 0.5rem; } .fig-leg u { display: inline-block; width: 0.7rem; height: 0.7rem; margin-right: 0.3rem; text-decoration: none; border-radius: 2px; vertical-align: -1px; }
+.fig-leg u.s-e { background: #d9d3ce; }
+.fig-scroll { overflow-x: auto; } .fig-table table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.86rem; min-width: 22rem; }
+.fig-table th { background: linear-gradient(180deg, #3a3330, #26211e); color: #fff; padding: 0.5rem 0.5rem; font: 600 0.7rem var(--mono, monospace); letter-spacing: 0.04em; text-align: right; } .fig-table th:first-child { text-align: left; border-radius: 8px 0 0 0; } .fig-table th:last-child { border-radius: 0 8px 0 0; background: linear-gradient(180deg, #9b3a3f, #6f2327); }
+.fig-table td { padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--rule); text-align: right; font-variant-numeric: tabular-nums; } .fig-table td:first-child { text-align: left; } .fig-table tr:nth-child(even) td { background: rgba(38,33,30,.03); } .fig-table td:last-child { background-image: linear-gradient(180deg, rgba(155,58,63,.10), rgba(155,58,63,.04)); } .fig-table td.neg { color: var(--red); font-weight: 700; }
+.fig-pros .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.4rem; } .fig-pros b { display: block; margin-bottom: 0.2rem; } .fig-pros p { margin: 0; font-size: 0.9rem; } .fig-pros .for b { color: #4d7a5a; } .fig-pros .mot b { color: var(--red); }
+@media (max-width: 560px) { .fb { grid-template-columns: 5.6rem 1fr 3rem; font-size: 0.78rem; } .fig-facts dl > div { grid-template-columns: 1fr; gap: 0.1rem; } .fig-pros .pc { grid-template-columns: 1fr; } }
