@@ -1285,3 +1285,8 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 .fig-table td { padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--rule); text-align: right; font-variant-numeric: tabular-nums; } .fig-table td:first-child { text-align: left; } .fig-table tr:nth-child(even) td { background: rgba(38,33,30,.03); } .fig-table td:last-child { background-image: linear-gradient(180deg, rgba(155,58,63,.10), rgba(155,58,63,.04)); } .fig-table td.neg { color: var(--red); font-weight: 700; }
 .fig-pros .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.4rem; } .fig-pros b { display: block; margin-bottom: 0.2rem; } .fig-pros p { margin: 0; font-size: 0.9rem; } .fig-pros .for b { color: #4d7a5a; } .fig-pros .mot b { color: var(--red); }
 @media (max-width: 560px) { .fb { grid-template-columns: 5.6rem 1fr 3rem; font-size: 0.78rem; } .fig-facts dl > div { grid-template-columns: 1fr; gap: 0.1rem; } .fig-pros .pc { grid-template-columns: 1fr; } }
+
+/* «Les mindre» også øverst i åpnede saker (Fredrik 3.11.2026) */
+.readless-top { display: none; align-self: flex-start; margin: 0 0 0.8rem; padding: 0.4rem 0.8rem; font: 500 0.78rem var(--mono, monospace); text-transform: uppercase; letter-spacing: 0.04em; background: transparent; color: var(--red); border: 1px solid var(--red); cursor: pointer; }
+.readless-top:hover { background: var(--red); color: #fff; }
+.item:has(.readmore[aria-expanded="true"]) .readless-top { display: inline-block; }
