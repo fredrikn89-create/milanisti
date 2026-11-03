@@ -1297,3 +1297,13 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
   .feed .item:has(.readmore[aria-expanded="true"]) .txt { width: 100%; max-width: 44rem; margin-inline: auto; }
 }
 .fig-leg + .fig-note { margin-top: 0.8rem; }
+/* Tabell i figurer: alle kolonner skal vises uten sideveis scrolling på mobil */
+.fig-table table { min-width: 0; table-layout: fixed; }
+.fig-table th:first-child, .fig-table td:first-child { width: 34%; }
+@media (max-width: 560px) {
+  .fig { padding: 0.8rem 0.7rem; }
+  .fig-table table { font-size: 0.72rem; }
+  .fig-table th { font-size: 0.58rem; letter-spacing: 0; padding: 0.45rem 0.2rem; overflow-wrap: anywhere; }
+  .fig-table td { padding: 0.45rem 0.2rem; }
+  .fig-table td:first-child, .fig-table th:first-child { padding-left: 0.3rem; }
+}
