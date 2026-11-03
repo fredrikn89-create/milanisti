@@ -1164,5 +1164,27 @@
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-modric-systemet"
   }
+ },
+ {
+  "id": "n-samlenyhet-3-nov",
+  "date": "2026-11-03",
+  "no": {
+   "title": "Dette rører seg i Milan: Ferencváros, Krösche og januarmarkedet",
+   "ingress": "Torsdag spiller Milan Ferencváros uten Maignan, mens Krösche-avtalen og januarvinduet foreløpig bare er meldinger fra mediene. Her er det som er bekreftet, og det som er rykter.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-samlenyhet-3-nov"
+  },
+  "en": {
+   "title": "What is happening at Milan: Ferencváros, Krösche and the January market",
+   "ingress": "On Thursday Milan face Ferencváros without Maignan, while the Krösche deal and the January window are so far only media reports. Here is what is confirmed, and what is rumour.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-samlenyhet-3-nov"
+  },
+  "it": {
+   "title": "Cosa si muove al Milan: Ferencváros, Krösche e il mercato di gennaio",
+   "ingress": "Giovedì il Milan affronta il Ferencváros senza Maignan, mentre l’accordo per Krösche e la finestra di gennaio sono per ora solo notizie dei media. Ecco cosa è confermato e cosa è solo voce.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-samlenyhet-3-nov"
+  }
  }
 ]
