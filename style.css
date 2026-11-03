@@ -1293,6 +1293,6 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 /* Åpnet sak på desktop (Fredrik 3.11.2026): bilde øverst i full bredde og én lesekolonne under, ikke tekst på høyresiden */
 @media (min-width: 761px) {
   .feed .item:has(.readmore[aria-expanded="true"]) { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
-  .feed .item:has(.readmore[aria-expanded="true"]) .art-fig { height: 20rem; min-height: 0; }
+  .feed .item:has(.readmore[aria-expanded="true"]) .art-fig { height: var(--fig-h, 20rem); min-height: 0; }
   .feed .item:has(.readmore[aria-expanded="true"]) .txt { width: 100%; max-width: 44rem; margin-inline: auto; }
 }
