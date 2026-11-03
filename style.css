@@ -1290,3 +1290,9 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 .readless-top { display: none; align-self: flex-start; margin: 0 0 0.8rem; padding: 0.4rem 0.8rem; font: 500 0.78rem var(--mono, monospace); text-transform: uppercase; letter-spacing: 0.04em; background: transparent; color: var(--red); border: 1px solid var(--red); cursor: pointer; }
 .readless-top:hover { background: var(--red); color: #fff; }
 .item:has(.readmore[aria-expanded="true"]) .readless-top { display: inline-block; }
+/* Åpnet sak på desktop (Fredrik 3.11.2026): bilde øverst i full bredde og én lesekolonne under, ikke tekst på høyresiden */
+@media (min-width: 761px) {
+  .feed .item:has(.readmore[aria-expanded="true"]) { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .feed .item:has(.readmore[aria-expanded="true"]) .art-fig { height: 20rem; min-height: 0; }
+  .feed .item:has(.readmore[aria-expanded="true"]) .txt { width: 100%; max-width: 44rem; margin-inline: auto; }
+}
