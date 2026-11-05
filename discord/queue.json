@@ -1274,5 +1274,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-rabiot-kaptein"
   }
+ },
+ {
+  "id": "a-ferencvaros",
+  "date": "2026-11-06",
+  "no": {
+   "title": "Lenny Joseph scoret to ganger da Milan tapte 0–2 for Ferencvaros på San Siro",
+   "ingress": "Milan tapte sin tredje Europa League-kamp for sesongen. Joseph scoret begge målene for Ferencvaros, og Amorim sa etter kampen at det ikke finnes noen unnskyldninger.",
+   "badge": "Milan 0–2 Ferencvaros",
+   "url": "https://milanisti.net/no/#a-ferencvaros"
+  },
+  "en": {
+   "title": "Lenny Joseph scored twice as Milan lost 0–2 to Ferencvaros at San Siro",
+   "ingress": "Milan lost their third Europa League match of the season. Joseph scored both goals for Ferencvaros, and Amorim said after the match that there are no excuses.",
+   "badge": "Milan 0–2 Ferencvaros",
+   "url": "https://milanisti.net/#a-ferencvaros"
+  },
+  "it": {
+   "title": "Lenny Joseph ha segnato due volte nel 0–2 del Milan contro il Ferencváros a San Siro",
+   "ingress": "Il Milan ha perso la terza partita di Europa League della stagione. Joseph ha segnato entrambi i gol per il Ferencváros e Amorim ha detto dopo la partita che non ci sono scuse.",
+   "badge": "Milan 0–2 Ferencvaros",
+   "url": "https://milanisti.net/it/#a-ferencvaros"
+  }
  }
 ]
