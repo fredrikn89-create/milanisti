@@ -1252,5 +1252,27 @@
    "badge": "Finanze",
    "url": "https://milanisti.net/it/#o-adidas-2028"
   }
+ },
+ {
+  "id": "n-rabiot-kaptein",
+  "date": "2026-11-05",
+  "no": {
+   "title": "Rabiot ventes med kapteinsbind mot Ferencváros",
+   "ingress": "Adrien Rabiot kan starte som kaptein når Milan møter Ferencváros torsdag kveld. Det er ikke offisielt, og avisene er uenige om han i det hele tatt starter.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-rabiot-kaptein"
+  },
+  "en": {
+   "title": "Rabiot expected to wear the armband against Ferencváros",
+   "ingress": "Adrien Rabiot could start as captain when Milan face Ferencváros on Thursday evening. It is not official, and the papers disagree on whether he starts at all.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-rabiot-kaptein"
+  },
+  "it": {
+   "title": "Rabiot atteso con la fascia da capitano contro il Ferencváros",
+   "ingress": "Adrien Rabiot potrebbe giocare da capitano giovedì sera contro il Ferencváros. Non è ufficiale e i giornali non concordano nemmeno sul fatto che giochi dall’inizio.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-rabiot-kaptein"
+  }
  }
 ]
