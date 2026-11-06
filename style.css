@@ -1309,3 +1309,5 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 }
 
 .k-okonomi .cat { color: var(--fg); }
+/* Eget bilde: ikke la det strekke seg til hele tekstkolonnens høyde på desktop (lukket sak) */
+@media (min-width: 761px) { .feed .item .art-fig[style*="--fig-h"] { max-height: var(--fig-h); align-self: start; } }
