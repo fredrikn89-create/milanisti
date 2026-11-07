@@ -1296,5 +1296,27 @@
    "badge": "Milan 0–2 Ferencvaros",
    "url": "https://milanisti.net/it/#a-ferencvaros"
   }
+ },
+ {
+  "id": "s-ramos-camarda",
+  "date": "2026-11-07",
+  "no": {
+   "title": "Hva gjør vi med Ramos nå?",
+   "ingress": "Milans dyreste spiller gjennom tidene gjør ingenting, mens en 18-åring venter på benken med tall som peker motsatt vei. Spørsmålet er om prosjektet allerede har feilet, eller om det bare trenger en annen oppskrift.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-ramos-camarda"
+  },
+  "en": {
+   "title": "What do we do about Ramos now?",
+   "ingress": "Milan’s most expensive player ever is doing nothing, while an 18-year-old waits on the bench with numbers pointing the other way. The question is whether the project has already failed, or simply needs a different recipe.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-ramos-camarda"
+  },
+  "it": {
+   "title": "Che cosa facciamo ora con Ramos?",
+   "ingress": "Il giocatore più costoso della storia del Milan non combina nulla, mentre un diciottenne aspetta in panchina con numeri che indicano il contrario. La domanda è se il progetto sia già fallito o abbia solo bisogno di un’altra ricetta.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-ramos-camarda"
+  }
  }
 ]
