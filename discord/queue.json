@@ -1340,5 +1340,27 @@
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-ramos-camarda"
   }
+ },
+ {
+  "id": "a-genoa",
+  "date": "2026-11-08",
+  "no": {
+   "title": "Cissé og Pulisic ga Milan to mål på 19 minutter, og Genoa kom for sent tilbake",
+   "ingress": "Milan vant 2–1 borte mot Genoa og fikk svar etter Europa League-tapet mot Ferencvaros. Cissé og Pulisic scoret før det var spilt 20 minutter, men Ellertsson ga Genoa et nervøst sluttspill.",
+   "badge": "Genoa 1–2 Milan",
+   "url": "https://milanisti.net/no/#a-genoa"
+  },
+  "en": {
+   "title": "Cissé and Pulisic gave Milan two goals in 19 minutes, and Genoa came back too late",
+   "ingress": "Milan won 2–1 away at Genoa and got an answer after the Europa League defeat to Ferencvaros. Cissé and Pulisic scored before 20 minutes had been played, but Ellertsson gave Genoa a nervy finish.",
+   "badge": "Genoa 1–2 Milan",
+   "url": "https://milanisti.net/#a-genoa"
+  },
+  "it": {
+   "title": "Cissé e Pulisic hanno dato al Milan due gol in 19 minuti, e il Genoa è tornato troppo tardi",
+   "ingress": "Il Milan ha vinto 2–1 in trasferta contro il Genoa e ha dato una risposta dopo la sconfitta in Europa League contro il Ferencvaros. Cissé e Pulisic hanno segnato prima dei 20 minuti, ma Ellertsson ha regalato al Genoa un finale nervoso.",
+   "badge": "Genoa 1–2 Milan",
+   "url": "https://milanisti.net/it/#a-genoa"
+  }
  }
 ]
