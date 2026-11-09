@@ -1362,5 +1362,27 @@
    "badge": "Genoa 1–2 Milan",
    "url": "https://milanisti.net/it/#a-genoa"
   }
+ },
+ {
+  "id": "s-late-nerves",
+  "date": "2026-11-09",
+  "no": {
+   "title": "Seier uten ro: Milan ledet 2–0 etter 19 minutter og endte med å holde pusten",
+   "ingress": "Milan tok tre poeng i Genova og ga svar etter torsdagens tap, men en 2–0-ledelse som burde vært en hvilepute ble i stedet en slutt der Ellertsson fikk tid til å skyte. Spørsmålet er om Amorims lag er bygget for å avgjøre kamper, eller bare for å vinne dem akkurat nok.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-late-nerves"
+  },
+  "en": {
+   "title": "A win without calm: Milan led 2–0 after 19 minutes and ended up holding their breath",
+   "ingress": "Milan took three points in Genoa and gave an answer after Thursday's defeat, but a 2–0 lead that should have been a cushion became instead an ending in which Ellertsson got time to shoot. The question is whether Amorim's team is built to decide matches, or only to win them just enough.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-late-nerves"
+  },
+  "it": {
+   "title": "Una vittoria senza pace: il Milan era avanti 2–0 dopo 19 minuti e ha finito per trattenere il fiato",
+   "ingress": "Il Milan ha preso tre punti a Genova e ha dato una risposta dopo la sconfitta di giovedì, ma un vantaggio di 2–0 che doveva essere un cuscino è diventato invece un finale in cui Ellertsson ha avuto il tempo di tirare. La domanda è se la squadra di Amorim sia costruita per decidere le partite, o solo per vincerle quanto basta.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-late-nerves"
+  }
  }
 ]
