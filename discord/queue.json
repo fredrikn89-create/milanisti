@@ -1384,5 +1384,27 @@
    "badge": "Prospettiva",
    "url": "https://milanisti.net/it/#s-late-nerves"
   }
+ },
+ {
+  "id": "n-generali-review",
+  "date": "2026-11-10",
+  "no": {
+   "title": "Milanos bystyre ber om ny miljøvurdering av Generali Stadium, og planene kan bli forsinket",
+   "ingress": "Bystyret i Milano vedtok mandag en ikke-bindende uttalelse med 22 mot 6 stemmer som ber om å stanse dagens miljøvurdering og starte en ny. Ingenting er utsatt, men en ny vurdering vil ta tid.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-generali-review"
+  },
+  "en": {
+   "title": "Milan's city council asks for a new environmental assessment of Generali Stadium, and the plans could be delayed",
+   "ingress": "Milan's city council on Monday passed a non-binding motion by 22 votes to 6 asking for the current environmental assessment to be halted and a new one started. Nothing has been postponed, but a new assessment will take time.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-generali-review"
+  },
+  "it": {
+   "title": "Il consiglio comunale di Milano chiede una nuova valutazione ambientale per il Generali Stadium, e i piani potrebbero subire ritardi",
+   "ingress": "Il consiglio comunale di Milano ha approvato lunedì un ordine del giorno non vincolante, con 22 voti contro 6, che chiede di fermare l'attuale valutazione ambientale e di avviarne una nuova. Nulla è stato rinviato, ma una nuova valutazione richiederà tempo.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-generali-review"
+  }
  }
 ]
