@@ -1406,5 +1406,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-generali-review"
   }
+ },
+ {
+  "id": "n-international-break",
+  "date": "2026-11-13",
+  "no": {
+   "title": "Camarda scoret da Italia U21 slo Frankrike 2–1",
+   "ingress": "Francesco Camarda åpnet scoringen i andre omgang da Italia U21 vant 2–1 over Frankrike i Laval fredag kveld. Bartesaghi startet også, og Diawara startet for Frankrike.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-international-break"
+  },
+  "en": {
+   "title": "Camarda scores as Italy U21 beat France 2–1",
+   "ingress": "Francesco Camarda opened the scoring in the second half as Italy U21 won 2–1 against France in Laval on Friday evening. Bartesaghi also started, and Diawara started for France.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-international-break"
+  },
+  "it": {
+   "title": "Camarda segna e l'Italia U21 batte la Francia 2–1",
+   "ingress": "Francesco Camarda ha sbloccato il risultato nella ripresa nel 2–1 dell'Italia U21 sulla Francia a Laval, venerdì sera. Anche Bartesaghi è partito titolare, e Diawara lo è stato per la Francia.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-international-break"
+  }
  }
 ]
