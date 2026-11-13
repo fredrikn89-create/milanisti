@@ -1312,40 +1312,62 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 /* Eget bilde: ikke la det strekke seg til hele tekstkolonnens høyde på desktop (lukket sak) */
 @media (min-width: 761px) { .feed .item .art-fig[style*="--fig-h"] { max-height: var(--fig-h); align-self: start; } }
 
-/* Søk i artiklene (under kategorifilteret). Ingen «Siste nytt»-overskrift (Fredrik 13.11.2026). */
+/* Søk i artiklene (under kategorifilteret). Ingen «Siste nytt»-overskrift (Fredrik 13.11.2026).
+   Perlemor-bakgrunn, hårfin kant med rødt skjær og en rolig glans som sveiper over (Fredrik 13.11.2026). */
 .feed-sec { gap: 0.9rem; }
 .feed-sec .filters { margin: 0; }
 .feed-search {
-  position: relative; display: flex; align-items: center;
-  width: 100%; max-width: 20rem; height: 2.25rem; margin: 0 0 0.6rem;
-  background: var(--surface); border: 1px solid transparent;
-  transition: background-color 0.15s, border-color 0.15s;
+  position: relative; display: flex; align-items: center; overflow: hidden; isolation: isolate;
+  width: 100%; max-width: 21rem; height: 2.4rem; margin: 0 0 0.6rem;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, #faf8f6 0%, #eee9e5 100%) padding-box,
+    linear-gradient(120deg, #e6e2de 0%, rgba(155, 58, 63, 0.55) 45%, #e6e2de 100%) border-box;
+  box-shadow: 0 1px 0 #fff inset, 0 1px 2px rgba(38, 33, 30, 0.06), 0 6px 16px -8px rgba(155, 58, 63, 0.28);
+  transition: box-shadow 0.25s, transform 0.25s;
 }
-.feed-search:hover { border-color: var(--rule); }
-.feed-search:focus-within { background: var(--bg); border-color: var(--fg); }
-.feed-search .fs-icon { position: absolute; left: 0.85rem; color: var(--muted); pointer-events: none; }
+.feed-search::after {  /* glansen */
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(100deg, transparent 32%, rgba(255, 255, 255, 0.95) 47%, rgba(230, 160, 164, 0.28) 50%, rgba(255, 255, 255, 0.95) 53%, transparent 68%);
+  transform: translateX(-120%);
+  animation: fs-shimmer 6s ease-in-out 1.2s infinite;
+}
+@keyframes fs-shimmer {
+  0%, 62% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+.feed-search:hover { box-shadow: 0 1px 0 #fff inset, 0 2px 4px rgba(38, 33, 30, 0.08), 0 8px 20px -8px rgba(155, 58, 63, 0.38); }
+.feed-search:focus-within {
+  box-shadow: 0 1px 0 #fff inset, 0 0 0 3px rgba(155, 58, 63, 0.16), 0 8px 22px -8px rgba(155, 58, 63, 0.5);
+  background:
+    linear-gradient(180deg, #fff, #fff) padding-box,
+    linear-gradient(120deg, var(--red), #d98a8e 50%, var(--red)) border-box;
+}
+.feed-search:focus-within::after, .feed-search.has-q::after { animation: none; opacity: 0; }
+.feed-search .fs-icon { position: absolute; left: 0.9rem; color: var(--red); opacity: 0.8; pointer-events: none; transition: opacity 0.2s; }
+.feed-search:focus-within .fs-icon { opacity: 1; }
 .feed-search input {
   flex: 1; min-width: 0; height: 100%; appearance: none; -webkit-appearance: none;
-  font: 400 0.9rem/1 var(--body); color: var(--fg);
-  padding: 0 0.4rem 0 2.2rem; border: 0; background: transparent; border-radius: 0;
+  font: 400 0.92rem/1 var(--body); letter-spacing: 0.01em; color: var(--fg);
+  padding: 0 0.4rem 0 2.35rem; border: 0; background: transparent; border-radius: 0;
 }
 .feed-search input:focus { outline: none; }
-.feed-search input::placeholder { color: var(--muted); opacity: 1; }
+.feed-search input::placeholder { color: var(--muted); font-style: italic; opacity: 0.9; }
 .feed-search input::-webkit-search-cancel-button { display: none; }
 .feed-search .fs-count {
-  flex: none; font: 500 0.66rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.02em;
-  color: var(--muted); white-space: nowrap;
+  flex: none; font: 500 0.66rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--red); white-space: nowrap;
 }
 .feed-search .fs-clear {
-  display: none; flex: none; width: 1.4rem; height: 1.4rem; margin: 0 0.45rem 0 0.4rem; padding: 0;
-  border: 0; border-radius: 50%; background: var(--muted); color: var(--bg);
-  font: 600 0.9rem/1 var(--body); cursor: pointer;
+  display: none; flex: none; width: 1.4rem; height: 1.4rem; margin: 0 0.5rem 0 0.45rem; padding: 0;
+  border: 0; border-radius: 50%; background: var(--red); color: #fff;
+  font: 600 0.9rem/1 var(--body); cursor: pointer; transition: background-color 0.15s;
 }
 .feed-search .fs-clear:hover { background: var(--fg); }
 .feed-search.has-q .fs-clear { display: grid; place-items: center; }
-.feed-search.has-q:not(:focus-within) { border-color: var(--rule); }
 .feed-noresult q { font-style: italic; color: var(--fg); }
 @media (max-width: 600px) {
-  .feed-search { max-width: none; height: 2.5rem; }
+  .feed-search { max-width: none; height: 2.65rem; }
   .feed-search input { font-size: 1rem; }  /* 16px hindrer at iOS zoomer inn */
 }
+@media (prefers-reduced-motion: reduce) { .feed-search::after { animation: none; opacity: 0; } .feed-search { transition: none; } }
