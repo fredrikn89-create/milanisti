@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="../style.css?v=202611131739">
+<link rel="stylesheet" href="../style.css?v=202611131745">
 <link rel="alternate" hreflang="en" href="../index.html">
 <link rel="alternate" hreflang="it" href="../it/index.html">
 <link rel="alternate" hreflang="nb" href="../no/index.html">
@@ -59,6 +59,12 @@
 
     <section class="sec stack" id="nyheter" aria-labelledby="h-artikler">
       <h2 id="h-artikler">Siste nytt</h2>
+      <div class="feed-search" role="search">
+        <svg class="fs-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="feed-q" type="search" placeholder="Søk i artiklene" aria-label="Søk i artiklene" autocomplete="off" spellcheck="false" enterkeyhint="search">
+        <span class="fs-count" aria-live="polite" data-one="1 artikkel" data-many="{n} artikler"></span>
+        <button type="button" class="fs-clear" aria-label="Tøm søket">×</button>
+      </div>
       <div class="filters" role="group" aria-label="Vis kategori"><button type="button" data-f="alle" aria-pressed="true">Alle</button><button type="button" data-f="nyhet" aria-pressed="false">Nyheter</button><button type="button" data-f="rapport" aria-pressed="false">Kamprapporter</button><button type="button" data-f="forkamp" aria-pressed="false">Før kampen</button><button type="button" data-f="skraablikk" aria-pressed="false">Perspektiv</button><button type="button" data-f="okonomi" aria-pressed="false">Økonomi</button><button type="button" data-f="kommentar" aria-pressed="false">Kommentar</button></div>
       <div class="articles feed">
         <article id="n-generali-review" class="item k-nyhet" data-kind="nyhet">
@@ -830,6 +836,7 @@
           </div>
         </article>
       </div><p class="feed-empty lg-empty" data-kind="kommentar" hidden>Ingen kommentarer ennå.</p><p class="feed-empty lg-empty" data-kind="nyhet" hidden>Ingen nyheter ennå.</p>
+      <p class="feed-noresult lg-empty" hidden>Ingen artikler passer søket <q></q>.</p>
     </section>
     <script>
       document.querySelectorAll('.readmore').forEach(function (btn) {
@@ -900,11 +907,50 @@
         b.addEventListener('click', function () {
           var f = b.dataset.f;
           document.querySelectorAll('.filters button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+          if (window.feedApply) { feedApply(); return; }
           var shown = 0;
           document.querySelectorAll('.feed .item').forEach(function (it) { it.hidden = f !== 'alle' && it.dataset.kind !== f; if (!it.hidden) shown++; });
           document.querySelectorAll('.feed-empty').forEach(function (p) { p.hidden = shown > 0 || p.dataset.kind !== f; });
         });
       });
+    </script>
+    <script>
+      (function () {
+        var q = document.getElementById('feed-q'), box = q && q.closest('.feed-search');
+        if (!q) return;
+        var clr = box.querySelector('.fs-clear'), cnt = box.querySelector('.fs-count'), none = document.querySelector('.feed-noresult');
+        var items = [].slice.call(document.querySelectorAll('.feed .item')), idx = null;
+        function norm(s) { return ' ' + (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\u00e6\u00f8\u00e5\u00df]+/g, ' '); }
+        function build() {
+          idx = items.map(function (it) {
+            var g = function (sel) { var n = it.querySelector(sel); return n ? n.textContent : ''; };
+            return norm([g('h3'), g('.ingress'), g('.cat'), g('.byline'), g('.body')].join(' '));
+          });
+        }
+        var timer = null, last = '';
+        window.feedApply = function () {
+          var on = document.querySelector('.filters button[aria-pressed="true"]'), f = on ? on.dataset.f : 'alle';
+          var terms = norm(q.value).trim().split(' ').filter(Boolean), shown = 0;
+          if (terms.length && !idx) build();
+          items.forEach(function (it, i) {
+            var ok = f === 'alle' || it.dataset.kind === f;
+            if (ok && terms.length) ok = terms.every(function (t) { return idx[i].indexOf(' ' + t) !== -1; });
+            it.hidden = !ok; if (ok) shown++;
+          });
+          box.classList.toggle('has-q', terms.length > 0);
+          cnt.textContent = !terms.length ? '' : shown === 1 ? cnt.dataset.one : cnt.dataset.many.replace('{n}', shown);
+          none.hidden = !terms.length || shown > 0;
+          if (!none.hidden) none.querySelector('q').textContent = q.value.trim();
+          document.querySelectorAll('.feed-empty').forEach(function (p) { p.hidden = terms.length > 0 || shown > 0 || p.dataset.kind !== f; });
+          var v = q.value.trim();
+          clearTimeout(timer);
+          if (v.length > 2 && v !== last && window.umami) timer = setTimeout(function () { last = v; umami.track('Artikkelsøk', { sok: v, treff: shown, sprak: document.documentElement.lang }); }, 1500);
+        };
+        q.addEventListener('input', feedApply);
+        q.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && q.value) { ev.preventDefault(); q.value = ''; feedApply(); } });
+        clr.addEventListener('click', function () { q.value = ''; feedApply(); q.focus(); });
+        if (q.value) feedApply();
+      })();
     </script>
   </main>
   <footer>
