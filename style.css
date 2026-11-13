@@ -1312,33 +1312,40 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 /* Eget bilde: ikke la det strekke seg til hele tekstkolonnens høyde på desktop (lukket sak) */
 @media (min-width: 761px) { .feed .item .art-fig[style*="--fig-h"] { max-height: var(--fig-h); align-self: start; } }
 
-/* Søk i artiklene (over kategorifilteret) */
+/* Søk i artiklene (under kategorifilteret). Ingen «Siste nytt»-overskrift (Fredrik 13.11.2026). */
+.feed-sec { gap: 0.9rem; }
+.feed-sec .filters { margin: 0; }
 .feed-search {
   position: relative; display: flex; align-items: center;
-  margin: -0.5rem 0 0.1rem; max-width: 34rem;
-  border: 1px solid var(--rule); background: var(--bg);
-  transition: border-color 0.15s;
+  width: 100%; max-width: 20rem; height: 2.25rem; margin: 0 0 0.6rem;
+  background: var(--surface); border: 1px solid transparent;
+  transition: background-color 0.15s, border-color 0.15s;
 }
-.feed-search:focus-within { border-color: var(--fg); box-shadow: 0 0 0 1px var(--fg); }
-.feed-search .fs-icon { position: absolute; left: 0.8rem; color: var(--muted); pointer-events: none; }
+.feed-search:hover { border-color: var(--rule); }
+.feed-search:focus-within { background: var(--bg); border-color: var(--fg); }
+.feed-search .fs-icon { position: absolute; left: 0.85rem; color: var(--muted); pointer-events: none; }
 .feed-search input {
-  flex: 1; min-width: 0; appearance: none; -webkit-appearance: none;
-  font: 400 1rem/1.2 var(--body); color: var(--fg);
-  padding: 0.7rem 0.6rem 0.7rem 2.5rem; border: 0; background: transparent; border-radius: 0;
+  flex: 1; min-width: 0; height: 100%; appearance: none; -webkit-appearance: none;
+  font: 400 0.9rem/1 var(--body); color: var(--fg);
+  padding: 0 0.4rem 0 2.2rem; border: 0; background: transparent; border-radius: 0;
 }
 .feed-search input:focus { outline: none; }
 .feed-search input::placeholder { color: var(--muted); opacity: 1; }
 .feed-search input::-webkit-search-cancel-button { display: none; }
 .feed-search .fs-count {
-  flex: none; font: 500 0.72rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.02em;
-  color: var(--muted); white-space: nowrap; padding-right: 0.3rem;
+  flex: none; font: 500 0.66rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.02em;
+  color: var(--muted); white-space: nowrap;
 }
 .feed-search .fs-clear {
-  display: none; flex: none; width: 2.6rem; align-self: stretch;
-  border: 0; border-left: 1px solid var(--rule); background: transparent;
-  color: var(--muted); font: 400 1.4rem/1 var(--body); cursor: pointer;
+  display: none; flex: none; width: 1.4rem; height: 1.4rem; margin: 0 0.45rem 0 0.4rem; padding: 0;
+  border: 0; border-radius: 50%; background: var(--muted); color: var(--bg);
+  font: 600 0.9rem/1 var(--body); cursor: pointer;
 }
-.feed-search .fs-clear:hover { color: var(--fg); }
-.feed-search.has-q .fs-clear { display: block; }
+.feed-search .fs-clear:hover { background: var(--fg); }
+.feed-search.has-q .fs-clear { display: grid; place-items: center; }
+.feed-search.has-q:not(:focus-within) { border-color: var(--rule); }
 .feed-noresult q { font-style: italic; color: var(--fg); }
-@media (max-width: 600px) { .feed-search { max-width: none; } }
+@media (max-width: 600px) {
+  .feed-search { max-width: none; height: 2.5rem; }
+  .feed-search input { font-size: 1rem; }  /* 16px hindrer at iOS zoomer inn */
+}
