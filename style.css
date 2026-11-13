@@ -1313,61 +1313,59 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 @media (min-width: 761px) { .feed .item .art-fig[style*="--fig-h"] { max-height: var(--fig-h); align-self: start; } }
 
 /* Søk i artiklene (under kategorifilteret). Ingen «Siste nytt»-overskrift (Fredrik 13.11.2026).
-   Perlemor-bakgrunn, hårfin kant med rødt skjær og en rolig glans som sveiper over (Fredrik 13.11.2026). */
+   Innfelt felt i matt, satengaktig finish: skygge innover i toppen, lys kant nederst, mykt skjær i overflaten. */
 .feed-sec { gap: 0.9rem; }
 .feed-sec .filters { margin: 0; }
 .feed-search {
-  position: relative; display: flex; align-items: center; overflow: hidden; isolation: isolate;
+  position: relative; display: flex; align-items: center; overflow: hidden;
   width: 100%; max-width: 21rem; height: 2.4rem; margin: 0 0 0.6rem;
-  border: 1px solid transparent;
+  border: 1px solid rgba(38, 33, 30, 0.16); border-top-color: rgba(38, 33, 30, 0.28); border-radius: 3px;
   background:
-    linear-gradient(180deg, #faf8f6 0%, #eee9e5 100%) padding-box,
-    linear-gradient(120deg, #e6e2de 0%, rgba(155, 58, 63, 0.55) 45%, #e6e2de 100%) border-box;
-  box-shadow: 0 1px 0 #fff inset, 0 1px 2px rgba(38, 33, 30, 0.06), 0 6px 16px -8px rgba(155, 58, 63, 0.28);
-  transition: box-shadow 0.25s, transform 0.25s;
+    linear-gradient(105deg, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0.38) 40%, rgba(214, 170, 168, 0.16) 55%, rgba(255, 255, 255, 0) 85%),
+    linear-gradient(180deg, #e7e2de 0%, #efebe7 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(38, 33, 30, 0.20),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 1px 0 #fff;
+  transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
-.feed-search::after {  /* glansen */
-  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(100deg, transparent 32%, rgba(255, 255, 255, 0.95) 47%, rgba(230, 160, 164, 0.28) 50%, rgba(255, 255, 255, 0.95) 53%, transparent 68%);
-  transform: translateX(-120%);
-  animation: fs-shimmer 6s ease-in-out 1.2s infinite;
-}
-@keyframes fs-shimmer {
-  0%, 62% { transform: translateX(-120%); }
-  100% { transform: translateX(120%); }
-}
-.feed-search:hover { box-shadow: 0 1px 0 #fff inset, 0 2px 4px rgba(38, 33, 30, 0.08), 0 8px 20px -8px rgba(155, 58, 63, 0.38); }
+.feed-search:hover { border-color: rgba(38, 33, 30, 0.24); border-top-color: rgba(38, 33, 30, 0.34); }
 .feed-search:focus-within {
-  box-shadow: 0 1px 0 #fff inset, 0 0 0 3px rgba(155, 58, 63, 0.16), 0 8px 22px -8px rgba(155, 58, 63, 0.5);
+  border-color: rgba(155, 58, 63, 0.65); border-top-color: rgba(155, 58, 63, 0.8);
   background:
-    linear-gradient(180deg, #fff, #fff) padding-box,
-    linear-gradient(120deg, var(--red), #d98a8e 50%, var(--red)) border-box;
+    linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 38%, rgba(214, 170, 168, 0.14) 52%, rgba(255, 255, 255, 0) 68%),
+    linear-gradient(180deg, #ece8e4 0%, #f4f1ee 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(38, 33, 30, 0.22),
+    0 0 0 3px rgba(155, 58, 63, 0.14),
+    0 1px 0 #fff;
 }
-.feed-search:focus-within::after, .feed-search.has-q::after { animation: none; opacity: 0; }
-.feed-search .fs-icon { position: absolute; left: 0.9rem; color: var(--red); opacity: 0.8; pointer-events: none; transition: opacity 0.2s; }
-.feed-search:focus-within .fs-icon { opacity: 1; }
+.feed-search .fs-icon { position: absolute; left: 0.9rem; color: #7d5a5c; opacity: 0.85; pointer-events: none; transition: color 0.2s; }
+.feed-search:focus-within .fs-icon { color: var(--red); opacity: 1; }
 .feed-search input {
   flex: 1; min-width: 0; height: 100%; appearance: none; -webkit-appearance: none;
   font: 400 0.92rem/1 var(--body); letter-spacing: 0.01em; color: var(--fg);
   padding: 0 0.4rem 0 2.35rem; border: 0; background: transparent; border-radius: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 .feed-search input:focus { outline: none; }
-.feed-search input::placeholder { color: var(--muted); font-style: italic; opacity: 0.9; }
+.feed-search input::placeholder { color: #8a827c; opacity: 1; }
 .feed-search input::-webkit-search-cancel-button { display: none; }
 .feed-search .fs-count {
   flex: none; font: 500 0.66rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.04em;
-  color: var(--red); white-space: nowrap;
+  color: #7d5a5c; white-space: nowrap;
 }
 .feed-search .fs-clear {
   display: none; flex: none; width: 1.4rem; height: 1.4rem; margin: 0 0.5rem 0 0.45rem; padding: 0;
-  border: 0; border-radius: 50%; background: var(--red); color: #fff;
-  font: 600 0.9rem/1 var(--body); cursor: pointer; transition: background-color 0.15s;
+  border: 0; border-radius: 50%; color: #fff;
+  background: linear-gradient(180deg, #a8444a 0%, #8c3238 100%);
+  box-shadow: 0 1px 1px rgba(38, 33, 30, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  font: 600 0.9rem/1 var(--body); cursor: pointer; transition: filter 0.15s;
 }
-.feed-search .fs-clear:hover { background: var(--fg); }
+.feed-search .fs-clear:hover { filter: brightness(0.9); }
 .feed-search.has-q .fs-clear { display: grid; place-items: center; }
 .feed-noresult q { font-style: italic; color: var(--fg); }
 @media (max-width: 600px) {
   .feed-search { max-width: none; height: 2.65rem; }
   .feed-search input { font-size: 1rem; }  /* 16px hindrer at iOS zoomer inn */
 }
-@media (prefers-reduced-motion: reduce) { .feed-search::after { animation: none; opacity: 0; } .feed-search { transition: none; } }
