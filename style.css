@@ -1318,54 +1318,53 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 .feed-sec .filters { margin: 0; }
 .feed-search {
   position: relative; display: flex; align-items: center; overflow: hidden;
-  width: 100%; max-width: 21rem; height: 2.4rem; margin: 0 0 0.6rem;
-  border: 1px solid rgba(38, 33, 30, 0.16); border-top-color: rgba(38, 33, 30, 0.28); border-radius: 3px;
+  width: 100%; max-width: 14rem; height: 2rem; margin: 0 0 0.4rem;
+  border: 1px solid rgba(38, 33, 30, 0.12); border-top-color: rgba(38, 33, 30, 0.2); border-radius: 2px;
   background:
-    linear-gradient(105deg, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0.38) 40%, rgba(214, 170, 168, 0.16) 55%, rgba(255, 255, 255, 0) 85%),
-    linear-gradient(180deg, #e7e2de 0%, #efebe7 100%);
+    linear-gradient(105deg, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0.3) 40%, rgba(214, 170, 168, 0.1) 55%, rgba(255, 255, 255, 0) 85%),
+    linear-gradient(180deg, #ebe7e3 0%, #f2efec 100%);
   box-shadow:
-    inset 0 2px 4px rgba(38, 33, 30, 0.20),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 1px 3px rgba(38, 33, 30, 0.14),
     0 1px 0 #fff;
   transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
-.feed-search:hover { border-color: rgba(38, 33, 30, 0.24); border-top-color: rgba(38, 33, 30, 0.34); }
+.feed-search:hover { border-color: rgba(38, 33, 30, 0.2); border-top-color: rgba(38, 33, 30, 0.28); }
 .feed-search:focus-within {
-  border-color: rgba(155, 58, 63, 0.65); border-top-color: rgba(155, 58, 63, 0.8);
+  border-color: rgba(155, 58, 63, 0.5); border-top-color: rgba(155, 58, 63, 0.6);
   background:
     linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 38%, rgba(214, 170, 168, 0.14) 52%, rgba(255, 255, 255, 0) 68%),
     linear-gradient(180deg, #ece8e4 0%, #f4f1ee 100%);
   box-shadow:
-    inset 0 2px 4px rgba(38, 33, 30, 0.22),
-    0 0 0 3px rgba(155, 58, 63, 0.14),
+    inset 0 1px 3px rgba(38, 33, 30, 0.14),
+    0 0 0 2px rgba(155, 58, 63, 0.1),
     0 1px 0 #fff;
 }
-.feed-search .fs-icon { position: absolute; left: 0.9rem; color: #7d5a5c; opacity: 0.85; pointer-events: none; transition: color 0.2s; }
+.feed-search .fs-icon { position: absolute; left: 0.65rem; width: 14px; height: 14px; color: #7d5a5c; opacity: 0.85; pointer-events: none; transition: color 0.2s; }
 .feed-search:focus-within .fs-icon { color: var(--red); opacity: 1; }
 .feed-search input {
   flex: 1; min-width: 0; height: 100%; appearance: none; -webkit-appearance: none;
-  font: 400 0.92rem/1 var(--body); letter-spacing: 0.01em; color: var(--fg);
-  padding: 0 0.4rem 0 2.35rem; border: 0; background: transparent; border-radius: 0;
+  font: 400 0.82rem/1 var(--body); color: var(--fg);
+  padding: 0 0.3rem 0 1.95rem; border: 0; background: transparent; border-radius: 0;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 .feed-search input:focus { outline: none; }
 .feed-search input::placeholder { color: #8a827c; opacity: 1; }
 .feed-search input::-webkit-search-cancel-button { display: none; }
 .feed-search .fs-count {
-  flex: none; font: 500 0.66rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.04em;
+  flex: none; font: 500 0.6rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.04em;
   color: #7d5a5c; white-space: nowrap;
 }
 .feed-search .fs-clear {
-  display: none; flex: none; width: 1.4rem; height: 1.4rem; margin: 0 0.5rem 0 0.45rem; padding: 0;
+  display: none; flex: none; width: 1.1rem; height: 1.1rem; margin: 0 0.4rem 0 0.35rem; padding: 0;
   border: 0; border-radius: 50%; color: #fff;
   background: linear-gradient(180deg, #a8444a 0%, #8c3238 100%);
   box-shadow: 0 1px 1px rgba(38, 33, 30, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  font: 600 0.9rem/1 var(--body); cursor: pointer; transition: filter 0.15s;
+  font: 600 0.75rem/1 var(--body); cursor: pointer; transition: filter 0.15s;
 }
 .feed-search .fs-clear:hover { filter: brightness(0.9); }
 .feed-search.has-q .fs-clear { display: grid; place-items: center; }
 .feed-noresult q { font-style: italic; color: var(--fg); }
 @media (max-width: 600px) {
-  .feed-search { max-width: none; height: 2.65rem; }
+  .feed-search { max-width: 15rem; height: 2.3rem; }
   .feed-search input { font-size: 1rem; }  /* 16px hindrer at iOS zoomer inn */
 }
