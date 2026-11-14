@@ -1447,3 +1447,18 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
   .pagehead h1 { font-size: 1.7rem; }
   .pagehead p { font-size: 0.9rem; }
 }
+
+/* Trenerteamet og Ledelsen i samme kompakte stil som troppen (Fredrik 14.11.2026):
+   liten gruppeoverskrift med strek, lave rader med navn først, rolle i liten skrift under. */
+.sec:has(> .people) { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 1.5rem; }
+.sec:has(> .people) > h2 { font-family: var(--mono); font-stretch: normal; font-weight: 500; font-size: 0.66rem; letter-spacing: 0.08em; line-height: 1.4; padding-bottom: 0.4rem; border-bottom: 1px solid var(--fg); }
+.sec:has(> .people) > h2::before { display: none; }
+.people { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 0 2rem; }
+.people li, .people li:last-child { display: flex; flex-direction: column; gap: 0.1rem; padding-block: 0.5rem; border-top: 0; border-bottom: 1px solid var(--rule); }
+.people .who { order: 1; line-height: 1.3; }
+.people .who b { display: block; font-size: 0.95rem; font-weight: 600; line-height: 1.3; }
+.people .role { order: 2; font-size: 0.64rem; letter-spacing: 0.05em; padding-top: 0; line-height: 1.4; }
+.people .who span { display: block; font-size: 0.76rem; line-height: 1.35; margin-top: 0.1rem; }
+.people li:has(.who span) .who { display: contents; }
+.people li:has(.who span) .who b { order: 1; }
+.people li:has(.who span) .who span { order: 3; margin-top: 0; }
