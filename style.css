@@ -1529,3 +1529,8 @@ body:has(.fin-sec) .prose p { margin-bottom: 0.6rem; }
 .rk .fin-table { font-size: 0.8rem; }
 body:has(.to-frame) .pagehead > p { display: none; }
 body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
+
+/* Banner: fullbredde bakgrunnsbilde (stadion + Duomo) med logo og ordmerke over */
+.bn-bg { width: 100% !important; right: auto; left: 0; object-position: 50% 52%; -webkit-mask-image: none; mask-image: none; }
+.banner::before { background: linear-gradient(90deg, rgba(10,8,8,.35), rgba(10,8,8,.15) 30%, rgba(10,8,8,.15) 70%, rgba(10,8,8,.3)); -webkit-mask-image: none; mask-image: none; }
+.banner::after { opacity: .08; }
