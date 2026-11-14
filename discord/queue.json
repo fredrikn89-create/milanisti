@@ -1428,5 +1428,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-international-break"
   }
+ },
+ {
+  "id": "n-cardinale-interview",
+  "date": "2026-11-14",
+  "no": {
+   "title": "Cardinale: «Jeg kommer aldri til å selge Milan»",
+   "ingress": "RedBird-sjef Gerry Cardinale sier at han aldri selger Milan, og at klubben skal få pengene til å konkurrere med Premier League om verdens beste spillere.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-cardinale-interview"
+  },
+  "en": {
+   "title": "Cardinale: “I will never sell Milan”",
+   "ingress": "RedBird chief Gerry Cardinale says he will never sell Milan, and that the club will have the money to compete with the Premier League for the world's best players.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-cardinale-interview"
+  },
+  "it": {
+   "title": "Cardinale: «Non venderò mai il Milan»",
+   "ingress": "Il numero uno di RedBird, Gerry Cardinale, dice che non venderà mai il Milan e che il club avrà le risorse per competere con la Premier League per i migliori giocatori del mondo.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-cardinale-interview"
+  }
  }
 ]
