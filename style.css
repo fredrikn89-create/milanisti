@@ -1491,3 +1491,41 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
   .lg-tabs button { font-size: 0.66rem; }
   .lg-bar { gap: 0.4rem 0.8rem; }
 }
+
+/* ---- Financials: kompakt (mobiloversikt) ---- */
+body:has(.fin-sec) .pagehead > p { display: none; }
+body:has(.fin-sec) .sec { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 1.5rem; }
+body:has(.fin-sec) .sec > h2 { font-family: var(--mono); font-stretch: normal; font-weight: 500; font-size: 0.66rem; letter-spacing: 0.08em; line-height: 1.4; padding-bottom: 0.4rem; margin-bottom: 0.8rem; border-bottom: 1px solid var(--fg); }
+body:has(.fin-sec) .sec > h2::before { display: none; }
+.fin-sec > * + * { margin-top: 0.9rem; }
+.fin-seclede { font-size: 0.85rem; margin-bottom: 0.6rem; color: var(--muted); }
+.fin-tiles { grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr)); }
+.fin-tile { padding: 0.7rem 0.75rem; }
+.fin-lab { font-size: 0.6rem; letter-spacing: 0.06em; }
+.fin-val { font-size: 1.45rem; margin: 0.25rem 0 0.25rem; }
+.fin-exp { font-size: 0.74rem; line-height: 1.35; }
+.fin-sec .prose { font-size: 0.88rem; }
+.fin-sec .prose p { margin: 0 0 0.6rem; }
+.fin-gloss { gap: 0.7rem 2rem; }
+.fin-gloss dt { font-size: 0.85rem; }
+.fin-gloss dd { font-size: 0.78rem; }
+.fin-table { font-size: 0.82rem; }
+.fin-table th, .fin-table td { padding-block: 0.4rem; }
+.fin-note { font-size: 0.74rem; }
+.fin-upd { font-size: 0.72rem; margin-top: 1.5rem; }
+.timeline { font-size: 0.85rem; }
+@media (max-width: 640px) {
+  .fin-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fin-tile { padding: 0.55rem 0.6rem; }
+  .fin-val { font-size: 1.25rem; }
+  .fin-exp { font-size: 0.68rem; }
+  .fin-table tr { padding: 0.4rem 0; }
+  .fin-table td { font-size: 0.8rem; }
+}
+body:has(.fin-sec) .prose { font-size: 0.88rem; line-height: 1.5; }
+body:has(.fin-sec) .prose p { margin-bottom: 0.6rem; }
+.rk .fin-seclede { display: none; }
+.rk-valgt { font-size: 0.95rem !important; margin: 0 0 0.6rem !important; line-height: 1.3; }
+.rk .fin-table { font-size: 0.8rem; }
+body:has(.to-frame) .pagehead > p { display: none; }
+body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
