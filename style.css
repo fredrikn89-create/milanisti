@@ -1539,3 +1539,4 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bn-slash, .bn-word { display: none; }
 .bn-in { min-height: clamp(6.5rem, 22vw, 15rem); }
 .banner::before { background: linear-gradient(90deg, rgba(10,8,8,.25), transparent 25%, transparent 75%, rgba(10,8,8,.2)); }
+.art-fig .ai-tag { right: 0.4rem; bottom: 0.3rem; font-size: 0.5rem; letter-spacing: 0.03em; color: rgba(255,255,255,0.68); }
