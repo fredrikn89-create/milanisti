@@ -1534,3 +1534,8 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bn-bg { width: 100% !important; right: auto; left: 0; object-position: 50% 52%; -webkit-mask-image: none; mask-image: none; }
 .banner::before { background: linear-gradient(90deg, rgba(10,8,8,.35), rgba(10,8,8,.15) 30%, rgba(10,8,8,.15) 70%, rgba(10,8,8,.3)); -webkit-mask-image: none; mask-image: none; }
 .banner::after { opacity: .08; }
+/* Bildets eget ordmerke brukes; skjold ligger til venstre */
+.bn-bg { object-position: 50% 46%; }
+.bn-slash, .bn-word { display: none; }
+.bn-in { min-height: clamp(6.5rem, 22vw, 15rem); }
+.banner::before { background: linear-gradient(90deg, rgba(10,8,8,.25), transparent 25%, transparent 75%, rgba(10,8,8,.2)); }
