@@ -1403,7 +1403,5 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 /* Liten AI-merknad nederst til høyre på bildet (Fredrik 14.11.2026) */
 .art-fig .ai-tag { position: absolute; right: 0.5rem; bottom: 0.5rem; font-size: 0.62rem; line-height: 1; padding: 0.22rem 0.4rem; border-radius: 3px; background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.9); letter-spacing: 0.02em; pointer-events: none; }
 
-/* AI-merknaden dempet (Fredrik 14.11.2026): skjult i feeden, vises diskré på bildet først når saken er åpnet.
-   Bildekreditten «Bilde: …» nederst i den åpne saken står som før. */
-.art-fig .ai-tag { display: none; padding: 0; background: none; border-radius: 0; font-size: 0.56rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.7); text-shadow: 0 1px 2px rgba(0,0,0,0.7); }
-.item:has(.readmore[aria-expanded="true"]) .art-fig .ai-tag { display: block; }
+/* AI-merknaden dempet men alltid synlig (Fredrik 14.11.2026): liten lys tekst uten boks nederst til høyre på bildet, også før «Les mer». */
+.art-fig .ai-tag { display: block; padding: 0; background: none; border-radius: 0; font-size: 0.56rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.72); text-shadow: 0 1px 2px rgba(0,0,0,0.75); }
