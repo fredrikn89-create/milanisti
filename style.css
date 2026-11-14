@@ -1462,3 +1462,32 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 .people li:has(.who span) .who { display: contents; }
 .people li:has(.who span) .who b { order: 1; }
 .people li:has(.who span) .who span { order: 3; margin-top: 0; }
+
+/* Statistikk i kompakt stil (Fredrik 14.11.2026): små kategorivalg, smale faner, ett filterfelt, lav tabell. */
+.st-team { padding: 1rem 0 0.5rem; }
+.lg-groups { border: 0; margin: 0 0 0.9rem; gap: 0.4rem; width: auto; }
+.lg-groups button, .lg-groups button + button { font: 500 0.66rem/1 var(--mono); font-stretch: normal; letter-spacing: 0.07em; padding: 0.5rem 0.8rem; background: none; color: var(--muted); border: 1px solid var(--rule); }
+.lg-groups button:hover { color: var(--fg); border-color: var(--fg); }
+.lg-groups button[aria-pressed="true"] { background: var(--fg); color: #fff; border-color: var(--fg); }
+.lg-tabs { gap: 0 1.1rem; margin: 0 0 1rem; }
+.lg-tabs button { font: 500 0.66rem/1 var(--mono); letter-spacing: 0.07em; text-transform: uppercase; padding: 0.55rem 0 0.5rem; border-bottom-width: 2px; }
+.lg-stamp { font: 400 0.64rem var(--mono); letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 0.6rem; }
+.lg-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin: 0 0 0.8rem; }
+.lg-bar .lg-comp { margin: 0; gap: 0.4rem; font-size: 0.62rem; }
+.lg-bar .lg-comp select { font-size: 0.7rem; padding: 0.25rem 0.4rem; border-radius: 0; }
+.lg-posf { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0; }
+.lg-posf button { font: 500 0.62rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 0.35rem 0.6rem; border: 1px solid var(--rule); background: none; color: var(--muted); cursor: pointer; }
+.lg-posf button:hover { color: var(--fg); border-color: var(--fg); }
+.lg-posf button[aria-pressed="true"] { background: var(--fg); border-color: var(--fg); color: #fff; }
+.lg-table th { font-size: 0.62rem; padding: 0.3rem 0.4rem; }
+.lg-table td { padding: 0.38rem 0.4rem; font-size: 0.88rem; }
+.lg-bors .tm b { display: inline; }
+.lg-bors .tm small { display: inline; margin-left: 0.4rem; font-size: 0.7rem; }
+.lg-note.lg-fine { font-size: 0.68rem; margin-top: 0.5rem; }
+.lg-note, .lg-src { font-size: 0.72rem; }
+.lg-legal { margin-top: 1.5rem; font-size: 0.72rem; padding: 0.7rem 1rem; }
+@media (max-width: 640px) {
+  .lg-tabs { gap: 0 1.1rem; }
+  .lg-tabs button { font-size: 0.66rem; }
+  .lg-bar { gap: 0.4rem 0.8rem; }
+}
