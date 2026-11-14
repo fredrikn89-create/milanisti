@@ -1405,3 +1405,45 @@ button.tip-google { background: transparent; color: var(--red); margin-top: 0.5r
 
 /* AI-merknaden dempet men alltid synlig (Fredrik 14.11.2026): liten lys tekst uten boks nederst til høyre på bildet, også før «Les mer». */
 .art-fig .ai-tag { display: block; padding: 0; background: none; border-radius: 0; font-size: 0.56rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.72); text-shadow: 0 1px 2px rgba(0,0,0,0.75); }
+
+/* Kompakt undermeny, sidehode og tropp (Fredrik 14.11.2026) */
+/* Undermenyen: én linje i samme stil som filteret på forsiden, aktiv side med rød understrek. */
+.subnav {
+  flex-wrap: nowrap; gap: 1.1rem; padding-block: 0; overflow-x: auto; scrollbar-width: none;
+  font-size: 0.66rem; letter-spacing: 0.07em;
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 1.6rem), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 1.6rem), transparent);
+}
+.subnav::-webkit-scrollbar { display: none; }
+.subnav a { flex: none; white-space: nowrap; padding: 0.6rem 0 0.5rem; border-bottom: 2px solid transparent; }
+.subnav a:last-child { margin-right: 1.4rem; }
+.subnav a:hover { color: var(--fg); }
+.subnav a[aria-current] { color: var(--fg); border-bottom-color: var(--red); }
+/* Sidehodet: uten etiketten over (den gjentar menyen), mindre tittel og ingress. */
+.pagehead { padding-block: 1.4rem 0; gap: 0.35rem; }
+.pagehead .eyebrow { display: none; }
+.pagehead h1 { font-size: clamp(1.7rem, 4.2vw, 2.6rem); line-height: 1; }
+.pagehead p { font-size: 0.92rem; }
+.pagehead + .sec { padding-top: 1.4rem; }
+/* Troppen: lave rader, lite draktnummer, navn og nasjonalitet på samme linje, pil i stedet for «Les mer». */
+.squad { gap: 1.5rem; }
+.group h3 { margin: 0; padding-bottom: 0.4rem; border-bottom: 1px solid var(--fg); font-size: 0.66rem; color: var(--fg); display: flex; justify-content: space-between; }
+.group h3 span { color: var(--muted); }
+.players { grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 0 2rem; }
+.players li { grid-template-columns: 1.7rem minmax(0, 1fr); gap: 0.6rem; align-items: baseline; padding-block: 0.5rem; border-top: 0; border-bottom: 1px solid var(--rule); }
+.players .no { font-family: var(--mono); font-stretch: normal; font-weight: 500; font-size: 0.8rem; line-height: 1.3; color: var(--red); text-align: right; }
+.players .pl { display: block; padding-right: 1.6rem; line-height: 1.3; }
+.players .pn { display: inline; font-size: 0.95rem; font-weight: 600; }
+.players .nat { font-size: 0.78rem; color: var(--muted); margin-left: 0.25rem; white-space: nowrap; }
+.players .meta, .players .meta + .meta { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.02em; margin-top: 0.1rem; }
+.players .flag { display: block; padding: 0; margin-top: 0.15rem; background: none; font-family: var(--body); font-size: 0.74rem; letter-spacing: 0; text-transform: none; font-style: italic; line-height: 1.3; }
+.players li.lgd .lgd-more { position: absolute; top: 0; right: 0; width: 2.2rem; height: 2.4rem; margin: 0; padding: 0; font-size: 0; color: var(--muted); text-align: right; }
+.players li.lgd .lgd-more span { font-size: 0.8rem; }
+.players li.lgd .lgd-more:hover { color: var(--red); text-decoration: none; }
+.players li.lgd.open { border-bottom-color: var(--fg); }
+.players li.lgd.open .lgd-more { color: var(--red); }
+@media (max-width: 760px) {
+  .subnav { padding-block: 0; gap: 1.1rem; font-size: 0.66rem; }
+  .pagehead { padding-block: 1.1rem 0; gap: 0.3rem; }
+  .pagehead h1 { font-size: 1.7rem; }
+  .pagehead p { font-size: 0.9rem; }
+}
