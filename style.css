@@ -1540,3 +1540,38 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bn-in { min-height: clamp(6.5rem, 22vw, 15rem); }
 .banner::before { background: linear-gradient(90deg, rgba(10,8,8,.25), transparent 25%, transparent 75%, rgba(10,8,8,.2)); }
 .art-fig .ai-tag { right: 0.4rem; bottom: 0.3rem; font-size: 0.5rem; letter-spacing: 0.03em; color: rgba(255,255,255,0.68); }
+
+/* Hovedmeny oppå banneret, knapper i full bredde (Fredrik 15.11.2026) */
+.banner { padding-bottom: 3.4rem; }
+.site .masthead { position: relative; z-index: 6; margin: -3.4rem auto 0; padding: 0 1rem 0.7rem; max-width: 68rem; box-sizing: border-box; display: block; }
+.site .masthead nav { width: 100%; }
+.site .menu { display: flex; flex-wrap: nowrap; gap: 0.3rem; width: 100%; box-sizing: border-box; padding: 0; }
+.site .menu > li { flex: 1 1 0; min-width: 0; }
+.site .menu > li > a, .site .menu > li:first-child > a, .site .menu > li:last-child > a {
+  padding: 0.55rem 0.2rem 0.5rem; text-align: center; white-space: nowrap;
+  font-size: clamp(0.55rem, 3.05vw, 1.05rem); letter-spacing: 0;
+  color: #f1ece8; background: rgba(10,8,8,.58); border: 1px solid rgba(255,255,255,.18); border-bottom-width: 0.18rem; border-radius: 2px;
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+}
+.site .menu > li > a:hover { color: #fff; background: rgba(155,58,63,.55); }
+.site .menu > li > a[aria-current] { background: rgba(155,58,63,.78); border-color: rgba(255,255,255,.25); border-bottom-color: #e0535a; }
+.site .menu:has(> li:nth-child(7)) > li > a { font-size: clamp(0.5rem, 2.4vw, 0.95rem) !important; }
+.site .drop { left: 0; right: 0; min-width: 12rem; }
+
+/* Meny i full innholdsbredde + mørk underlinje som fortsetter banneret (Fredrik 15.11.2026) */
+.site { border-bottom: 0; }
+.site .masthead { padding-inline: 0; padding-bottom: 0.6rem; }
+.site .menu { gap: 0.25rem; }
+.site .menu > li { flex: 1 1 auto; }
+.site .menu > li > a, .site .menu > li:first-child > a, .site .menu > li:last-child > a { font-size: clamp(0.5rem, 2.75vw, 1.05rem); padding-inline: 0.3rem; overflow: hidden; text-overflow: clip; }
+.subnav, .feed-sec .filters {
+  --ink: #121010;
+  background: var(--ink); box-shadow: 0 0 0 100vmax var(--ink); clip-path: inset(0 -100vmax);
+  -webkit-mask-image: none; mask-image: none; border-bottom: 0;
+}
+.subnav a, .feed-sec .filters button { color: rgba(241,236,232,.62); margin-bottom: 0; padding-block: 0.7rem 0.6rem; }
+.subnav a:hover, .feed-sec .filters button:hover { color: #fff; }
+.subnav a[aria-current], .feed-sec .filters button[aria-pressed="true"] { color: #fff; border-bottom-color: #c0232b; }
+.sec.stack.feed-sec { padding-top: 0; }
+.feed-search, .feed-search:hover, .feed-search:focus-within { margin-top: 0.8rem; }
+.subnav, .feed-sec .filters { margin-top: -3px; padding-top: 3px; position: relative; z-index: 1; }
