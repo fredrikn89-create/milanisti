@@ -1564,14 +1564,6 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .site .menu { gap: 0.25rem; }
 .site .menu > li { flex: 1 1 auto; }
 .site .menu > li > a, .site .menu > li:first-child > a, .site .menu > li:last-child > a { font-size: clamp(0.5rem, 2.75vw, 1.05rem); padding-inline: 0.3rem; overflow: hidden; text-overflow: clip; }
-.subnav, .feed-sec .filters {
-  --ink: #121010;
-  background: var(--ink); box-shadow: 0 0 0 100vmax var(--ink); clip-path: inset(0 -100vmax);
-  -webkit-mask-image: none; mask-image: none; border-bottom: 0;
-}
-.subnav a, .feed-sec .filters button { color: rgba(241,236,232,.62); margin-bottom: 0; padding-block: 0.7rem 0.6rem; }
-.subnav a:hover, .feed-sec .filters button:hover { color: #fff; }
-.subnav a[aria-current], .feed-sec .filters button[aria-pressed="true"] { color: #fff; border-bottom-color: #c0232b; }
-.sec.stack.feed-sec { padding-top: 0; }
+/* variant 2: hvit underlinje */
+.site { border-bottom: 1px solid var(--fg); }
 .feed-search, .feed-search:hover, .feed-search:focus-within { margin-top: 0.8rem; }
-.subnav, .feed-sec .filters { margin-top: -3px; padding-top: 3px; position: relative; z-index: 1; }
