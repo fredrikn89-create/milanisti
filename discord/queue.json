@@ -1450,5 +1450,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-cardinale-interview"
   }
+ },
+ {
+  "id": "n-maignan-all-clear",
+  "date": "2026-11-17",
+  "no": {
+   "title": "Maignan klar for Frosinone: MR viser ingen skade",
+   "ingress": "Mike Maignan har ingen skade i lyske- og adduktorområdet, ifølge undersøkelsene Milan gjennomførte tirsdag. Keeperen er dermed tilgjengelig mot Frosinone søndag.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-maignan-all-clear"
+  },
+  "en": {
+   "title": "Maignan fit for Frosinone: MRI shows no injury",
+   "ingress": "Mike Maignan has no injury in the groin and adductor area, according to the tests Milan carried out on Tuesday. The goalkeeper is therefore available against Frosinone on Sunday.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-maignan-all-clear"
+  },
+  "it": {
+   "title": "Maignan a disposizione per il Frosinone: la risonanza non evidenzia lesioni",
+   "ingress": "Mike Maignan non ha lesioni nella zona pubica e adduttoria, secondo gli esami svolti dal Milan martedì. Il portiere è quindi a disposizione per la sfida con il Frosinone di domenica.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-maignan-all-clear"
+  }
  }
 ]
