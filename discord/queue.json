@@ -1472,5 +1472,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-maignan-all-clear"
   }
+ },
+ {
+  "id": "n-squad-back-frosinone",
+  "date": "2026-11-19",
+  "no": {
+   "title": "Landslagsspillerne tilbake på Milanello, Maignan og Pavlović med i gruppen",
+   "ingress": "Milan startet treningen foran Frosinone torsdag med landslagsspillerne tilbake. Maignan og Pavlović er med i gruppen og ventes tilgjengelige søndag.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-squad-back-frosinone"
+  },
+  "en": {
+   "title": "International players back at Milanello, Maignan and Pavlović in the group",
+   "ingress": "Milan began their preparation for Frosinone on Thursday with the international players back. Maignan and Pavlović are in the group and expected to be available on Sunday.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-squad-back-frosinone"
+  },
+  "it": {
+   "title": "Nazionali di nuovo a Milanello, Maignan e Pavlović in gruppo",
+   "ingress": "Il Milan ha avviato giovedì la preparazione al Frosinone con i nazionali di nuovo a disposizione. Maignan e Pavlović sono in gruppo e dovrebbero essere disponibili domenica.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-squad-back-frosinone"
+  }
  }
 ]
