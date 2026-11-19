@@ -1474,6 +1474,28 @@
   }
  },
  {
+  "id": "s-goalkeeper-depth",
+  "date": "2026-11-19",
+  "no": {
+   "title": "Én kollisjon fra debuten: Milans keeperdybde hviler på en 21-åring",
+   "ingress": "Maignan-skrekken endte med en frifinnelse, men de døgnene der Milan ventet på MR-svaret viste hva som står bak den ene mannen som aldri må falle fra. Spørsmålet er om klubben vil ta forsikringen like alvorlig som angriperne den snakker om.",
+   "badge": "Perspektiv",
+   "url": "https://milanisti.net/no/#s-goalkeeper-depth"
+  },
+  "en": {
+   "title": "One collision from a debut: Milan's goalkeeper depth rests on a 21-year-old",
+   "ingress": "The Maignan scare ended in an acquittal, but the days Milan spent waiting for the MRI result showed what stands behind the one man who must never drop out. The question is whether the club will take the insurance as seriously as the forwards it talks about.",
+   "badge": "Perspective",
+   "url": "https://milanisti.net/#s-goalkeeper-depth"
+  },
+  "it": {
+   "title": "A uno scontro dall'esordio: la profondità dei portieri del Milan poggia su un ventunenne",
+   "ingress": "Lo spavento per Maignan si è chiuso con un'assoluzione, ma i giorni passati dal Milan ad aspettare l'esito della risonanza hanno mostrato cosa c'è dietro l'unico uomo che non può mai mancare. La domanda è se il club prenderà l'assicurazione sul serio quanto gli attaccanti di cui parla.",
+   "badge": "Prospettiva",
+   "url": "https://milanisti.net/it/#s-goalkeeper-depth"
+  }
+ },
+ {
   "id": "n-squad-back-frosinone",
   "date": "2026-11-19",
   "no": {
