@@ -1567,3 +1567,7 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 /* variant 2: hvit underlinje */
 .site { border-bottom: 1px solid var(--fg); }
 .feed-search, .feed-search:hover, .feed-search:focus-within { margin-top: 0.8rem; }
+
+/* Ekte foto (Fredrik 20.11.2026): hele bildet vises, ingen beskjæring av logoer */
+.art-fig.real-photo img:not(.comp-logo) { object-fit: contain; background: #111; }
+@media (max-width: 760px) { .art-fig.real-photo img:not(.comp-logo) { aspect-ratio: 8 / 5; height: auto; } }
