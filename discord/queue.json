@@ -1516,5 +1516,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-squad-back-frosinone"
   }
+ },
+ {
+  "id": "n-amorim-points-average",
+  "date": "2026-11-20",
+  "no": {
+   "title": "Amorim har Milans høyeste poengsnitt i Serie A i trepoengsepoken",
+   "ingress": "Ruben Amorim snitter 2,18 poeng per kamp i Serie A etter 11 kamper, ifølge Opta det høyeste for en Milan-trener siden ligaen innførte tre poeng for seier.",
+   "badge": "Nyheter",
+   "url": "https://milanisti.net/no/#n-amorim-points-average"
+  },
+  "en": {
+   "title": "Amorim has Milan's highest points average in Serie A in the three-point era",
+   "ingress": "Ruben Amorim averages 2.18 points per Serie A match after 11 games, according to Opta the highest for a Milan coach since the league introduced three points for a win.",
+   "badge": "News",
+   "url": "https://milanisti.net/#n-amorim-points-average"
+  },
+  "it": {
+   "title": "Amorim ha la media punti più alta del Milan in Serie A nell'era dei tre punti",
+   "ingress": "Ruben Amorim ha una media di 2,18 punti a partita in Serie A dopo 11 gare, secondo Opta la più alta per un allenatore del Milan da quando il campionato ha introdotto i tre punti per la vittoria.",
+   "badge": "Notizie",
+   "url": "https://milanisti.net/it/#n-amorim-points-average"
+  }
  }
 ]
