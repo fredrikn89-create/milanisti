@@ -1538,5 +1538,27 @@
    "badge": "Notizie",
    "url": "https://milanisti.net/it/#n-amorim-points-average"
   }
+ },
+ {
+  "id": "f-frosinone",
+  "date": "2026-11-21",
+  "no": {
+   "title": "Milan–Frosinone – Pavlović er innkalt, og Amorim vil gi Ramos flere sjanser",
+   "ingress": "Milan møter Alvinis Frosinone søndag kl. 18.00 på San Siro. Amorim sier at Pavlović blir innkalt, men er usikker på om han kan starte, og at laget må skape mer for Ramos.",
+   "badge": "Før kamp: Milan–Frosinone",
+   "url": "https://milanisti.net/no/#f-frosinone"
+  },
+  "en": {
+   "title": "Milan–Frosinone – Pavlović is called up, and Amorim wants to give Ramos more chances",
+   "ingress": "Milan face Alvini's Frosinone on Sunday at 18:00 at San Siro. Amorim says Pavlović will be called up but is unsure whether he can start, and that the team must create more for Ramos.",
+   "badge": "Preview: Milan–Frosinone",
+   "url": "https://milanisti.net/#f-frosinone"
+  },
+  "it": {
+   "title": "Milan–Frosinone – Pavlović è convocato e Amorim vuole dare più occasioni a Ramos",
+   "ingress": "Il Milan affronta il Frosinone di Alvini domenica alle 18.00 a San Siro. Amorim dice che Pavlović sarà convocato ma non è sicuro che possa partire titolare, e che la squadra deve creare di più per Ramos.",
+   "badge": "Pre-partita: Milan–Frosinone",
+   "url": "https://milanisti.net/it/#f-frosinone"
+  }
  }
 ]
