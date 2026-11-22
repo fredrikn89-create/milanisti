@@ -1560,5 +1560,27 @@
    "badge": "Anteprima: Milan–Frosinone",
    "url": "https://milanisti.net/it/#f-frosinone"
   }
+ },
+ {
+  "id": "a-frosinone",
+  "date": "2026-11-22",
+  "no": {
+   "title": "Milan slo Frosinone 5–1, og Ramos fikk endelig scoret",
+   "ingress": "Milan vant 5–1 hjemme mot Frosinone etter mål av Calvani (selvmål), Ramos, Jashari, Cissé og Pulisic. Rabiot var kampens beste i flere pagelle, og Amorim sa at Milan må vinne mot Olympiacos for å komme videre i Europa League.",
+   "badge": "Milan 5–1 Frosinone",
+   "url": "https://milanisti.net/no/#a-frosinone"
+  },
+  "en": {
+   "title": "Milan beat Frosinone 5–1, and Ramos finally scored",
+   "ingress": "Milan won 5–1 at home against Frosinone, with goals from Calvani (own goal), Ramos, Jashari, Cissé and Pulisic. Rabiot was the best player on the pitch in several player ratings, and Amorim said Milan must beat Olympiacos to go through in the Europa League.",
+   "badge": "Milan 5–1 Frosinone",
+   "url": "https://milanisti.net/#a-frosinone"
+  },
+  "it": {
+   "title": "Il Milan batte il Frosinone 5–1 e Ramos segna finalmente",
+   "ingress": "Il Milan ha vinto 5–1 in casa contro il Frosinone con i gol di Calvani (autorete), Ramos, Jashari, Cissé e Pulisic. Rabiot è stato il migliore in campo in diverse pagelle e Amorim ha detto che il Milan deve battere l'Olympiacos per passare il turno in Europa League.",
+   "badge": "Milan 5–1 Frosinone",
+   "url": "https://milanisti.net/it/#a-frosinone"
+  }
  }
 ]
