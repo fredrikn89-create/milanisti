@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="style.css?v=202611231854">
+<link rel="stylesheet" href="style.css?v=202611231900">
 <link rel="alternate" hreflang="en" href="statistikk-futuro.html">
 <link rel="alternate" hreflang="it" href="it/statistikk-futuro.html">
 <link rel="alternate" hreflang="nb" href="no/statistikk-futuro.html">
@@ -138,7 +138,7 @@
               tr._m = mode === 'points' ? g + a : mode === 'goals' ? g : a;
               var cg = tr.querySelector('.c-g'), ca = tr.querySelector('.c-a'), cp = tr.querySelector('.c-p'), sm = tr.querySelector('small');
               if (cg) cg.textContent = g; if (ca) ca.textContent = a; if (cp) cp.textContent = g + a;
-              if (sm) sm.textContent = parts.join(' · ');
+              if (sm) sm.innerHTML = parts.join('<br>');
               tr.hidden = tr._m === 0;
             });
             rows.sort(function (x, y) { return (y._m - x._m) || (y._g - x._g) || x.cells[0].textContent.localeCompare(y.cells[0].textContent); });
@@ -154,12 +154,13 @@
 
         (function () {
           var tbl = document.querySelector('.lg-bors'); if (!tbl) return;
-          var dec = tbl.dataset.dec || ',';
+          var L = tbl.dataset, dec = L.dec || ',';
           var dlg = document.createElement('dialog'); dlg.className = 'bp-dlg';
           document.body.appendChild(dlg);
           function f1(v) { return Number.isInteger(v) ? String(v) : v.toFixed(1).replace('.', dec); }
           function dm(d) { return d.slice(8, 10) + '.' + d.slice(5, 7) + '.'; }
           function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+          // rad: [dato, motstander, turnering, karakter|null, turnering_rå, mål, assist]
           function open(tr, comp0) {
             var all = JSON.parse(tr.dataset.m), name = tr.querySelector('.bp-open').textContent;
             var comps = []; all.forEach(function (x) { if (comps.indexOf(x[2]) < 0) comps.push(x[2]); });
@@ -171,39 +172,49 @@
           }
           function draw(tr, all, comps, comp, name) {
             var m = all.filter(function (x) { return comp === 'alle' || x[2] === comp; });
-            var sc = m.map(function (x) { return x[3]; });
-            var avg = sc.reduce(function (a, b) { return a + b; }, 0) / sc.length;
-            var lo = Math.min(5, Math.floor(Math.min.apply(null, sc))), hi = Math.max(8, Math.ceil(Math.max.apply(null, sc)));
-            var W = 320, H = 150, L = 22, R = 10, T = 12, B = 22, iw = W - L - R, ih = H - T - B;
-            function X(i) { return L + (m.length === 1 ? iw / 2 : i * iw / (m.length - 1)); }
-            function Y(v) { return T + (hi - v) / (hi - lo) * ih; }
-            var g = '';
-            for (var v = lo; v <= hi; v++) g += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" class="bp-grid"/><text x="' + (L - 5) + '" y="' + (Y(v) + 3) + '" class="bp-ax" text-anchor="end">' + v + '</text>';
-            g += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(avg) + '" y2="' + Y(avg) + '" class="bp-avg"/>';
-            var pts = m.map(function (x, i) { return X(i) + ',' + Y(x[3]); }).join(' ');
-            g += m.length > 1 ? '<polyline points="' + pts + '" class="bp-line"/>' : '';
-            m.forEach(function (x, i) { g += '<circle cx="' + X(i) + '" cy="' + Y(x[3]) + '" r="' + (comps.indexOf(x[2]) ? 3.6 : 3.2) + '" class="bp-dot' + (comps.indexOf(x[2]) ? ' alt' : '') + '"/>'; });
-            g += '<text x="' + L + '" y="' + (H - 6) + '" class="bp-ax">' + dm(m[0][0]) + '</text>';
-            if (m.length > 1) g += '<text x="' + (W - R) + '" y="' + (H - 6) + '" class="bp-ax" text-anchor="end">' + dm(m[m.length - 1][0]) + '</text>';
+            var rated = m.filter(function (x) { return x[3] !== null; });
+            var tg = 0, ta = 0; m.forEach(function (x) { tg += x[5]; ta += x[6]; });
+            var chart = '', avg = 0;
+            if (rated.length) {
+              var sc = rated.map(function (x) { return x[3]; });
+              avg = sc.reduce(function (a, b) { return a + b; }, 0) / sc.length;
+              var lo = Math.min(5, Math.floor(Math.min.apply(null, sc))), hi = Math.max(8, Math.ceil(Math.max.apply(null, sc)));
+              var W = 320, H = 150, Lm = 22, R = 10, T = 12, iw = W - Lm - R, ih = H - T - 22, n = rated.length;
+              var X = function (i) { return Lm + (n === 1 ? iw / 2 : i * iw / (n - 1)); };
+              var Y = function (v) { return T + (hi - v) / (hi - lo) * ih; };
+              var g = '';
+              for (var v = lo; v <= hi; v++) g += '<line x1="' + Lm + '" x2="' + (W - R) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" class="bp-grid"/><text x="' + (Lm - 5) + '" y="' + (Y(v) + 3) + '" class="bp-ax" text-anchor="end">' + v + '</text>';
+              g += '<line x1="' + Lm + '" x2="' + (W - R) + '" y1="' + Y(avg) + '" y2="' + Y(avg) + '" class="bp-avg"/>';
+              if (n > 1) g += '<polyline points="' + rated.map(function (x, i) { return X(i) + ',' + Y(x[3]); }).join(' ') + '" class="bp-line"/>';
+              rated.forEach(function (x, i) { g += '<circle cx="' + X(i) + '" cy="' + Y(x[3]) + '" r="' + (comps.indexOf(x[2]) ? 3.6 : 3.2) + '" class="bp-dot' + (comps.indexOf(x[2]) ? ' alt' : '') + '"/>'; });
+              g += '<text x="' + Lm + '" y="' + (H - 6) + '" class="bp-ax">' + dm(rated[0][0]) + '</text>';
+              if (n > 1) g += '<text x="' + (W - R) + '" y="' + (H - 6) + '" class="bp-ax" text-anchor="end">' + dm(rated[n - 1][0]) + '</text>';
+              chart = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="bp-chart" role="img" aria-label="' + esc(name) + '">' + g + '</svg>';
+            }
             var rows = m.slice().reverse().map(function (x) {
-              return '<li><span><i class="bp-mk' + (comps.indexOf(x[2]) ? ' alt' : '') + '"></i>' + esc(x[1]) + ' <small>' + dm(x[0]) + ' · ' + esc(x[2]) + '</small></span><b class="die d' + Math.floor(x[3]) + '">' + f1(x[3]) + '</b></li>';
+              var tags = '';
+              if (x[5]) tags += '<em class="bp-t g">' + esc(L.lGoal) + (x[5] > 1 ? ' ×' + x[5] : '') + '</em>';
+              if (x[6]) tags += '<em class="bp-t a">' + esc(L.lAssist) + (x[6] > 1 ? ' ×' + x[6] : '') + '</em>';
+              var die = x[3] === null ? '<b class="die na">–</b>' : '<b class="die d' + Math.floor(x[3]) + '">' + f1(x[3]) + '</b>';
+              return '<li><span><i class="bp-mk' + (comps.indexOf(x[2]) ? ' alt' : '') + '"></i>' + esc(x[1]) + ' <small>' + dm(x[0]) + ' · ' + esc(x[2]) + '</small></span><span class="bp-r">' + tags + die + '</span></li>';
             }).join('');
             var chips = '';
             if (comps.length > 1) {
               chips = '<div class="bp-chips" role="group">' + ['alle'].concat(comps).map(function (c) {
                 var i = comps.indexOf(c);
-                return '<button type="button" data-c="' + esc(c) + '" aria-pressed="' + (c === comp) + '">' + (c === 'alle' ? esc(tbl.dataset.lAll) : '<i class="bp-mk' + (i ? ' alt' : '') + '"></i>' + esc(c)) + '</button>';
+                return '<button type="button" data-c="' + esc(c) + '" aria-pressed="' + (c === comp) + '">' + (c === 'alle' ? esc(L.lAll) : '<i class="bp-mk' + (i ? ' alt' : '') + '"></i>' + esc(c)) + '</button>';
               }).join('') + '</div>';
             }
-            dlg.innerHTML = '<div class="bp-head"><div><strong>' + esc(name) + '</strong><small>' + esc(tbl.dataset.lTitle) + ' · ' + esc(tbl.dataset.lAvg) + ' ' + f1(Math.round(avg * 10) / 10) + ' · ' + m.length + '</small></div>'
-              + '<button type="button" class="bp-x" aria-label="' + esc(tbl.dataset.lClose) + '">×</button></div>' + chips
-              + '<svg viewBox="0 0 ' + W + ' ' + H + '" class="bp-chart" role="img" aria-label="' + esc(name) + '">' + g + '</svg>'
-              + '<div class="bp-share"><button type="button" class="bp-copy">' + esc(tbl.dataset.lShare) + '</button></div><ul class="bp-list">' + rows + '</ul>';
+            var sub = esc(L.lTitle) + (rated.length ? ' · ' + esc(L.lAvg) + ' ' + f1(Math.round(avg * 10) / 10) : '') + ' · ' + esc(L.lGoal) + ' ' + tg + ' · ' + esc(L.lAssist) + ' ' + ta;
+            dlg.innerHTML = '<div class="bp-head"><div><strong>' + esc(name) + '</strong><small>' + sub + '</small></div>'
+              + '<button type="button" class="bp-x" aria-label="' + esc(L.lClose) + '">×</button></div>' + chips + chart
+              + (tr.dataset.inc ? '<p class="bp-note">' + esc(L.lInc) + '</p>' : '')
+              + '<div class="bp-share"><button type="button" class="bp-copy">' + esc(L.lShare) + '</button></div><ul class="bp-list">' + rows + '</ul>';
             dlg.querySelector('.bp-x').addEventListener('click', function () { dlg.close(); });
             dlg.querySelectorAll('.bp-chips button').forEach(function (bt) { bt.addEventListener('click', function () { draw(tr, all, comps, bt.dataset.c, name); }); });
             var cp = dlg.querySelector('.bp-copy'), link = new URL(tr.dataset.share, location.href).href;
             cp.addEventListener('click', function () {
-              function done() { cp.textContent = tbl.dataset.lCopied; }
+              function done() { cp.textContent = L.lCopied; }
               if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(done, function () { window.prompt('', link); });
               else window.prompt('', link);
             });
@@ -211,9 +222,9 @@
           dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
           dlg.addEventListener('close', function () { try { history.replaceState(null, '', location.pathname + location.hash); } catch (x) {} });
           var want = new URLSearchParams(location.search).get('p');
-          if (want) { var wtr = tbl.querySelector('tr[data-slug="' + want.replace(/[^a-z0-9-]/g, '') + '"]'); if (wtr) open(wtr); }
-          tbl.addEventListener('click', function (ev) {
-            var b = ev.target.closest('.bp-open'); if (b) open(b.closest('tr'));
+          if (want) { var wtr = document.querySelector('tr[data-slug="' + want.replace(/[^a-z0-9-]/g, '') + '"]'); if (wtr) open(wtr); }
+          document.addEventListener('click', function (ev) {
+            var b = ev.target.closest('.bp-open'); if (b && b.closest('tr[data-m]')) open(b.closest('tr'));
           });
         })();
         document.querySelectorAll('.lg-bors').forEach(function (tbl) {

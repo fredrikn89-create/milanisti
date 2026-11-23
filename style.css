@@ -1634,3 +1634,10 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bp-chips button[aria-pressed="true"] { color: var(--fg); border-color: var(--fg); }
 .bp-chips .bp-mk { margin-right: 0.3rem; }
 .bp-list .bp-mk { width: 0.45rem; height: 0.45rem; margin-right: 0.5rem; }
+.bp-r { display: inline-flex; align-items: center; gap: 0.35rem; flex: none; }
+.bp-t { font: 500 0.56rem var(--mono); font-style: normal; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.18rem 0.35rem; border: 1px solid var(--red); color: var(--red); white-space: nowrap; }
+.bp-t.g { background: var(--red); color: #fff; }
+.bp-note { margin: 0.5rem 1rem 0; font-size: 0.72rem; color: var(--muted); }
+.bp-list .die.na { opacity: 0.5; }
+.lg-points .bp-open, .lg-mt .bp-open { font-weight: inherit; }
+.lg-mt td.tm small { line-height: 1.45; }
