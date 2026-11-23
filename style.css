@@ -1670,5 +1670,5 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bp-e.multi { font-size: 0.8rem; padding: 0.1rem 0.4rem 0.1rem 0.28rem; }
 .bp-e b { font-size: 0.68rem; }
 .bp-r { gap: 0.3rem; }
-.bp-boot{width:1.9em;height:1.08em;vertical-align:-.2em}
-.bp-e .bp-boot{width:2em;height:1.14em;vertical-align:middle}
+.bp-boot{width:1.6em;height:1.03em;vertical-align:-.2em}
+.bp-e .bp-boot{width:1.7em;height:1.1em;vertical-align:middle}
