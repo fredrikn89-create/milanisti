@@ -1587,3 +1587,14 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .vid-play .vid-txt{padding:0 .15rem .1rem}
 .vid-yt{align-self:flex-start;padding-left:.2rem}
 .vid-card{flex-direction:column;align-items:flex-start}
+/* Video-ruten litt mindre (Fredrik 23.11.2026) */
+.vids{max-width:20rem;gap:.45rem}
+.vid-play{padding:.25rem;gap:.3rem;border-radius:7px}
+.vid-thumbwrap{border-radius:5px}
+.vid-thumbwrap .vid-icon{width:1.8rem;height:1.8rem;font-size:.65rem}
+.vid-title{font-size:.72rem}
+.vid-credit{font-size:.6rem}
+.vid-yt{font-size:.65rem}
+.vids-note{font-size:.6rem}
+.vid.vid-open{grid-column:1/-1}
+.vids:has(.vid-open){max-width:none}
