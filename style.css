@@ -1641,3 +1641,9 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bp-list .die.na { opacity: 0.5; }
 .lg-points .bp-open, .lg-mt .bp-open { font-weight: inherit; }
 .lg-mt td.tm small { line-height: 1.45; }
+.bp-e { display: inline-flex; align-items: center; gap: 0.15rem; font-size: 1.05rem; line-height: 1; }
+.bp-e.multi { background: var(--red); color: #fff; border-radius: 99px; padding: 0.18rem 0.5rem 0.18rem 0.35rem; font-size: 0.95rem; }
+.bp-e b { font: 800 0.8rem var(--mono); letter-spacing: 0; }
+.bp-sum { font-size: 0.8rem; margin-left: 0.2rem; white-space: nowrap; }
+.bp-head small { text-transform: uppercase; }
+.bp-sums { white-space: nowrap; }
