@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="../style.css?v=202611232016">
+<link rel="stylesheet" href="../style.css?v=202611232022">
 <link rel="alternate" hreflang="en" href="../statistikk-futuro.html">
 <link rel="alternate" hreflang="it" href="../it/statistikk-futuro.html">
 <link rel="alternate" hreflang="nb" href="../no/statistikk-futuro.html">
@@ -162,13 +162,13 @@
           function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
           // rad: [dato, motstander, turnering, karakter|null, turnering_rå, mål, assist]
           var BOOT = '<svg class="bp-boot" aria-hidden="true" viewBox="0 -4 62 43"><g transform="rotate(20 30 20)"><path d="M3.2 24.5C2 17 3 11 4.6 7.4L10.5 3.2 16.5 6.4 25 8.2 31.5 6.8 34.4 10.2 41 14.6C49 16.2 57 17.4 57.6 22.6V25.4H3.2Z" fill="#141210"/><path d="M4.6 7.4L10.5 3.2 14.2 5.4 12.6 10.2 6 10.2Z" fill="#fff"/><path d="M25 8.2L31.5 6.8 34.4 10.2 27.5 10.6Z" fill="#2b2724"/><path d="M15.6 24.8h4.2L29.2 13l-4.2-.4ZM25.2 24.8h4.2L37.4 16l-4.2-.8Z" fill="#fff"/><path d="M2.8 24.6H57.9v3.1H2.8Z" fill="#e9e3d8"/><path d="M8.5 27.6h4.2v3.8H8.5ZM20.5 27.6h4.2v3.8h-4.2ZM38 27.6h4.2v3.8H38ZM50 27.6h4.2v3.8H50Z" fill="#141210"/></g></svg>';
+          var CODES = {'Serie A': 'sa', 'Europa League': 'el'};
           function open(tr, comp0) {
             var all = JSON.parse(tr.dataset.m), name = tr.querySelector('.bp-open').textContent;
             var comps = []; all.forEach(function (x) { if (comps.indexOf(x[2]) < 0) comps.push(x[2]); });
             var sel = document.querySelector('.lg-comp-sel[data-bors]');
             var comp = comp0 || (sel && sel.value !== 'alle' && comps.length > 1 ? (all.filter(function (x) { return x[4] === sel.value; })[0] || [])[2] : '') || 'alle';
             draw(tr, all, comps, comp, name);
-            try { history.replaceState(null, '', location.pathname + '?p=' + tr.dataset.slug + location.hash); } catch (x) {}
             if (dlg.showModal) { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute('open', '');
           }
           function draw(tr, all, comps, comp, name) {
@@ -213,7 +213,11 @@
               + '<ul class="bp-list">' + rows + '</ul>';
             dlg.querySelector('.bp-x').addEventListener('click', function () { dlg.close(); });
             dlg.querySelectorAll('.bp-chips button').forEach(function (bt) { bt.addEventListener('click', function () { draw(tr, all, comps, bt.dataset.c, name); }); });
-            var cp = dlg.querySelector('.bp-copy'), link = new URL(tr.dataset.share, location.href).href;
+            var cc = '';
+            if (comp !== 'alle') { var fr = all.filter(function (x) { return x[2] === comp; })[0]; cc = fr ? (CODES[fr[4]] || fr[4].toLowerCase().replace(/[^a-z0-9]+/g, '-')) : ''; }
+            var sl = tr.dataset.slug;
+            try { history.replaceState(null, '', location.pathname + '?p=' + sl + (cc ? '&k=' + cc : '') + location.hash); } catch (x) {}
+            var cp = dlg.querySelector('.bp-copy'), link = new URL('karakter-' + sl + (cc ? '-' + cc : '') + '.html', new URL(tr.dataset.share, location.href)).href;
             cp.addEventListener('click', function () {
               function done() { cp.textContent = L.lCopied; }
               if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(done, function () { window.prompt('', link); });
@@ -223,7 +227,7 @@
           dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
           dlg.addEventListener('close', function () { try { history.replaceState(null, '', location.pathname + location.hash); } catch (x) {} });
           var want = new URLSearchParams(location.search).get('p');
-          if (want) { var wtr = document.querySelector('tr[data-slug="' + want.replace(/[^a-z0-9-]/g, '') + '"]'); if (wtr) open(wtr); }
+          if (want) { var wtr = document.querySelector('tr[data-slug="' + want.replace(/[^a-z0-9-]/g, '') + '"]'); if (wtr) { var wk = new URLSearchParams(location.search).get('k'), wc = ''; if (wk) { JSON.parse(wtr.dataset.m).forEach(function (x) { if ((CODES[x[4]] || x[4].toLowerCase().replace(/[^a-z0-9]+/g, '-')) === wk) wc = x[2]; }); } open(wtr, wc); } }
           document.addEventListener('click', function (ev) {
             var b = ev.target.closest('.bp-open'); if (b && b.closest('tr[data-m]')) open(b.closest('tr'));
           });
