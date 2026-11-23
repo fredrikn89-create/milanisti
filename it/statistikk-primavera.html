@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="../style.css?v=202611231752">
+<link rel="stylesheet" href="../style.css?v=202611231815">
 <link rel="alternate" hreflang="en" href="../statistikk-primavera.html">
 <link rel="alternate" hreflang="it" href="../it/statistikk-primavera.html">
 <link rel="alternate" hreflang="nb" href="../no/statistikk-primavera.html">
@@ -181,11 +181,22 @@
             }).join('');
             dlg.innerHTML = '<div class="bp-head"><div><strong>' + esc(name) + '</strong><small>' + esc(tbl.dataset.lTitle) + ' · ' + esc(tbl.dataset.lAvg) + ' ' + f1(Math.round(avg * 10) / 10) + '</small></div>'
               + '<button type="button" class="bp-x" aria-label="' + esc(tbl.dataset.lClose) + '">×</button></div>'
-              + '<svg viewBox="0 0 ' + W + ' ' + H + '" class="bp-chart" role="img" aria-label="' + esc(name) + '">' + g + '</svg><ul class="bp-list">' + rows + '</ul>';
+              + '<svg viewBox="0 0 ' + W + ' ' + H + '" class="bp-chart" role="img" aria-label="' + esc(name) + '">' + g + '</svg>'
+              + '<div class="bp-share"><button type="button" class="bp-copy">' + esc(tbl.dataset.lShare) + '</button></div><ul class="bp-list">' + rows + '</ul>';
             dlg.querySelector('.bp-x').addEventListener('click', function () { dlg.close(); });
+            var cp = dlg.querySelector('.bp-copy'), link = new URL(tr.dataset.share, location.href).href;
+            cp.addEventListener('click', function () {
+              function done() { cp.textContent = tbl.dataset.lCopied; }
+              if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(done, function () { window.prompt('', link); });
+              else window.prompt('', link);
+            });
+            try { history.replaceState(null, '', location.pathname + '?p=' + tr.dataset.slug + location.hash); } catch (x) {}
             if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
           }
           dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
+          dlg.addEventListener('close', function () { try { history.replaceState(null, '', location.pathname + location.hash); } catch (x) {} });
+          var want = new URLSearchParams(location.search).get('p');
+          if (want) { var wtr = tbl.querySelector('tr[data-slug="' + want.replace(/[^a-z0-9-]/g, '') + '"]'); if (wtr) open(wtr); }
           tbl.addEventListener('click', function (ev) {
             var b = ev.target.closest('.bp-open'); if (b) open(b.closest('tr'));
           });
