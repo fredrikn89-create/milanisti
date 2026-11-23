@@ -1571,3 +1571,5 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 /* Ekte foto (Fredrik 20.11.2026): hele bildet vises, ingen beskjæring av logoer */
 .art-fig.real-photo img:not(.comp-logo) { object-fit: contain; background: #111; }
 @media (max-width: 760px) { .art-fig.real-photo img:not(.comp-logo) { aspect-ratio: 8 / 5; height: auto; } }
+
+.bors .ga{margin-left:.35em;font-size:.85em;white-space:nowrap}
