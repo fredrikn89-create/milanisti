@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="style.css?v=202611231910">
+<link rel="stylesheet" href="style.css?v=202611231915">
 <link rel="alternate" hreflang="en" href="statistikk-forstelaget.html">
 <link rel="alternate" hreflang="it" href="it/statistikk-forstelaget.html">
 <link rel="alternate" hreflang="nb" href="no/statistikk-forstelaget.html">
@@ -179,7 +179,7 @@
               var sc = rated.map(function (x) { return x[3]; });
               avg = sc.reduce(function (a, b) { return a + b; }, 0) / sc.length;
               var lo = Math.min(5, Math.floor(Math.min.apply(null, sc))), hi = Math.max(8, Math.ceil(Math.max.apply(null, sc)));
-              var W = 320, H = 150, Lm = 22, R = 10, T = 12, iw = W - Lm - R, ih = H - T - 22, n = rated.length;
+              var W = 320, H = 100, Lm = 22, R = 10, T = 8, iw = W - Lm - R, ih = H - T - 16, n = rated.length;
               var X = function (i) { return Lm + (n === 1 ? iw / 2 : i * iw / (n - 1)); };
               var Y = function (v) { return T + (hi - v) / (hi - lo) * ih; };
               var g = '';
@@ -187,8 +187,8 @@
               g += '<line x1="' + Lm + '" x2="' + (W - R) + '" y1="' + Y(avg) + '" y2="' + Y(avg) + '" class="bp-avg"/>';
               if (n > 1) g += '<polyline points="' + rated.map(function (x, i) { return X(i) + ',' + Y(x[3]); }).join(' ') + '" class="bp-line"/>';
               rated.forEach(function (x, i) { g += '<circle cx="' + X(i) + '" cy="' + Y(x[3]) + '" r="' + (comps.indexOf(x[2]) ? 3.6 : 3.2) + '" class="bp-dot' + (comps.indexOf(x[2]) ? ' alt' : '') + '"/>'; });
-              g += '<text x="' + Lm + '" y="' + (H - 6) + '" class="bp-ax">' + dm(rated[0][0]) + '</text>';
-              if (n > 1) g += '<text x="' + (W - R) + '" y="' + (H - 6) + '" class="bp-ax" text-anchor="end">' + dm(rated[n - 1][0]) + '</text>';
+              g += '<text x="' + Lm + '" y="' + (H - 3) + '" class="bp-ax">' + dm(rated[0][0]) + '</text>';
+              if (n > 1) g += '<text x="' + (W - R) + '" y="' + (H - 3) + '" class="bp-ax" text-anchor="end">' + dm(rated[n - 1][0]) + '</text>';
               chart = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="bp-chart" role="img" aria-label="' + esc(name) + '">' + g + '</svg>';
             }
             var rows = m.slice().reverse().map(function (x) {
@@ -207,9 +207,9 @@
             }
             var sub = esc(L.lTitle) + (rated.length ? ' · ' + esc(L.lAvg) + ' ' + f1(Math.round(avg * 10) / 10) : '') + ' · <span class="bp-sums"><span class="bp-sum" title="' + esc(L.lGoal) + '">⚽ ' + tg + '</span> <span class="bp-sum" title="' + esc(L.lAssist) + '">👟 ' + ta + '</span></span>';
             dlg.innerHTML = '<div class="bp-head"><div><strong>' + esc(name) + '</strong><small>' + sub + '</small></div>'
-              + '<button type="button" class="bp-x" aria-label="' + esc(L.lClose) + '">×</button></div>' + chips + chart
+              + '<div class="bp-hr"><button type="button" class="bp-copy">' + esc(L.lShare) + '</button><button type="button" class="bp-x" aria-label="' + esc(L.lClose) + '">×</button></div></div>' + chips + chart
               + (tr.dataset.inc ? '<p class="bp-note">' + esc(L.lInc) + '</p>' : '')
-              + '<div class="bp-share"><button type="button" class="bp-copy">' + esc(L.lShare) + '</button></div><ul class="bp-list">' + rows + '</ul>';
+              + '<ul class="bp-list">' + rows + '</ul>';
             dlg.querySelector('.bp-x').addEventListener('click', function () { dlg.close(); });
             dlg.querySelectorAll('.bp-chips button').forEach(function (bt) { bt.addEventListener('click', function () { draw(tr, all, comps, bt.dataset.c, name); }); });
             var cp = dlg.querySelector('.bp-copy'), link = new URL(tr.dataset.share, location.href).href;

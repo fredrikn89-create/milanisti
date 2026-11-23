@@ -1647,3 +1647,26 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bp-sum { font-size: 0.8rem; margin-left: 0.2rem; white-space: nowrap; }
 .bp-head small { text-transform: uppercase; }
 .bp-sums { white-space: nowrap; }
+
+/* Kompakt spillervindu: minst 10 (helst alle) kamper uten scrolling (Fredrik 23.11.2026) */
+.bp-dlg { width: min(94vw, 28rem); max-height: 94vh; max-height: 94dvh; display: flex; flex-direction: column; overflow: hidden; }
+.bp-dlg[open] { display: flex; }
+.bp-head { padding: 0.6rem 0.8rem 0.2rem; align-items: center; gap: 0.5rem; flex: none; }
+.bp-head strong { font-size: 1.1rem; }
+.bp-head small { font-size: 0.58rem; display: block; margin-top: 0.15rem; }
+.bp-hr { display: flex; align-items: center; gap: 0.4rem; flex: none; }
+.bp-x { font-size: 1.4rem; }
+.bp-copy { padding: 0.25rem 0.45rem; font-size: 0.56rem; }
+.bp-chips { padding: 0.25rem 0.8rem 0; gap: 0.25rem; flex: none; }
+.bp-chips button { padding: 0.22rem 0.4rem; font-size: 0.56rem; }
+.bp-chart { padding: 0 0.4rem; flex: none; max-height: 5.6rem; }
+.bp-note { margin: 0.3rem 0.8rem 0; font-size: 0.66rem; flex: none; }
+.bp-list { padding: 0.1rem 0.8rem 0.5rem; margin: 0.15rem 0 0; overflow-y: auto; flex: 1 1 auto; min-height: 0; }
+.bp-list li { padding: 0.12rem 0; font-size: 0.8rem; line-height: 1.15; }
+.bp-list li small { font-size: 0.62rem; margin-left: 0.25rem; }
+.bp-list .die { min-width: 1.6rem; height: 1.45rem; font-size: 0.78rem; border-radius: 3px; padding: 0 0.25rem; }
+.bp-list .bp-mk { width: 0.4rem; height: 0.4rem; margin-right: 0.4rem; border-width: 1.5px; }
+.bp-e { font-size: 0.85rem; }
+.bp-e.multi { font-size: 0.8rem; padding: 0.1rem 0.4rem 0.1rem 0.28rem; }
+.bp-e b { font-size: 0.68rem; }
+.bp-r { gap: 0.3rem; }
