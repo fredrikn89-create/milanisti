@@ -1626,3 +1626,11 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .bp-share { padding: 0.1rem 1rem 0; }
 .bp-copy { font: 500 0.62rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; background: none; border: 1px solid var(--rule); color: var(--muted); padding: 0.35rem 0.6rem; cursor: pointer; }
 .bp-copy:hover { color: var(--red); border-color: var(--red); }
+.bp-dot.alt { fill: var(--bg); stroke: var(--red); stroke-width: 2; }
+.bp-mk { display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--red); border: 2px solid var(--red); box-sizing: border-box; margin-right: 0.4rem; vertical-align: 0.03rem; }
+.bp-mk.alt { background: var(--bg); }
+.bp-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; padding: 0.4rem 1rem 0; }
+.bp-chips button { font: 500 0.62rem var(--mono); letter-spacing: 0.06em; text-transform: uppercase; background: none; border: 1px solid var(--rule); color: var(--muted); padding: 0.35rem 0.55rem; cursor: pointer; }
+.bp-chips button[aria-pressed="true"] { color: var(--fg); border-color: var(--fg); }
+.bp-chips .bp-mk { margin-right: 0.3rem; }
+.bp-list .bp-mk { width: 0.45rem; height: 0.45rem; margin-right: 0.5rem; }
