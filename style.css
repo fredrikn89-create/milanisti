@@ -1598,3 +1598,9 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .vids-note{font-size:.6rem}
 .vid.vid-open{grid-column:1/-1}
 .vids:has(.vid-open){max-width:none}
+
+/* Les også (Fredrik 23.11.2026) */
+.related{margin:1.2rem 0 .6rem;padding-top:.8rem;border-top:1px solid var(--line,rgba(128,128,128,.3))}
+.related h4{margin:0 0 .4rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.related ul{margin:0;padding-left:1.1rem}
+.related li{margin:.25rem 0}
