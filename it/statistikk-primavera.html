@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="../style.css?v=202611231206">
+<link rel="stylesheet" href="../style.css?v=202611231748">
 <link rel="alternate" hreflang="en" href="../statistikk-primavera.html">
 <link rel="alternate" hreflang="it" href="../it/statistikk-primavera.html">
 <link rel="alternate" hreflang="nb" href="../no/statistikk-primavera.html">
@@ -137,6 +137,45 @@
             });
           });
         });
+
+        (function () {
+          var tbl = document.querySelector('.lg-bors'); if (!tbl) return;
+          var dec = tbl.dataset.dec || ',';
+          var dlg = document.createElement('dialog'); dlg.className = 'bp-dlg';
+          document.body.appendChild(dlg);
+          function f1(v) { return Number.isInteger(v) ? String(v) : v.toFixed(1).replace('.', dec); }
+          function dm(d) { return d.slice(8, 10) + '.' + d.slice(5, 7) + '.'; }
+          function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+          function open(tr) {
+            var m = JSON.parse(tr.dataset.m), name = tr.querySelector('.bp-open').textContent;
+            var sc = m.map(function (x) { return x[3]; });
+            var avg = sc.reduce(function (a, b) { return a + b; }, 0) / sc.length;
+            var lo = Math.min(5, Math.floor(Math.min.apply(null, sc))), hi = Math.max(8, Math.ceil(Math.max.apply(null, sc)));
+            var W = 320, H = 150, L = 22, R = 10, T = 12, B = 22, iw = W - L - R, ih = H - T - B;
+            function X(i) { return L + (m.length === 1 ? iw / 2 : i * iw / (m.length - 1)); }
+            function Y(v) { return T + (hi - v) / (hi - lo) * ih; }
+            var g = '';
+            for (var v = lo; v <= hi; v++) g += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" class="bp-grid"/><text x="' + (L - 5) + '" y="' + (Y(v) + 3) + '" class="bp-ax" text-anchor="end">' + v + '</text>';
+            g += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(avg) + '" y2="' + Y(avg) + '" class="bp-avg"/>';
+            var pts = m.map(function (x, i) { return X(i) + ',' + Y(x[3]); }).join(' ');
+            g += m.length > 1 ? '<polyline points="' + pts + '" class="bp-line"/>' : '';
+            m.forEach(function (x, i) { g += '<circle cx="' + X(i) + '" cy="' + Y(x[3]) + '" r="3.2" class="bp-dot"/>'; });
+            g += '<text x="' + L + '" y="' + (H - 6) + '" class="bp-ax">' + dm(m[0][0]) + '</text>';
+            if (m.length > 1) g += '<text x="' + (W - R) + '" y="' + (H - 6) + '" class="bp-ax" text-anchor="end">' + dm(m[m.length - 1][0]) + '</text>';
+            var rows = m.slice().reverse().map(function (x) {
+              return '<li><span>' + esc(x[1]) + ' <small>' + dm(x[0]) + ' · ' + esc(x[2]) + '</small></span><b class="die d' + Math.floor(x[3]) + '">' + f1(x[3]) + '</b></li>';
+            }).join('');
+            dlg.innerHTML = '<div class="bp-head"><div><strong>' + esc(name) + '</strong><small>' + esc(tbl.dataset.lTitle) + ' · ' + esc(tbl.dataset.lAvg) + ' ' + f1(Math.round(avg * 10) / 10) + '</small></div>'
+              + '<button type="button" class="bp-x" aria-label="' + esc(tbl.dataset.lClose) + '">×</button></div>'
+              + '<svg viewBox="0 0 ' + W + ' ' + H + '" class="bp-chart" role="img" aria-label="' + esc(name) + '">' + g + '</svg><ul class="bp-list">' + rows + '</ul>';
+            dlg.querySelector('.bp-x').addEventListener('click', function () { dlg.close(); });
+            if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+          }
+          dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
+          tbl.addEventListener('click', function (ev) {
+            var b = ev.target.closest('.bp-open'); if (b) open(b.closest('tr'));
+          });
+        })();
         document.querySelectorAll('.lg-bors').forEach(function (tbl) {
           var sel = tbl.closest('.lg-panel').querySelector('.lg-comp-sel[data-bors]');
           if (!sel) return;

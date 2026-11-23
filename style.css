@@ -1604,3 +1604,22 @@ body:has(.to-frame) .fin-upd { font-size: 0.72rem; margin-top: 1rem; }
 .related h4{margin:0 0 .4rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
 .related ul{margin:0;padding-left:1.1rem}
 .related li{margin:.25rem 0}
+
+/* Klikk på spillernavn i børsen: alle karakterer + graf (Fredrik 23.11.2026) */
+.bp-open { font: inherit; font-weight: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; text-align: left; cursor: pointer; border-bottom: 1px dotted var(--muted); }
+.bp-open:hover { color: var(--red); border-bottom-color: var(--red); }
+.bp-dlg { border: 0; padding: 0; width: min(92vw, 26rem); max-height: 86vh; background: var(--bg); color: var(--fg); box-shadow: 0 10px 40px rgba(0,0,0,.35); border-top: 3px solid var(--red); overflow: auto; }
+.bp-dlg::backdrop { background: rgba(10,8,8,.6); }
+.bp-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 0.9rem 1rem 0.3rem; }
+.bp-head strong { display: block; font-family: var(--display); font-stretch: 75%; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; line-height: 1.1; }
+.bp-head small { font: 500 0.66rem var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.bp-x { font-size: 1.6rem; line-height: 1; background: none; border: 0; color: var(--muted); cursor: pointer; padding: 0 0.2rem; }
+.bp-chart { display: block; width: 100%; height: auto; padding: 0 0.6rem; box-sizing: border-box; }
+.bp-grid { stroke: var(--rule); stroke-width: 1; }
+.bp-avg { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.bp-line { fill: none; stroke: var(--red); stroke-width: 2; stroke-linejoin: round; }
+.bp-dot { fill: var(--red); stroke: var(--bg); stroke-width: 1.5; }
+.bp-ax { font: 500 8px var(--mono); fill: var(--muted); }
+.bp-list { list-style: none; margin: 0.3rem 0 0; padding: 0 1rem 1rem; }
+.bp-list li { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.9rem; }
+.bp-list small { color: var(--muted); font-size: 0.72rem; margin-left: 0.3rem; }
