@@ -213,6 +213,7 @@ details.sale .ctl{margin:0 .5rem .5rem}
   </div>
   <h3 class="h3">2. Milan kjøper en spiller <small>Dra for å endre</small></h3>
   <div class="ctl ctl3">
+    <div class="flag" id="q-flag" role="status" aria-live="polite" style="margin:0 0 .6rem"></div>
     <div class="row"><label for="q-price">Kjøpesum <output id="o-q-price"></output></label><input type="range" id="q-price" min="0" max="200" step="1" value="40"></div>
     <div class="row"><label for="q-n">Kontraktslengde <output id="o-q-n"></output></label><input type="range" id="q-n" min="1" max="5" step="1" value="5"></div>
     <div class="row"><label for="q-wage">Lønn per år, brutto <output id="o-q-wage"></output></label><input type="range" id="q-wage" min="0" max="20" step="0.1" value="8"></div>
@@ -222,7 +223,6 @@ details.sale .ctl{margin:0 .5rem .5rem}
   <p class="sale-note" style="margin:.2rem .7rem .6rem">Gevinsten (salgssum minus bokført verdi) regnes som inntekt. Lønnen og avskrivningen på den solgte faller bort. Flere salg: legg dem sammen.</p></details>
   <div class="rumo" id="rumo"></div>
   <h3 class="h3">3. Hva skjer <small>Alt annet holdes likt</small></h3>
-  <div class="flag" id="q-flag" role="status" aria-live="polite"></div>
   <div class="split2">
     <div class="eff res">
       <h4><span class="bdg res">Resultat</span> Resultatregnskapet</h4>
