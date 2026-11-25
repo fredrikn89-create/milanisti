@@ -176,11 +176,16 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
 .rumo-leg i{width:8px;height:8px;border-radius:50%;flex:none}
 #rumo-src a{color:inherit}
 
-.flag{margin:.8rem 0 0;padding:.7rem .85rem;border-radius:6px;border:2px solid var(--rule,#d9d2ca);background:var(--surface,#f1efec)}
-.flag b{display:block;font:700 1.15rem/1.2 var(--body)}.flag span{display:block;font-size:.85rem;margin-top:.2rem}
-.flag.over{background:#9b2b2b;border-color:#9b2b2b;color:#fff}.flag.over b:before{content:"⚠ "}
-.flag.ok{border-color:#2f8f56;color:#1f6b3d}.flag.ok b:before{content:"✓ "}
-.sale-note{font-size:.78rem;color:var(--muted);margin:.3rem 0 0}
+
+.flag{margin:.2rem 0 .7rem;padding:.4rem .6rem;border-radius:4px;border-left:4px solid var(--rule,#d9d2ca);background:var(--surface,#f1efec);font-size:.82rem;line-height:1.35}
+.flag b{font-weight:700}.flag.over{background:#f6e6e4;border-left-color:#9b2b2b;color:#6e1f1f}.flag.over b:before{content:"⚠ "}
+.flag.ok{background:#e8f2ec;border-left-color:#2f8f56;color:#1f5a38}.flag.ok b:before{content:"✓ "}
+details.sale{margin:.6rem 0 .5rem;border:1px solid var(--rule,#d9d2ca);border-radius:6px;background:#fff}
+details.sale>summary{list-style:none;cursor:pointer;padding:.5rem .7rem;font:600 .84rem var(--body);display:flex;gap:.5rem;align-items:center;justify-content:space-between}
+details.sale>summary::-webkit-details-marker{display:none}
+details.sale>summary:after{content:"▸";font-size:.8rem;color:var(--muted);transition:transform .15s}details.sale[open]>summary:after{transform:rotate(90deg)}
+details.sale>summary small{font:400 .8rem var(--body);color:var(--muted);margin-left:auto;text-align:right}
+details.sale .ctl{margin:0 .5rem .5rem}
 </style>
 
 <div class="wrap">
@@ -212,12 +217,12 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
     <div class="row"><label for="q-n">Durata del contratto <output id="o-q-n"></output></label><input type="range" id="q-n" min="1" max="5" step="1" value="5"></div>
     <div class="row"><label for="q-wage">Ingaggio annuo lordo <output id="o-q-wage"></output></label><input type="range" id="q-wage" min="0" max="20" step="0.1" value="8"></div>
   </div>
-  <div class="rumo" id="rumo"></div>
-  <div class="flag" id="q-flag" role="status" aria-live="polite"></div>
-  <h3 class="h3">Il Milan vende un giocatore <small>Facoltativo, nella stessa sessione</small></h3>
+  <details class="sale" id="q-sale"><summary><span>Cessioni nella stessa sessione</span><small id="q-sale-s">nessuna</small></summary>
   <div class="ctl ctl3"><div class="row"><label for="s-price">Prezzo di vendita <output id="o-s-price"></output></label><input type="range" id="s-price" min="0" max="200" step="1" value="0"></div><div class="row"><label for="s-book">Valore residuo del giocatore ceduto <output id="o-s-book"></output></label><input type="range" id="s-book" min="0" max="200" step="1" value="0"></div><div class="row"><label for="s-wage">Ingaggio che viene meno, lordo <output id="o-s-wage"></output></label><input type="range" id="s-wage" min="0" max="20" step="0.1" value="0"></div><div class="row"><label for="s-n">Anni residui di contratto <output id="o-s-n"></output></label><input type="range" id="s-n" min="1" max="5" step="1" value="2"></div></div>
-  <p class="sale-note">La plusvalenza (prezzo meno valore residuo) conta come ricavo. Ingaggio e ammortamento del ceduto vengono meno. Più cessioni: sommale.</p>
+  <p class="sale-note" style="margin:.2rem .7rem .6rem">La plusvalenza (prezzo meno valore residuo) conta come ricavo. Ingaggio e ammortamento del ceduto vengono meno. Più cessioni: sommale.</p></details>
+  <div class="rumo" id="rumo"></div>
   <h3 class="h3">3. Cosa succede <small>Tutto il resto resta invariato</small></h3>
+  <div class="flag" id="q-flag" role="status" aria-live="polite"></div>
   <div class="split2">
     <div class="eff res">
       <h4><span class="bdg res">Conto economico</span> Effetto sul risultato</h4>
@@ -702,7 +707,8 @@ function drawQ(){
   $('#q-gauge').innerHTML='<i style="left:0;width:'+pc(WB/REVn)+'%;background:var(--s5);opacity:.55"></i><i style="left:'+pc(WB/REVn)+'%;width:'+pc(AM/REVn)+'%;background:var(--s2)"></i><i style="left:'+pc(net>=0?base:after)+'%;width:'+pc(Math.abs(net)/REVn)+'%;background:'+(over?'var(--red)':'var(--s3)')+'"></i><div class="lim" style="left:'+pc(LIM)+'%"></div>';
   $('#q-gleg').innerHTML='<span><b style="background:var(--s5);opacity:.55"></b>Ingaggi oggi</span><span><b style="background:var(--s2)"></b>Ammortamenti oggi</span><span><b style="background:'+(over?'var(--red)':'var(--s3)')+'"></b>Nuovo giocatore</span><span><b style="background:var(--fg);width:2px"></b>Limite FPF 70 %</span>';
   var pmax=Math.max(0,n*(LIM*REVn-WB-AM+SW+AS-W)),need=(WB+AM+net)/LIM-REVn;
-  var dp=Math.abs(after-LIM)*100;$('#q-flag').className='flag '+(over?'over':'ok');$('#q-flag').innerHTML='<b>'+(over?'Sforamento FPF: {a} % contro il limite del 70 %':'Entro l\'FPF: {a} % su un massimo del 70 %').replace('{a}',fmt(after*100,1))+'</b><span>'+(over?'{d} punti percentuali sopra. Al Milan servirebbero circa € {n} mln di ricavi in più.':'Il margine è di {d} punti percentuali.').replace('{d}',fmt(dp,1)).replace('{n}',fmt(need,0))+'</span>';
+  var dp=Math.abs(after-LIM)*100;$('#q-flag').className='flag '+(over?'over':'ok');$('#q-flag').innerHTML=over?'<b>Sforamento FPF: '+fmt(after*100,1)+' %</b> contro il limite del 70 %, servono circa € '+fmt(need,0)+' mln di ricavi in più':'<b>Entro l\'FPF: '+fmt(after*100,1)+' %</b>, margine '+fmt(dp,1)+' punti';
+  $('#q-sale-s').textContent=sale?'Cessione {s} mln, plusvalenza {g}'.replace('{s}',fmt(S,0)).replace('{g}',fmt(S-B,0)):'nessuna';
   $('#q-read').innerHTML=over
     ?'<b>No, non senza interventi.</b> Il costo della rosa passa dal '+fmt(before*100,1)+' % al <b>'+fmt(after*100,1)+' %</b>, '+fmt((after-LIM)*100,1)+' punti percentuali sopra il limite FPF del 70 %. Al Milan servirebbero circa <b>'+money(need,1)+'</b> di ricavi in più, per esempio cessioni con plusvalenza, oppure costi più bassi altrove.'
     :'<b>Sì, entro il limite.</b> Il costo della rosa passa dal '+fmt(before*100,1)+' % al <b>'+fmt(after*100,1)+' %</b>. Con questo ingaggio e questo contratto il costo del cartellino potrebbe arrivare fino a <b>'+(pmax>150?'oltre € 150 mln':money(pmax,1))+'</b> prima di toccare il limite FPF del 70 %. Il modello è approssimativo, e il margine reale è probabilmente più basso perché mancano lo stipendio dell\'allenatore e altri costi.';

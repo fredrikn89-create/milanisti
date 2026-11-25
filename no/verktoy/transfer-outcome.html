@@ -176,11 +176,16 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
 .rumo-leg i{width:8px;height:8px;border-radius:50%;flex:none}
 #rumo-src a{color:inherit}
 
-.flag{margin:.8rem 0 0;padding:.7rem .85rem;border-radius:6px;border:2px solid var(--rule,#d9d2ca);background:var(--surface,#f1efec)}
-.flag b{display:block;font:700 1.15rem/1.2 var(--body)}.flag span{display:block;font-size:.85rem;margin-top:.2rem}
-.flag.over{background:#9b2b2b;border-color:#9b2b2b;color:#fff}.flag.over b:before{content:"⚠ "}
-.flag.ok{border-color:#2f8f56;color:#1f6b3d}.flag.ok b:before{content:"✓ "}
-.sale-note{font-size:.78rem;color:var(--muted);margin:.3rem 0 0}
+
+.flag{margin:.2rem 0 .7rem;padding:.4rem .6rem;border-radius:4px;border-left:4px solid var(--rule,#d9d2ca);background:var(--surface,#f1efec);font-size:.82rem;line-height:1.35}
+.flag b{font-weight:700}.flag.over{background:#f6e6e4;border-left-color:#9b2b2b;color:#6e1f1f}.flag.over b:before{content:"⚠ "}
+.flag.ok{background:#e8f2ec;border-left-color:#2f8f56;color:#1f5a38}.flag.ok b:before{content:"✓ "}
+details.sale{margin:.6rem 0 .5rem;border:1px solid var(--rule,#d9d2ca);border-radius:6px;background:#fff}
+details.sale>summary{list-style:none;cursor:pointer;padding:.5rem .7rem;font:600 .84rem var(--body);display:flex;gap:.5rem;align-items:center;justify-content:space-between}
+details.sale>summary::-webkit-details-marker{display:none}
+details.sale>summary:after{content:"▸";font-size:.8rem;color:var(--muted);transition:transform .15s}details.sale[open]>summary:after{transform:rotate(90deg)}
+details.sale>summary small{font:400 .8rem var(--body);color:var(--muted);margin-left:auto;text-align:right}
+details.sale .ctl{margin:0 .5rem .5rem}
 </style>
 
 <div class="wrap">
@@ -212,12 +217,12 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
     <div class="row"><label for="q-n">Kontraktslengde <output id="o-q-n"></output></label><input type="range" id="q-n" min="1" max="5" step="1" value="5"></div>
     <div class="row"><label for="q-wage">Lønn per år, brutto <output id="o-q-wage"></output></label><input type="range" id="q-wage" min="0" max="20" step="0.1" value="8"></div>
   </div>
-  <div class="rumo" id="rumo"></div>
-  <div class="flag" id="q-flag" role="status" aria-live="polite"></div>
-  <h3 class="h3">Milan selger en spiller <small>Valgfritt, i samme periode</small></h3>
+  <details class="sale" id="q-sale"><summary><span>Salg i samme periode</span><small id="q-sale-s">ingen</small></summary>
   <div class="ctl ctl3"><div class="row"><label for="s-price">Salgssum <output id="o-s-price"></output></label><input type="range" id="s-price" min="0" max="200" step="1" value="0"></div><div class="row"><label for="s-book">Bokført restverdi på den solgte <output id="o-s-book"></output></label><input type="range" id="s-book" min="0" max="200" step="1" value="0"></div><div class="row"><label for="s-wage">Lønn som faller bort, brutto <output id="o-s-wage"></output></label><input type="range" id="s-wage" min="0" max="20" step="0.1" value="0"></div><div class="row"><label for="s-n">År igjen på kontrakten <output id="o-s-n"></output></label><input type="range" id="s-n" min="1" max="5" step="1" value="2"></div></div>
-  <p class="sale-note">Gevinsten (salgssum minus bokført verdi) regnes som inntekt. Lønnen og avskrivningen på den solgte faller bort. Flere salg: legg dem sammen.</p>
+  <p class="sale-note" style="margin:.2rem .7rem .6rem">Gevinsten (salgssum minus bokført verdi) regnes som inntekt. Lønnen og avskrivningen på den solgte faller bort. Flere salg: legg dem sammen.</p></details>
+  <div class="rumo" id="rumo"></div>
   <h3 class="h3">3. Hva skjer <small>Alt annet holdes likt</small></h3>
+  <div class="flag" id="q-flag" role="status" aria-live="polite"></div>
   <div class="split2">
     <div class="eff res">
       <h4><span class="bdg res">Resultat</span> Resultatregnskapet</h4>
@@ -701,7 +706,8 @@ function drawQ(){
   $('#q-gauge').innerHTML='<i style="left:0;width:'+pc(WB/REVn)+'%;background:var(--s5);opacity:.55"></i><i style="left:'+pc(WB/REVn)+'%;width:'+pc(AM/REVn)+'%;background:var(--s2)"></i><i style="left:'+pc(net>=0?base:after)+'%;width:'+pc(Math.abs(net)/REVn)+'%;background:'+(over?'var(--red)':'var(--s3)')+'"></i><div class="lim" style="left:'+pc(LIM)+'%"></div>';
   $('#q-gleg').innerHTML='<span><b style="background:var(--s5);opacity:.55"></b>Lønn i dag</span><span><b style="background:var(--s2)"></b>Avskrivning i dag</span><span><b style="background:'+(over?'var(--red)':'var(--s3)')+'"></b>Ny spiller</span><span><b style="background:var(--fg);width:2px"></b>FFP-krav 70 %</span>';
   var pmax=Math.max(0,n*(LIM*REVn-WB-AM+SW+AS-W)),need=(WB+AM+net)/LIM-REVn;
-  var dp=Math.abs(after-LIM)*100;$('#q-flag').className='flag '+(over?'over':'ok');$('#q-flag').innerHTML='<b>'+(over?'FFP-brudd: {a} % mot kravet på 70 %':'Innenfor FFP: {a} % av maks 70 %').replace('{a}',fmt(after*100,1))+'</b><span>'+(over?'{d} prosentpoeng over. Milan trenger rundt € {n} mill. mer i inntekter.':'Marginen er {d} prosentpoeng.').replace('{d}',fmt(dp,1)).replace('{n}',fmt(need,0))+'</span>';
+  var dp=Math.abs(after-LIM)*100;$('#q-flag').className='flag '+(over?'over':'ok');$('#q-flag').innerHTML=over?'<b>FFP-brudd: '+fmt(after*100,1)+' %</b> mot kravet på 70 %, trenger ca. € '+fmt(need,0)+' mill. mer i inntekter':'<b>Innenfor FFP: '+fmt(after*100,1)+' %</b>, margin '+fmt(dp,1)+' poeng';
+  $('#q-sale-s').textContent=sale?'Salg {s} mill., gevinst {g}'.replace('{s}',fmt(S,0)).replace('{g}',fmt(S-B,0)):'ingen';
   $('#q-read').innerHTML=over
     ?'<b>Nei, ikke uten tiltak.</b> Lagkostnaden går fra '+fmt(before*100,1)+' % til <b>'+fmt(after*100,1)+' %</b>, '+fmt((after-LIM)*100,1)+' prosentpoeng over FFP-kravet på 70 %. Milan trenger rundt <b>'+money(need,1)+'</b> mer i inntekter, for eksempel salg med gevinst, eller lavere kostnader andre steder.'
     :'<b>Ja, innenfor grensen.</b> Lagkostnaden går fra '+fmt(before*100,1)+' % til <b>'+fmt(after*100,1)+' %</b>. Med denne lønnen og kontrakten kunne kjøpesummen vært opp til <b>'+(pmax>150?'over € 150 mill.':money(pmax,1))+'</b> før FFP-kravet på 70 % nås. Modellen er grov, og den reelle marginen er trolig mindre fordi trenerlønn og andre kostnader mangler.';
