@@ -172,10 +172,10 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
   </div>
   <h3 class="h3">1. Milan i dag <small>Utgangspunktet er låst: siste rapporterte tall</small></h3>
   <div class="base">
-    <div class="locked"><span>Resultat 2025/26 <em class="bdg res">Resultat</em></span><b>−24,0 mill.</b><span>anslag, ikke endelig regnskap</span></div>
-    <div class="locked"><span>Avskrivning per år <em class="bdg res">Resultat</em></span><b>120,0 mill.</b><span>2024/25, siste detaljerte regnskap</span></div>
+    <div class="locked"><span>Resultat 2025/26 <em class="bdg res">Resultat</em></span><b>−23,7 mill.</b><span>regnskapet, godkjent 29. oktober 2026</span></div>
+    <div class="locked"><span>Avskrivning per år <em class="bdg res">Resultat</em></span><b>121,2 mill.</b><span>2025/26, avskrivninger og nedskrivninger</span></div>
     <div class="locked"><span>Netto gjeld <em class="bdg bal">Balanse</em></span><b>145,3 mill.</b><span>2025/26</span></div>
-    <div class="locked"><span>Lagkostnad <em class="bdg res">Resultat</em></span><b>48,0 %</b><span>FFP-kravet er maks 70 %. (Lønn 103,1 + avskr. 120) ÷ inntekter 464,6</span></div>
+    <div class="locked"><span>Lagkostnad <em class="bdg res">Resultat</em></span><b>64,8 %</b><span>FFP-kravet er maks 70 %. (Lønn, alle ansatte 179,9 + avskr. 121,2) ÷ inntekter 464,6. Samme regnemåte som på Regnskap-siden; UEFAs offisielle tall er ikke offentlig.</span></div>
   </div>
   <h3 class="h3">2. Milan kjøper en spiller <small>Dra for å endre</small></h3>
   <div class="ctl ctl3">
@@ -306,7 +306,7 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
   <div class="ptable" id="ptable"></div>
   <div class="pdetail" id="pdetail" hidden></div>
   <p class="note">Kjøpesum og kontrakt er hentet fra åpne kilder (Calcio e Finanza, klubben, Sky Sport og lignende). Restverdi er regnet ut av oss som kjøpesum × år igjen ÷ kontraktslengde, med mindre kilden oppgir tallet. Tall merket ≈ er utledet. Mangler en kilde et tall, står det «–».</p>
-  <p class="src">Kilder: klubbens regnskap via Calcio e Finanza, Il Sole 24 Ore og klubbens pressemelding 28. september 2026 (Sky Sport). Tall merket ≈ er anslag. Detaljert regnskap for 2025/26 er ikke publisert.</p>
+  <p class="src">Kilder: klubbens regnskap via Calcio e Finanza, Il Sole 24 Ore og klubbens pressemelding 28. september 2026 (Sky Sport). Tall merket ≈ er anslag. Tallene for 2025/26 er hentet fra italienske medier som gjengir det konsoliderte regnskapet (MilanNews, MilanNews24, MilanPress), ikke fra selve årsrapporten.</p>
 </section>
 </div>
 
@@ -466,7 +466,7 @@ function drawK(){
 /* ---------- 3. Milans tall ---------- */
 var DATA={"2020/21":{gain:20.1,amort:81.1,buy:70.2,debt:101.6,res:-96.4,est:[]},"2021/22":{gain:5.6,amort:76.4,buy:null,debt:28.4,res:-66.5,est:[]},
 "2022/23":{gain:0.3,amort:71.3,buy:56.0,debt:-10.8,res:6.1,est:['buy','debt']},"2023/24":{gain:44.9,amort:93.7,buy:124.0,debt:49.6,res:4.1,est:['buy']},
-"2024/25":{gain:55.9,amort:120.0,buy:123.2,debt:92.6,res:3.0,est:['buy']},"2025/26":{gain:null,amort:null,buy:null,debt:145.3,res:-24.0,est:['res']}};
+"2024/25":{gain:55.9,amort:120.0,buy:123.2,debt:92.6,res:3.0,est:['buy']},"2025/26":{gain:86.6,amort:121.2,buy:241.7,debt:145.3,res:-23.7,est:[]}};
 var SER=[['gain','Gevinst på salg','--s2','Salgspris minus restverdi. Inntekt i regnskapet.'],
          ['amort','Avskrivninger','--s1','Kjøpesummer fordelt over kontraktene, pluss nedskrivninger.'],
          ['buy','Kjøp','--s3','Overgangssummer betalt i sesongen (klubben oppgir ikke alltid tallet).'],
@@ -485,7 +485,7 @@ function moreHtml(k,d){
     var L=PLAYERS.filter(function(p){return p.amort_m}).sort(function(a,b){return b.amort_m-a.amort_m}),sum=L.reduce(function(a,p){return a+p.amort_m},0);
     return '<p><span class="bdg res">Resultat</span> Avskrivning er kjøpesummen for hver spiller fordelt likt over kontrakten. Eksempel: 40 mill. over fem år er 8 mill. i året. Summen for hele troppen er kostnaden som står i resultatregnskapet. Den har ikke noe med årets kjøp å gjøre alene, men med alle kjøp som ennå ikke er skrevet ned.</p>'+
       '<p><b>Dagens tropp, per spiller (mill. € per år):</b></p>'+rows(L.map(function(p){return [p.name+(p.amort_rep?'':' ≈'),fmt(p.amort_m,1)]}).concat([['<b>Sum for '+L.length+' spillere</b>','<b>'+fmt(sum,1)+'</b>']]))+
-      '<p style="margin-top:.5rem;color:var(--muted)">Dette er det vi har tall for, og dekker bare en del av totalen på '+fmt(d.amort||120,1)+' mill. Resten gjelder spillere vi mangler tall for og spillere som har forlatt klubben. ≈ betyr utledet av oss.</p>';
+      '<p style="margin-top:.5rem;color:var(--muted)">Dette er det vi har tall for, og dekker bare en del av totalen på '+fmt(d.amort||121.2,1)+' mill. Resten gjelder spillere vi mangler tall for og spillere som har forlatt klubben. ≈ betyr utledet av oss.</p>';
   }
   if(k==='buy'){
     var B=PLAYERS.filter(function(p){return p.fee_m}).sort(function(a,b){return b.fee_m-a.fee_m}).slice(0,10);
@@ -640,7 +640,7 @@ wTable();
 /* kjøp av spiller */
 function drawQ(){
   var g=function(id){return +$('#'+id).value};
-  var P=g('q-price'),n=g('q-n'),W=g('q-wage'),LIM=.7,REV=464.6,WB=103.1,AM=120,RES=-24.0,DEBT=145.3;
+  var P=g('q-price'),n=g('q-n'),W=g('q-wage'),LIM=.7,REV=464.6,WB=179.9,AM=121.2,RES=-23.7,DEBT=145.3;
   $('#o-q-price').textContent=money(P,0);$('#o-q-n').textContent=n+' år';$('#o-q-wage').textContent=money(W,1);
   var am1=P/n,yr=am1+W,before=(WB+AM)/REV,after=(WB+AM+yr)/REV,over=after>LIM;
   var li=function(t,v,cls,sub){return '<li class="'+(cls||'')+'"><span>'+t+(sub?'<small>'+sub+'</small>':'')+'</span><b>'+v+'</b></li>'};
@@ -648,7 +648,7 @@ function drawQ(){
     li('Ny avskrivning per år',sign(-am1,1)+' mill.','neg',money(P,0)+' ÷ '+n+' år')+
     li('Ny lønn per år',sign(-W,1)+' mill.','neg','Brutto, løper hvert år')+
     li('Ekstra kostnad per år',sign(-yr,1)+' mill.','neg tot')+
-    li('Resultat første år',fmt(RES,1)+' → '+fmt(RES-yr,1),'tot','Fra −24,0, alt annet likt')+
+    li('Resultat første år',fmt(RES,1)+' → '+fmt(RES-yr,1),'tot','Fra −23,7, alt annet likt')+
     li('Lagkostnad (FFP)',fmt(before*100,1)+' % → '+fmt(after*100,1)+' %',over?'neg':'pos','FFP-kravet: maks 70 %');
   $('#q-bal').innerHTML=
     li('Ny eiendel: spillerrettigheter','+'+fmt(P,1)+' mill.','pos','Føres opp til kjøpesum')+

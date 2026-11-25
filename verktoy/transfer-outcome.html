@@ -172,10 +172,10 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
   </div>
   <h3 class="h3">1. Milan today <small>The starting point is locked: latest reported figures</small></h3>
   <div class="base">
-    <div class="locked"><span>Result 2025/26 <em class="bdg res">Profit/loss</em></span><b>−€24.0m</b><span>estimate, not final accounts</span></div>
-    <div class="locked"><span>Amortisation per year <em class="bdg res">Profit/loss</em></span><b>€120.0m</b><span>2024/25, latest detailed accounts</span></div>
+    <div class="locked"><span>Result 2025/26 <em class="bdg res">Profit/loss</em></span><b>−€23.7m</b><span>the accounts, approved 29 October 2026</span></div>
+    <div class="locked"><span>Amortisation per year <em class="bdg res">Profit/loss</em></span><b>€121.2m</b><span>2025/26, amortisation and write-downs</span></div>
     <div class="locked"><span>Net debt <em class="bdg bal">Balance sheet</em></span><b>€145.3m</b><span>2025/26</span></div>
-    <div class="locked"><span>Squad cost <em class="bdg res">Profit/loss</em></span><b>48.0%</b><span>The FFP limit is a maximum of 70%. (Wages 103.1 + amort. 120) ÷ revenue 464.6</span></div>
+    <div class="locked"><span>Squad cost <em class="bdg res">Profit/loss</em></span><b>64.8%</b><span>The FFP limit is a maximum of 70%. (Wages, all staff 179.9 + amort. 121.2) ÷ revenue 464.6. Same method as on the Accounts page; UEFA's official figure is not public.</span></div>
   </div>
   <h3 class="h3">2. Milan buy a player <small>Drag to change</small></h3>
   <div class="ctl ctl3">
@@ -306,7 +306,7 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
   <div class="ptable" id="ptable"></div>
   <div class="pdetail" id="pdetail" hidden></div>
   <p class="note">Transfer fees and contracts are taken from open sources (Calcio e Finanza, the club, Sky Sport and similar). Book value is calculated by us as transfer fee × years left ÷ contract length, unless the source gives the figure. Figures marked ≈ are derived. Where a source lacks a figure, it shows “–”.</p>
-  <p class="src">Sources: the club's accounts via Calcio e Finanza, Il Sole 24 Ore and the club's press release of 28 September 2026 (Sky Sport). Figures marked ≈ are estimates. Detailed accounts for 2025/26 have not been published.</p>
+  <p class="src">Sources: the club's accounts via Calcio e Finanza, Il Sole 24 Ore and the club's press release of 28 September 2026 (Sky Sport). Figures marked ≈ are estimates. The 2025/26 figures come from Italian media reporting the consolidated accounts (MilanNews, MilanNews24, MilanPress), not from the annual report itself.</p>
 </section>
 </div>
 
@@ -467,7 +467,7 @@ function drawK(){
 /* ---------- 3. Milans tall ---------- */
 var DATA={"2020/21":{gain:20.1,amort:81.1,buy:70.2,debt:101.6,res:-96.4,est:[]},"2021/22":{gain:5.6,amort:76.4,buy:null,debt:28.4,res:-66.5,est:[]},
 "2022/23":{gain:0.3,amort:71.3,buy:56.0,debt:-10.8,res:6.1,est:['buy','debt']},"2023/24":{gain:44.9,amort:93.7,buy:124.0,debt:49.6,res:4.1,est:['buy']},
-"2024/25":{gain:55.9,amort:120.0,buy:123.2,debt:92.6,res:3.0,est:['buy']},"2025/26":{gain:null,amort:null,buy:null,debt:145.3,res:-24.0,est:['res']}};
+"2024/25":{gain:55.9,amort:120.0,buy:123.2,debt:92.6,res:3.0,est:['buy']},"2025/26":{gain:86.6,amort:121.2,buy:241.7,debt:145.3,res:-23.7,est:[]}};
 var SER=[['gain','Profit on sales','--s2','Sale price minus book value. Income in the accounts.'],
          ['amort','Amortisation','--s1','Transfer fees spread over the contracts, plus impairments.'],
          ['buy','Purchases','--s3','Transfer fees paid in the season (the club does not always give the figure).'],
@@ -486,7 +486,7 @@ function moreHtml(k,d){
     var L=PLAYERS.filter(function(p){return p.amort_m}).sort(function(a,b){return b.amort_m-a.amort_m}),sum=L.reduce(function(a,p){return a+p.amort_m},0);
     return '<p><span class="bdg res">Profit/loss</span> Amortisation is each player\'s transfer fee spread evenly over his contract. Example: €40m over five years is €8m a year. The total for the whole squad is the cost shown in the income statement. It is not about this year\'s purchases alone, but all purchases that have not yet been written down.</p>'+
       '<p><b>Current squad, per player (€m per year):</b></p>'+rows(L.map(function(p){return [p.name+(p.amort_rep?'':' ≈'),fmt(p.amort_m,1)]}).concat([['<b>Total for '+L.length+' players</b>','<b>'+fmt(sum,1)+'</b>']]))+
-      '<p style="margin-top:.5rem;color:var(--muted)">This is what we have figures for, and it covers only part of the total of €'+fmt(d.amort||120,1)+'m. The rest relates to players we lack figures for and players who have left the club. ≈ means derived by us.</p>';
+      '<p style="margin-top:.5rem;color:var(--muted)">This is what we have figures for, and it covers only part of the total of €'+fmt(d.amort||121.2,1)+'m. The rest relates to players we lack figures for and players who have left the club. ≈ means derived by us.</p>';
   }
   if(k==='buy'){
     var B=PLAYERS.filter(function(p){return p.fee_m}).sort(function(a,b){return b.fee_m-a.fee_m}).slice(0,10);
@@ -641,7 +641,7 @@ wTable();
 /* kjøp av spiller */
 function drawQ(){
   var g=function(id){return +$('#'+id).value};
-  var P=g('q-price'),n=g('q-n'),W=g('q-wage'),LIM=.7,REV=464.6,WB=103.1,AM=120,RES=-24.0,DEBT=145.3;
+  var P=g('q-price'),n=g('q-n'),W=g('q-wage'),LIM=.7,REV=464.6,WB=179.9,AM=121.2,RES=-23.7,DEBT=145.3;
   $('#o-q-price').textContent=money(P,0);$('#o-q-n').textContent=n+(n===1?' year':' years');$('#o-q-wage').textContent=money(W,1);
   var am1=P/n,yr=am1+W,before=(WB+AM)/REV,after=(WB+AM+yr)/REV,over=after>LIM;
   var li=function(t,v,cls,sub){return '<li class="'+(cls||'')+'"><span>'+t+(sub?'<small>'+sub+'</small>':'')+'</span><b>'+v+'</b></li>'};
@@ -649,7 +649,7 @@ function drawQ(){
     li('New amortisation per year',smoney(-am1,1),'neg',money(P,0)+' ÷ '+n+(n===1?' year':' years'))+
     li('New wages per year',smoney(-W,1),'neg','Gross, recurring every year')+
     li('Extra cost per year',smoney(-yr,1),'neg tot')+
-    li('Result in the first year',fmt(RES,1)+' → '+fmt(RES-yr,1),'tot','From −24.0, all else equal')+
+    li('Result in the first year',fmt(RES,1)+' → '+fmt(RES-yr,1),'tot','From −23.7, all else equal')+
     li('Squad cost (FFP)',fmt(before*100,1)+'% → '+fmt(after*100,1)+'%',over?'neg':'pos','FFP limit: max 70%');
   $('#q-bal').innerHTML=
     li('New asset: player registration','+€'+fmt(P,1)+'m','pos','Recorded at the transfer fee')+

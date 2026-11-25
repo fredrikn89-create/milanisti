@@ -172,10 +172,10 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
   </div>
   <h3 class="h3">1. Il Milan oggi <small>Il punto di partenza è fisso: ultimi dati pubblicati</small></h3>
   <div class="base">
-    <div class="locked"><span>Risultato d'esercizio 2025/26 <em class="bdg res">Conto economico</em></span><b>−24,0 mln</b><span>stima, non bilancio definitivo</span></div>
-    <div class="locked"><span>Ammortamenti annui <em class="bdg res">Conto economico</em></span><b>120,0 mln</b><span>2024/25, ultimo bilancio dettagliato</span></div>
+    <div class="locked"><span>Risultato d'esercizio 2025/26 <em class="bdg res">Conto economico</em></span><b>−23,7 mln</b><span>bilancio approvato il 29 ottobre 2026</span></div>
+    <div class="locked"><span>Ammortamenti annui <em class="bdg res">Conto economico</em></span><b>121,2 mln</b><span>2025/26, ammortamenti e svalutazioni</span></div>
     <div class="locked"><span>Indebitamento netto <em class="bdg bal">Stato patrimoniale</em></span><b>145,3 mln</b><span>2025/26</span></div>
-    <div class="locked"><span>Costo della rosa <em class="bdg res">Conto economico</em></span><b>48,0 %</b><span>Il limite FPF è il 70 %. (Ingaggi 103,1 + amm. 120) ÷ ricavi 464,6</span></div>
+    <div class="locked"><span>Costo della rosa <em class="bdg res">Conto economico</em></span><b>64,8 %</b><span>Il limite FPF è il 70 %. (Stipendi, tutti i dipendenti 179,9 + amm. 121,2) ÷ ricavi 464,6. Stesso metodo della pagina Bilanci; il dato ufficiale UEFA non è pubblico.</span></div>
   </div>
   <h3 class="h3">2. Il Milan acquista un giocatore <small>Trascina per modificare</small></h3>
   <div class="ctl ctl3">
@@ -306,7 +306,7 @@ tr.hit td{background:#f7e3d6;box-shadow:inset 0 1px 0 var(--red),inset 0 -1px 0 
   <div class="ptable" id="ptable"></div>
   <div class="pdetail" id="pdetail" hidden></div>
   <p class="note">Costo del cartellino e contratto provengono da fonti pubbliche (Calcio e Finanza, il club, Sky Sport e simili). Il valore residuo è calcolato da noi come costo del cartellino × anni residui ÷ durata del contratto, salvo quando la fonte indica la cifra. Le cifre contrassegnate con ≈ sono dedotte. Se manca una cifra nelle fonti, compare «–».</p>
-  <p class="src">Fonti: bilancio del club via Calcio e Finanza, Il Sole 24 Ore e comunicato stampa del club del 28 settembre 2026 (Sky Sport). Le cifre contrassegnate con ≈ sono stime. Il bilancio dettagliato del 2025/26 non è stato pubblicato.</p>
+  <p class="src">Fonti: bilancio del club via Calcio e Finanza, Il Sole 24 Ore e comunicato stampa del club del 28 settembre 2026 (Sky Sport). Le cifre contrassegnate con ≈ sono stime. I dati del 2025/26 provengono da media italiani che riportano il bilancio consolidato (MilanNews, MilanNews24, MilanPress), non dalla relazione annuale stessa.</p>
 </section>
 </div>
 
@@ -467,7 +467,7 @@ function drawK(){
 /* ---------- 3. Milans tall ---------- */
 var DATA={"2020/21":{gain:20.1,amort:81.1,buy:70.2,debt:101.6,res:-96.4,est:[]},"2021/22":{gain:5.6,amort:76.4,buy:null,debt:28.4,res:-66.5,est:[]},
 "2022/23":{gain:0.3,amort:71.3,buy:56.0,debt:-10.8,res:6.1,est:['buy','debt']},"2023/24":{gain:44.9,amort:93.7,buy:124.0,debt:49.6,res:4.1,est:['buy']},
-"2024/25":{gain:55.9,amort:120.0,buy:123.2,debt:92.6,res:3.0,est:['buy']},"2025/26":{gain:null,amort:null,buy:null,debt:145.3,res:-24.0,est:['res']}};
+"2024/25":{gain:55.9,amort:120.0,buy:123.2,debt:92.6,res:3.0,est:['buy']},"2025/26":{gain:86.6,amort:121.2,buy:241.7,debt:145.3,res:-23.7,est:[]}};
 var SER=[['gain','Plusvalenze','--s2','Prezzo di cessione meno valore residuo. Ricavo a bilancio.'],
          ['amort','Ammortamenti','--s1','Costi dei cartellini ripartiti sulla durata dei contratti, più svalutazioni.'],
          ['buy','Acquisti','--s3','Costi dei cartellini pagati nella stagione (il club non sempre comunica la cifra).'],
@@ -486,7 +486,7 @@ function moreHtml(k,d){
     var L=PLAYERS.filter(function(p){return p.amort_m}).sort(function(a,b){return b.amort_m-a.amort_m}),sum=L.reduce(function(a,p){return a+p.amort_m},0);
     return '<p><span class="bdg res">Conto economico</span> L\'ammortamento è il costo del cartellino di ogni giocatore ripartito in quote uguali sulla durata del contratto. Esempio: 40 mln in cinque anni sono 8 mln all\'anno. La somma per l\'intera rosa è il costo che compare nel conto economico. Non dipende solo dagli acquisti dell\'anno, ma da tutti gli acquisti non ancora interamente ammortizzati.</p>'+
       '<p><b>Rosa attuale, per giocatore (mln € all\'anno):</b></p>'+rows(L.map(function(p){return [p.name+(p.amort_rep?'':' ≈'),fmt(p.amort_m,1)]}).concat([['<b>Totale per '+L.length+' giocatori</b>','<b>'+fmt(sum,1)+'</b>']]))+
-      '<p style="margin-top:.5rem;color:var(--muted)">Sono i giocatori per cui abbiamo i dati, e coprono solo una parte del totale di '+fmt(d.amort||120,1)+' mln. Il resto riguarda giocatori di cui mancano i dati e giocatori che hanno lasciato il club. ≈ indica un valore dedotto da noi.</p>';
+      '<p style="margin-top:.5rem;color:var(--muted)">Sono i giocatori per cui abbiamo i dati, e coprono solo una parte del totale di '+fmt(d.amort||121.2,1)+' mln. Il resto riguarda giocatori di cui mancano i dati e giocatori che hanno lasciato il club. ≈ indica un valore dedotto da noi.</p>';
   }
   if(k==='buy'){
     var B=PLAYERS.filter(function(p){return p.fee_m}).sort(function(a,b){return b.fee_m-a.fee_m}).slice(0,10);
@@ -641,7 +641,7 @@ wTable();
 /* kjøp av spiller */
 function drawQ(){
   var g=function(id){return +$('#'+id).value};
-  var P=g('q-price'),n=g('q-n'),W=g('q-wage'),LIM=.7,REV=464.6,WB=103.1,AM=120,RES=-24.0,DEBT=145.3;
+  var P=g('q-price'),n=g('q-n'),W=g('q-wage'),LIM=.7,REV=464.6,WB=179.9,AM=121.2,RES=-23.7,DEBT=145.3;
   $('#o-q-price').textContent=money(P,0);$('#o-q-n').textContent=yrs(n);$('#o-q-wage').textContent=money(W,1);
   var am1=P/n,yr=am1+W,before=(WB+AM)/REV,after=(WB+AM+yr)/REV,over=after>LIM;
   var li=function(t,v,cls,sub){return '<li class="'+(cls||'')+'"><span>'+t+(sub?'<small>'+sub+'</small>':'')+'</span><b>'+v+'</b></li>'};
@@ -649,7 +649,7 @@ function drawQ(){
     li('Nuovo ammortamento annuo',sign(-am1,1)+' mln','neg',money(P,0)+' ÷ '+yrs(n))+
     li('Nuovo ingaggio annuo',sign(-W,1)+' mln','neg','Lordo, ogni anno')+
     li('Costo aggiuntivo annuo',sign(-yr,1)+' mln','neg tot')+
-    li('Risultato del primo anno',fmt(RES,1)+' → '+fmt(RES-yr,1),'tot','Da −24,0, a parità di tutto il resto')+
+    li('Risultato del primo anno',fmt(RES,1)+' → '+fmt(RES-yr,1),'tot','Da −23,7, a parità di tutto il resto')+
     li('Costo della rosa (FPF)',fmt(before*100,1)+' % → '+fmt(after*100,1)+' %',over?'neg':'pos','Limite FPF: max 70 %');
   $('#q-bal').innerHTML=
     li('Nuova attività: diritti sul giocatore','+'+fmt(P,1)+' mln','pos','Iscritta al costo del cartellino')+
