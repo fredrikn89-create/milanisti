@@ -1648,5 +1648,27 @@
    "badge": "Anteprima: Olympiacos–Milan",
    "url": "https://milanisti.net/it/#f-olympiacos"
   }
+ },
+ {
+  "id": "a-olympiacos",
+  "date": "2026-11-26",
+  "no": {
+   "title": "Milan snudde 0–2 til 2–4 i Piraeus, og Hutchinson sto bak tre mål",
+   "ingress": "Milan lå under 0–2 mot Olympiacos etter 49 minutter, men svarte med fire mål. Er den andre omgangen mønsteret, eller var det unntaket Milan trengte i Europa League?",
+   "badge": "Olympiacos 2–4 Milan",
+   "url": "https://milanisti.net/no/#a-olympiacos"
+  },
+  "en": {
+   "title": "Milan turned 0–2 into 2–4 in Piraeus, and Hutchinson was behind three goals",
+   "ingress": "Milan were 0–2 down against Olympiacos after 49 minutes, but responded with four goals. Is the second half the pattern, or was it the exception Milan needed in the Europa League?",
+   "badge": "Olympiacos 2–4 Milan",
+   "url": "https://milanisti.net/#a-olympiacos"
+  },
+  "it": {
+   "title": "Il Milan ribalta lo 0–2 in 2–4 al Pireo, e Hutchinson è dietro tre gol",
+   "ingress": "Il Milan era sotto 0–2 contro l'Olympiacos dopo 49 minuti, ma ha risposto con quattro gol. Il secondo tempo è la regola, o è stata l'eccezione di cui il Milan aveva bisogno in Europa League?",
+   "badge": "Olympiacos 2–4 Milan",
+   "url": "https://milanisti.net/it/#a-olympiacos"
+  }
  }
 ]
